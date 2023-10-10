@@ -20,7 +20,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install requests
+        pip install -r requirements.txt
 
     - name: Run searchtenders.py r
       run: python searchtenders.py
