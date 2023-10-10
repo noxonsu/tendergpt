@@ -4,6 +4,6 @@ requests
 playwright
 docx2txt
 chromadb
-pysqlite3-binary
 tiktoken
 langchainhub
+unstructured

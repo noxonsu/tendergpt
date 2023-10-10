@@ -1,43 +1,71 @@
 from playwright.sync_api import sync_playwright
-
-from langchain.document_loaders import AsyncChromiumLoader
-from langchain.document_transformers import BeautifulSoupTransformer
 import re
 import json
 import requests
 import os
+import time  # Import the time module
+
+def load_tenders_without_docs():
+    with open("tenders.json", "r", encoding="utf-8") as file:
+        tenders = json.load(file)
+    return [tender for tender in tenders if not tender.get("documentation")]
+
+def get_file_links(html_content):
+    matches = re.findall(r'"title":"(.*?)","fsid":"(.*?)","link":"(.*?)"', html_content)
+    target_titles = ["Извещение", "Кп", "ткп"]
+    target_links = [(fsid, link) for title, fsid, link in matches if title in target_titles]
+    return target_links if target_links else [title for title, _, _ in matches]
+
+def update_tender_json(tenderid, documentation):
+    with open("tenders.json", "r", encoding="utf-8") as file:
+        tenders = json.load(file)
+    for tender in tenders:
+        if tender["tenderId"] == str(tenderid):
+            tender["documentation"] = documentation
+            break
+    with open("tenders.json", "w", encoding="utf-8") as file:
+        json.dump(tenders, file, ensure_ascii=False, indent=4)
 
 def main():
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)  # Change 'headless' to True if you don't want to see the browser
+        browser = p.chromium.launch(headless=True)  # Change to True if you don't want to see the browser
         page = browser.new_page()
-
-        # Navigate to the login page
+        
+        # Navigate to the login page and log in once
         page.goto("https://rostender.info/login")
-
-        # Fill in login details and submit
         page.fill("#username", "i448539")
         page.fill("#password", os.environ.get("rostenderPASSWORD"))
         page.click("[name='login-button']")
-
-        # Wait for successful login (e.g., by checking if a specific element exists after login)
-        page.wait_for_selector(".header-login__name")
         
-        print(page.content())
+        time.sleep(3)  # Sleep/wait for 10 seconds after login click
+        
+        
 
-        page.goto("https://rostender.info/tender/70940564")
-        html = page.content()
+        tenders_to_process = load_tenders_without_docs()
 
-        # Transform
-        bs_transformer = BeautifulSoupTransformer()
-        docs_transformed = bs_transformer.transform_documents(html,tags_to_extract=["a","span"])
+        for tender in tenders_to_process:
+            tenderid = tender["tenderId"]
+            page.goto("https://rostender.info/tender/"+ tenderid)
+            html_content = page.content()
+            with open("tenders/"+ str(tenderid)+".html", "w", encoding="utf-8") as f:
+                f.write(html_content) 
+           
+            file_links_or_titles = get_file_links(html_content)
 
-
-        result = docs_transformed[0].page_content[0:2000000]
-
-        print(result)
-
-        # Close the browser
+            if file_links_or_titles and isinstance(file_links_or_titles[0], tuple):  
+                documentation_links = []
+                for fsid, link in file_links_or_titles:
+                    response = requests.get(link)
+                    file_extension = os.path.splitext(fsid)[-1]
+                    new_file_name = f"tenders/{tenderid}{file_extension}"
+                    documentation_links.append(new_file_name)
+                    with open(new_file_name, "wb") as file:
+                        file.write(response.content)
+                update_tender_json(tenderid, documentation_links)
+            else:
+                print(f"Files not found. Available files: {', '.join(file_links_or_titles)}")
+                update_tender_json(tenderid, "not_found")
+        
         browser.close()
 
 if __name__ == "__main__":
