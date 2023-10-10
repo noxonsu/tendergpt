@@ -1,3 +1,4 @@
 langchain
 beautifulsoup4
 requests
+playwright
