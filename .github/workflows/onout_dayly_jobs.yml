@@ -22,8 +22,8 @@ jobs:
       run: |
         pip install requests
 
-    - name: Run searchtenders.py.py
-      run: python searchtenders.py.py
+    - name: Run searchtenders.py
+      run: python searchtenders.py
 
     - name: Commit and push changes
       run: |
