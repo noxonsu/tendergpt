@@ -2,3 +2,8 @@ langchain
 beautifulsoup4
 requests
 playwright
+docx2txt
+chromadb
+pysqlite3-binary
+tiktoken
+langchainhub
