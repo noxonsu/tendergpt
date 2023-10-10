@@ -22,6 +22,9 @@ jobs:
       run: |
         pip install -r requirements.txt
 
+    - name: Install Playwright Browsers
+      run: playwright install   
+
     - name: Run searchtenders.py r
       run: python searchtenders.py
 
