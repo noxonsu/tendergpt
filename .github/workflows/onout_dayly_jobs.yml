@@ -22,7 +22,7 @@ jobs:
       run: |
         pip install requests
 
-    - name: Run searchtenders.py
+    - name: Run searchtenders.py r
       run: python searchtenders.py
 
     - name: Commit and push changes
