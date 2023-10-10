@@ -26,8 +26,7 @@ pattern = re.compile(r'\((/tender/\d+)\)\s*([\w\s\-]+)')
 # Using a set to track processed tenderIds
 seen_tender_ids = set()
 tenders = []
-
-# Load existing tenders if file exists
+existing_tenders = []
 if os.path.exists("tenders.json"):
     with open("tenders.json", "r", encoding='utf-8') as f:
         existing_tenders = json.load(f)
@@ -52,6 +51,9 @@ for match in matches:
         webhook_url = f"https://noxon.wpmix.net/counter.php?totenders=1&msg={json.dumps(tender_data, ensure_ascii=False)}"
         requests.get(webhook_url)
 
+# Append new tenders to the list of existing tenders
+existing_tenders.extend(tenders)
+
 # Save to JSON
 with open("tenders.json", "w", encoding='utf-8') as f:
-    json.dump(tenders, f, ensure_ascii=False, indent=4)
+    json.dump(existing_tenders, f, ensure_ascii=False, indent=4)
