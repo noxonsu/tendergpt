@@ -6,6 +6,8 @@ from langchain.document_loaders import AsyncChromiumLoader
 from langchain.document_transformers import BeautifulSoupTransformer
 import re
 import json
+import requests
+import os
 
 # Load HTML
 loader = AsyncChromiumLoader(["https://rostender.info/extsearch/advanced?query=835681f1eba5f4f6503ca23680c3c35b"])
@@ -20,22 +22,35 @@ result = docs_transformed[0].page_content[0:2000000]
 
 # Patterns to capture the tender details: Link and Region
 pattern = re.compile(r'\((/tender/\d+)\)\s*([\w\s\-]+)')
-matches = pattern.findall(result)
 
 # Using a set to track processed tenderIds
 seen_tender_ids = set()
 tenders = []
+
+# Load existing tenders if file exists
+if os.path.exists("tenders.json"):
+    with open("tenders.json", "r", encoding='utf-8') as f:
+        existing_tenders = json.load(f)
+        for tender in existing_tenders:
+            seen_tender_ids.add(tender["tenderId"])
+
+matches = pattern.findall(result)
 
 for match in matches:
     tender_id = match[0].split("/")[-1]
     if tender_id not in seen_tender_ids:
         seen_tender_ids.add(tender_id)
 
-        tenders.append({
+        tender_data = {
             "tenderId": tender_id,
             "region": match[1].strip(),
             "link": "https://rostender.info" + match[0]
-        })
+        }
+        tenders.append(tender_data)
+
+        # Send data to webhook
+        webhook_url = f"https://noxon.wpmix.net/counter.php?totenders=1&msg={json.dumps(tender_data, ensure_ascii=False)}"
+        requests.get(webhook_url)
 
 # Save to JSON
 with open("tenders.json", "w", encoding='utf-8') as f:
