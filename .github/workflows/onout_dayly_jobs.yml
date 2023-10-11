@@ -34,7 +34,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: Install Playwright Browsers
-      run: playwright install   
+      run: playwright install chromium   
 
     - name: Run getTenderFiles3.py
       env:
@@ -42,6 +42,8 @@ jobs:
       run: xvfb-run python getTenderFiles3.py
     
     - name: Run docAnaluse_step4.py
+      env:
+        ROSTENDERPASSWORD: ${{ secrets.OPENAI_API_KEY }}
       run: python docAnaluse_step4.py
 
     - name: Commit and push changes
