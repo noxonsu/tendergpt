@@ -100,7 +100,8 @@
         "keyword": "полиэфирное волокно",
         "file-snippet": "... , мм: не менее 48. Тип ворса:полиэфирное волокно, Диаметр бюгеля: не менее 6 мм, Ширина ...",
         "documentationfilepath": "tenders/70993901",
-        "url": "https://rostender.info/tender/70993901"
+        "url": "https://rostender.info/tender/70993901",
+        "gptresult": "https://github.com/noxonsu/tendergpt/raw/main/tenders/70993901"
     },
     {
         "tenderId": "70994346",
@@ -110,7 +111,8 @@
         "keyword": "заменители масла какао",
         "file-snippet": "...  назначения, заменители молочного жира, эквиваленты, улучшители,заменители масла какао10.51 Молоко и молочная продукция 10 ...",
         "documentationfilepath": "tenders/70994346.docx",
-        "url": "https://rostender.info/tender/70994346"
+        "url": "https://rostender.info/tender/70994346",
+        "gptresult": "https://github.com/noxonsu/tendergpt/raw/main/tenders/70994346.docx"
     },
     {
         "tenderId": "70992694",
@@ -170,6 +172,27 @@
         "keyword": "полиэфирного волокна",
         "file-snippet": "...  л Всего по позиции Геотекстиль нетканый изполиэфирного волокна, иглопробивной, поверхностная плотность 300 г/м2 (Автомобильные ...  Всего по позиции Геотекстиль нетканый изполиэфирного волокна, иглопробивной, поверхностная плотность 300 г/м2 ЗТм ...",
         "documentationfilepath": "tenders/71000221.rar",
+        "gptresult": "processing"
+    },
+    {
+        "tenderId": "71002544",
+        "tendername": "Поставка ноутбуков стационарного размещения для организации рабочих мест для нужд филиала АО РусГидро ОЦО - Восток в г. Владивостоке",
+        "documentationfilename": "0004-ТПИР ОНМ ИТ-2023-РГОЦО_Приложение № 9 к ДоЗ - Форма заявки на аккредитацию",
+        "documentationurl": "https://files.rostender.info/?t=3fea236993d95de68705bad9d5715fb8a5bdfddc71d106956ff21b04a00ed2485b5f53bef3589e3e1abf01c18a5e7aa0770495725ef8940cb556f3e79e9a83a1ab53972812053ad2af1aef4f1ee04fb26af1c90e08cc7b6e916962f6bd91d763652fc7397d6c2a75437d3caa4d0f23f366801f16b550aa52d33b8892868acce6d2dc2ffdad9b046958a62398c9dd7c93985d5060c4869373ad046f4211ec8fc8cc88993236dead6898a05b5f4e06bf2996f83902fda4ef21d1a2dcde7334532ccecc69fc356b70dc74a1bb94d6f70a983d77f8b7d93341e1ff309180cb2ae8cd09bb84d037d0398cc11e5431f63aeb99f98a13213497f3cf415ee8af2721e0b54399c3235e331a383c913547273a551c821b0ac1fdd9e68651c44f46a3ab763b41d58c113685ab0b87b529208ea97a2a3e2511ce65e9a8bf545ad3af66b3ff1e2cc5063ba20f53270de3b64d515a7eeacd8982b3c466be2e074749657f1fe59a82d1b07aa4eb793262bd8d58e428d461fd5e89213177156a8bb2fcffa934ef140a803d031bf8f1a2831af5c99394ffa5385b65a3f82e3bdd0e94b0f71a85e7b0f6968b6a3a7df68c001b74e7487e9998647f3c1adb273447827dc454257fe4c37aa607d6c33ac6d81b3986487c1d60bd42e569f6faa5fcec52d534aeb0ecd30628c9af317036155fc8edb79eca5cc52a2671e154505cbce5de89d38b95c380c060bd1f6b48eb42b512a9b0aa38e37bb1398b43b6504050487190a5e7c0f13d96d6f9f3a30aeeb360a41f6cf8513fead7ebb801f58f3ff81fddcbd3bdcd6d4a70bb96ce570ed5622748881e07a822f4e95a0661af6534341c20df1a090fe01d46b49ab197dee529b6f6bc0f79f59a1af4f36ab1262eccd52e5276e8efa3dd48d5d5b9604fa73b691a3c1604f66e7d76d0edb2ca147c6485a2182fffe6af1c8f8570d7b5548d34259049656c526521895cdd01e98a2c18d95c6604ff63ce9ea1b4164a851ed716093d78a7a45422eca3035ca2a1b976dbdedad02d1a005a2653ca9fc561f596062daa081e0b2660662270d9fcb8a5a08bde79fa3666b9530f4583b885beb4ccd398c7999661302e53fc927e2b2884e52b23ce708f9692fdc828b02cbd1392defcb2e508f5c90d32f6f401ff70b9c161f24cc1c917a8827a6bfbf7b355090e34e7cbbdb86094c00058319282c41f459c69f0bd81dab3dc8433011a23f48d9272ee1bf27df6166a7808c469da715ae815bf13d20cb19cfaaf3c1ddaefcaf4796439d135064b9d64019c94a3103fc0db1bd2e5c9fba73b87519c1bba10b6686e1abcdd4c5f9fca03ef23af47adb2c5377c54053674b52a0c22216e15fb11f89e36809822420b22d06c235e38a6d0bfa40d0a4b238a4314dce7bc6009bab94bfd0364f610384d3633ac98a569ceb337bd1cd0b7726371b690d2e6919cd57de14bf8328fe66d51fd2f52898cb3321ad0b3738c0406d4361dabefaa1c73b0bdb0cd94a429f8a0e7536614c0e83a51751fd929ad822328940384e80ea96579a726c02256e7ec9a34190c4e2e9940975cb7f6efad8e8bf0a092980a358626bf9e8bc4e735ce9d2c040188916194408f5c99e7e85265fef655695dceef149ec9325f945628ee422f7b303b58f936c775eaa5f6f7f086d391ac322db5df60b966f88568ab0af632281882d63260cbcd221fd7aa55a2fcfbd44cf811bffb7a17a3c1ec6472527ea35ec998f4a1f89ba21ab509d67cbd1ac2598753240f21cf27798f3952aae555c6b08d10ae5413f3fbb7a9007349d34362e6055114ec570bb417460170674b52d75e7a53e3bc02bc63a04cfc19b0345efdc424036f080c94507ecc1819b4d50a9837fb316961b471e0929e214e57781a5945856d3bdc96ff39a69f62078674eed58884b5a8e7ce35a2a5f240d56320157b5f5bb57ca27a3ca8f5a7045e7109be41bdb1ee46be768f3648ddd0232a7cd55f45cc6bc6d6c7d06fc301dc14453faaa631f77752e238004aa4d8635403f28bac622a9e1bdeeeb85c8e6499afb8a41c80ae933407ebf834ba88bb66276c0aa3f7c485e903742423cb543d72c9b74aa144fe4b55ef20f18c16fe1186b453d97a32dc8dea27a5337d4a7381a7d8e9aaa32d10116efe2b94177fe9eda0967bdd32c5125532514c4511fe7471f4051c8b2c0f1af5ba6e48b77510a3aee950191a8ce06cce6a5ac0a7392850f994cdbbde5839704b1c90c0c5bc2a",
+        "keyword": "заменители масла какао",
+        "file-snippet": "...  назначения, заменители молочного жира, эквиваленты, улучшители,заменители масла какао10.51 Молоко и молочная продукция 10 ...",
+        "documentationfilepath": "tenders/71002544",
+        "gptresult": "https://github.com/noxonsu/tendergpt/raw/main/tenders/71002544",
+        "url": "https://rostender.info/tender/71002544"
+    },
+    {
+        "tenderId": "71002190",
+        "tendername": "Азот пищевой (1-ый сорт) Требования по ГОСТ 9293-74 место поставки: Екатеринбург, Саратов",
+        "documentationfilename": "ТЗ на азот Саратов.xls",
+        "documentationurl": "https://files.rostender.info/?t=3fea236993d95de604e36f2d8fda692039cdbc4a12ad8bcdf78b4140c28ac72e04fd508490c6e053fd08ad1732e25b11b86934cf2884e40e1f00ebdf5fcedaa4d0d42c8ff968d4937367081cb15f80dcf02f543045b4153c431ccccd0940627a9b820c9a65b063c37f987869fbefdd0c377d629048a24b5fc09c5989ddfda005aeb71f5349492f3b88a0714aeb7e95956514981da3d198495bb1e34400a09f4afc76914e374e4d452453e029e2ef6952343bdcdafcc4ec4cca6a252c899e52edf04184ea8ca48f48120449568882bd78544202bdb9cc32b502b669a08445da114b3e75038fd0a55e9af3449896c66a04606339539e22379de82d2babee7e05b6c12962d69d7cf21c719bcd405df69e8b2ea86b6d5b9b703174bf2b48e15032c656bb562042ee875f61d778fb1cd3651478f0f983d9771f531c6f7c702d77ba8ec48b466cd335685aedf237ccae68e522e24da6bd9a2370fedd852c5fc077899009dd0d321133ab63e83394f1fd922ffa52b5df2f79e028b2bed0df8bf79a424667adcc902a7a959690721936a6739bea64b5329919801aad8837c6d35eb692f408c6c47311d78c04b701d89d9352cc849265d7c03d5889cafed9924037cb07452a23d77d6d6924a803ebd890c9e2cec67ad7501962e1acc68f0817cdaafad53e9ecd80b5083b7e8f1979035ad85192100a332f31df65562e76f6cfc0f8e4da793efe3e2cd4cdb2e93315e19267f344a4e2aa29030b40bc8ead5d6b5cee84d0aec87f4f7abcdc90881fbf0236f6dace15e2df80b55f9565a627801e720be038b85b99ce47ffd183ab4c7809ad80b1f5d05f7ea55cbdc053acaaa6fcbb8144671ff50baaadab999f30f20cf0939d30ec651db362b3949109f8ce03c1ef94dc96ef3524d61d10e8c65796cf4ac948eac0f6501a8866b20655ee742e6a8c164d2e84dd09a077eb8e70be28a36fe06b81ab5640da2127e2551a800cf5b945a44f45bd2aea497b66657770e78337c1e3f847c73b1eb32799717ff4d03336962fdd422277b46759abb88ee1ff2824a2b05305a8fd2fbd9d583d67b3bc0b0a444b99d3412c2b1cbd7d07139b4bfe32360e93495ab9d5d697a4dbebfe6f8376879d7cdaeba3c05ff2d7f7e96d53496a3f0901e38204c8abb6aca4512de8e0dbf7c634f9919c214c2572633076613abcd8ce15e5ce",
+        "keyword": "Пальмовое масло",
+        "file-snippet": "... кг 932,089.792Пальмовое масломягкая фракция отбеленное  ... .000Масло пальмовоеотбеленное дезодорированное 1 кг 7,803,616.900Масло пальмовоераф ...Масло пальмовоерафинированное дезодорированное отбеленное (повтор). кг 3,771,326.000Масло пальмовое...",
+        "documentationfilepath": "tenders/71002190.xls",
         "gptresult": "processing"
     }
 ]
