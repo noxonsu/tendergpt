@@ -10,13 +10,12 @@ import requests
 import os
 
 # Load HTML
-loader = AsyncChromiumLoader(["https://rostender.info/extsearch/advanced?query=835681f1eba5f4f6503ca23680c3c35b"])
+loader = AsyncChromiumLoader(["https://rostender.info/extsearch/advanced?query=e9ac7cfa7191307db492aaf70b1b5cf6"])
 html = loader.load()
 
 # Transform
 bs_transformer = BeautifulSoupTransformer()
 docs_transformed = bs_transformer.transform_documents(html,tags_to_extract=["a","span"])
-
 
 result = docs_transformed[0].page_content[0:2000000]
 
@@ -27,6 +26,7 @@ pattern = re.compile(r'\((/tender/\d+)\)\s*([\w\s\-]+)')
 seen_tender_ids = set()
 tenders = []
 existing_tenders = []
+
 if os.path.exists("tenders.json"):
     with open("tenders.json", "r", encoding='utf-8') as f:
         existing_tenders = json.load(f)
@@ -57,3 +57,8 @@ existing_tenders.extend(tenders)
 # Save to JSON
 with open("tenders.json", "w", encoding='utf-8') as f:
     json.dump(existing_tenders, f, ensure_ascii=False, indent=4)
+
+# Display the count of new tenders found
+print(f"Total new tenders found: {len(tenders)}")
+for tender in tenders:
+    print(f"Tender ID: {tender['tenderId']}, Region: {tender['region']}, Link: {tender['link']}")

@@ -80,5 +80,17 @@
         "region": "Магаданская область",
         "link": "https://rostender.info/tender/30576661892",
         "documentation": "not_found"
+    },
+    {
+        "tenderId": "30576752928",
+        "region": "Московская область",
+        "link": "https://rostender.info/tender/30576752928",
+        "documentation": "not_found"
+    },
+    {
+        "tenderId": "30576752059",
+        "region": "Москва город",
+        "link": "https://rostender.info/tender/30576752059",
+        "documentation": "not_found"
     }
 ]
