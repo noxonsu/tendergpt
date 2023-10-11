@@ -105,8 +105,10 @@ def main():
             response = requests.get(current_data['documentationurl'])
             
             #write documentationurl to tenderid.md
-            with open(f"tenders/{tenderid}.md", "wb") as file:
-                file.write(current_data['documentationurl'])
+            #TypeError: a bytes-like object is required, not 'str'
+            with open('tenders/'+tenderid+'.md', "wb") as file:
+                file.write(current_data['documentationurl'].encode('utf-8'))
+
                 
             with open(new_file_path, "wb") as file:
                 file.write(response.content)
