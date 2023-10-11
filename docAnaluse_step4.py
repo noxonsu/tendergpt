@@ -42,10 +42,11 @@ from langchain.chat_models import ChatOpenAI
 llm = ChatOpenAI(model_name="gpt-4", temperature=0)
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.schema.runnable import RunnablePassthrough
-
+any_tender_to_process = False
 for idx, tender in enumerate(tenders):
     if 'gptresult' not in tender:
         tenders[idx]['gptresult'] = "processing"
+        any_tender_to_process = True 
         # Save the updated tenders list back to the tenders.json file
         with open('tenders.json', 'w', encoding='utf-8') as f:
             json.dump(tenders, f, ensure_ascii=False, indent=4)
@@ -88,6 +89,9 @@ for idx, tender in enumerate(tenders):
             response = requests.post(webhook_url)
             if response.status_code != 200:
                 print(f"Failed to send webhook for tender at index {idx}. Status code: {response.status_code}")
+# If there's no tender to process, print a message
+if not any_tender_to_process:
+    print("All tenders have been queried. Nothing to analyze.")
 
 # Save the updated tenders list back to the tenders.json file
 with open('tenders.json', 'w', encoding='utf-8') as f:

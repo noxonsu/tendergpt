@@ -11,3 +11,4 @@ pyunpack
 patool
 unstructured[xlsx]
 unstructured[doc]
+pysqlite3
