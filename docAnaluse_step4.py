@@ -82,7 +82,7 @@ for idx, tender in enumerate(tenders):
         tenders[idx]['gptresult'] = gptresult.content
         tenders[idx]['url'] = 'https://rostender.info/tender/' + tender['tenderId']
         tenders[idx]['gptresult'] = 'https://github.com/noxonsu/tendergpt/raw/main/'+tender['documentationfilepath']
-        if "Нет упоминания" not in gptresult:
+        if "Нет упоминания" not in gptresult.content:
             # Construct the webhook URL with the tender data
             tender_data_json = json.dumps(tender, ensure_ascii=False)
             webhook_url = f"https://noxon.wpmix.net/counter.php?totenders=1&msg={tender_data_json}"
@@ -91,6 +91,8 @@ for idx, tender in enumerate(tenders):
             response = requests.post(webhook_url)
             if response.status_code != 200:
                 print(f"Failed to send webhook for tender at index {idx}. Status code: {response.status_code}")
+
+
 # If there's no tender to process, print a message
 if not any_tender_to_process:
     print("All tenders have been queried. Nothing to analyze.")
