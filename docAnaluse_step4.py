@@ -6,9 +6,21 @@ from langchain.document_loaders import Docx2txtLoader
 __import__('pysqlite3')
 import sys
 
+#load file tenders.json into tenders
+import json 
+with open('tenders.json', 'r', encoding='utf-8') as f:
+    tenders = json.load(f)
+
+#find tender with tenderId = 70987947
+for tender in tenders:
+    if tender['tenderId'] == '70987947':
+        tender = tender
+        break
+
+
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
-# Load the document, split it into chunks, embed each chunk and load it into the vector store.
-loader = Docx2txtLoader("70887730_test_positive.docx")
+# Load the document, from tender documentationfilepath 
+loader = Docx2txtLoader(tender['documentationfilepath'])
 
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
@@ -42,4 +54,4 @@ rag_chain = (
     | llm 
 )
 
-print(rag_chain.invoke("Мы поставляем Ксантоновая камедь, полиэфирное волокно, гуаровая камедь, диоксид титана, пальмовое масло, кокосовое масло, защищённый жир, заменитель какао масла. Проанализируй документ и найди что и в каком объеме (из того, что мы поставляем) им нужно и куда его поставить? Перечисли позиции и объем"))
+print(rag_chain.invoke("Мы поставляем кокосовое масло. Проанализируй документ и найди что и в каком объеме (из того, что мы поставляем) им нужно и куда его поставить? Перечисли позиции и объем"))
