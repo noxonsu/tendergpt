@@ -58,7 +58,10 @@
     {
         "tenderId": "70887730",
         "region": "Приморский край",
-        "link": "https://rostender.info/tender/70887730"
+        "link": "https://rostender.info/tender/70887730",
+        "documentation": [
+            "tenders/70887730.docx"
+        ]
     },
     {
         "tenderId": "30576662738",
