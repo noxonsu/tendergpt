@@ -66,7 +66,6 @@ for idx, tender in enumerate(tenders):
         loader = loader_cls(tender['documentationfilepath'])
 
         # remove file tender['documentationfilepath']
-        os.remove(tender['documentationfilepath'])
         
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
         splits = text_splitter.split_documents(loader.load())
@@ -82,6 +81,8 @@ for idx, tender in enumerate(tenders):
         
         gptresult = rag_chain.invoke("Есть ли упоминание " + keyword + "? Если да, то нужно ли им поставлять это вещество и в каком объеме? Так же если документе есть адрес (куда поставить) выведи его. Если не упоминается, то выведи 'Нет упоминания'")
         print(gptresult)
+
+        os.remove(tender['documentationfilepath'])
         
         tenders[idx]['gptresult'] = gptresult.content
         tenders[idx]['url'] = 'https://rostender.info/tender/' + tender['tenderId']
