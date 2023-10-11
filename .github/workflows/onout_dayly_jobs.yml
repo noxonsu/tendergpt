@@ -25,10 +25,10 @@ jobs:
         else
           echo "ROSTENDERPASSWORD is set!"
         fi
-    - name: Install XVFB
+    - name: Install XVFB and other libs
       run: |
         sudo apt-get update
-        sudo apt-get install -y xvfb
+        sudo apt-get install -y xvfb unrar p7zip-full
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
@@ -36,13 +36,14 @@ jobs:
     - name: Install Playwright Browsers
       run: playwright install   
 
-    #- name: Run searchtenders.py 
-    #  run: python searchtenders.py
-
-    - name: Run getTenderFiles2.py
+    - name: Run getTenderFiles3.py
       env:
         ROSTENDERPASSWORD: ${{ secrets.ROSTENDERPASSWORD }}
-      run: xvfb-run python getTenderFiles2.py
+      run: xvfb-run python getTenderFiles3.py
+    
+    - name: Run docAnaluse_step4.py
+      run: python docAnaluse_step4.py
+
     - name: Commit and push changes
       run: |
         git config --global user.name "GitHub Action"

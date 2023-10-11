@@ -79,7 +79,7 @@ for idx, tender in enumerate(tenders):
         tenders[idx]['gptresult'] = gptresult.content
         tenders[idx]['url'] = 'https://rostender.info/tender/' + tender['tenderId']
 
-        if "нет упоминания" not in gptresult:
+        if "Нет упоминания" not in gptresult:
             # Construct the webhook URL with the tender data
             tender_data_json = json.dumps(tender, ensure_ascii=False)
             webhook_url = f"https://noxon.wpmix.net/counter.php?totenders=1&msg={tender_data_json}"

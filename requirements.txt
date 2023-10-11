@@ -9,3 +9,5 @@ langchainhub
 unstructured
 pyunpack
 patool
+unstructured[xlsx]
+unstructured[doc]
