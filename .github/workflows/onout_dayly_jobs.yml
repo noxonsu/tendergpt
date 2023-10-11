@@ -19,7 +19,7 @@ jobs:
         python-version: '3.x'
     - name: Check if ROSTENDERPASSWORD is set
       run: |
-        if [ -z "${{ secrets.ROSTENDERPASSWORD }}" ]; then
+        if [ -z "${ROSTENDERPASSWORD}" ]; then
           echo "ROSTENDERPASSWORD is not set!"
           exit 1
         else
