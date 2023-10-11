@@ -32,16 +32,16 @@ def main():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)  # Change to True if you don't want to see the browser
 
-        password = os.environ.get("rostenderPASSWORD")
+        password = os.environ.get("ROSTENDERPASSWORD")
         if not password:
-            raise ValueError("Environment variable 'rostenderPASSWORD' is not set!")
+            raise ValueError("Environment variable 'ROSTENDERPASSWORD' is not set!")
 
         page = browser.new_page()
         
         # Navigate to the login page and log in once
         page.goto("https://rostender.info/login")
         page.fill("#username", "i448539")
-        page.fill("#password", os.environ.get("rostenderPASSWORD"))
+        page.fill("#password", os.environ.get("ROSTENDERPASSWORD"))
         page.click("[name='login-button']")
         
         time.sleep(2)  # Sleep/wait for 2 seconds after login click
