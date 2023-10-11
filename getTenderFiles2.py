@@ -42,29 +42,34 @@ def main():
         page.goto("https://rostender.info/login")
         page.fill("#username", "i448539")
         page.fill("#password", os.environ.get("rostenderPASSWORD"))
-        
-        
         page.click("[name='login-button']")
         
-        time.sleep(2)  # Sleep/wait for 10 seconds after login click
+        time.sleep(2)  # Sleep/wait for 2 seconds after login click
         html_content = page.content()
         page.screenshot(path='screenshotAfterLogin.png')
         with open("after_login.html", "w", encoding="utf-8") as f:
             f.write(html_content) 
         
-
         tenders_to_process = load_tenders_without_docs()
+
+        # Check if there are new tenders without documentation
+        if not tenders_to_process:
+            print("No new tenders without documentation found.")
+            browser.close()
+            return  # Exit the function if no tenders to process
+
+        processed_tenders_count = 0  # Counter to keep track of processed tenders
 
         for tender in tenders_to_process:
             tenderid = tender["tenderId"]
-            page.goto("https://rostender.info/tender/"+ tenderid)
+            page.goto("https://rostender.info/tender/" + tenderid)
             html_content = page.content()
-            with open("tenders/"+ str(tenderid)+".html", "w", encoding="utf-8") as f:
+            with open("tenders/" + str(tenderid) + ".html", "w", encoding="utf-8") as f:
                 f.write(html_content) 
-           
+
             file_links_or_titles = get_file_links(html_content)
 
-            if file_links_or_titles and isinstance(file_links_or_titles[0], tuple):  
+            if file_links_or_titles and isinstance(file_links_or_titles[0], tuple):
                 documentation_links = []
                 for fsid, link in file_links_or_titles:
                     response = requests.get(link)
@@ -75,10 +80,15 @@ def main():
                         file.write(response.content)
                 update_tender_json(tenderid, documentation_links)
             else:
-                print(f"Files not found. Available files: {', '.join(file_links_or_titles)}")
+                print(f"For tender {tenderid}: 'Извещение' file not found. Available files: {', '.join(file_links_or_titles)}")
                 update_tender_json(tenderid, "not_found")
-        
+            
+            processed_tenders_count += 1  # Increment the counter after processing each tender
+
+        print(f"Total tenders processed: {processed_tenders_count}")
+
         browser.close()
 
 if __name__ == "__main__":
     main()
+

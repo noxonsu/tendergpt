@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ru-RU" class="device-desktop safari chrome rt"><head><script type="text/javascript" async="" id="tmr-code" src="https://top-fwz1.mail.ru/js/code.js"></script><script async="" src="https://mc.yandex.ru/metrika/tag.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-J0N9RPSLL3&amp;l=dataLayer&amp;cx=c"></script><script>var nrm='GET'; var prmb='b2fd10ffd16c303f71c388d7a267429a';</script>
+<!DOCTYPE html><html lang="ru-RU" class="device-desktop safari chrome rt"><head><script type="text/javascript" async="" id="tmr-code" src="https://top-fwz1.mail.ru/js/code.js"></script><script async="" src="https://mc.yandex.ru/metrika/tag.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-J0N9RPSLL3&amp;l=dataLayer&amp;cx=c"></script><script>var nrm='GET'; var prmb='';</script>
         <meta charset="UTF-8">
 
                     <meta name="viewport" content="width=device-width">
@@ -33,7 +33,7 @@
             window.project = 1;
 
             // Хеш клиента `clientid`
-            window.clientid = "eda481a9800cb5cda3909d724aa95539";
+            window.clientid = "8b84d26f5b9258ed054d0de919950944";
 
             var offsetCookieDate = new Date();
 
@@ -109,14 +109,14 @@
                         
                         var url = "https://rostender.info/tender/70887730",
                             ClientIP = '74.234.212.88',
-                            ClientID = 'eda481a9800cb5cda3909d724aa95539',
+                            ClientID = '8b84d26f5b9258ed054d0de919950944',
                             ServerIP = '127.0.0.1',
-                            MessageDigest = 'e71094ab96a6858bc8f0bcbc2c550ad8',
+                            MessageDigest = 'Undefined',
                             Staff = 'Not authorized',
-                            Account = '848474',
-                            RequestID = '45d00c052b90f7a94b972b5a0a77c931',
+                            Account = 'Not authorized',
+                            RequestID = '218a08e9a8a912b0e88e2aab53303a5f',
                             UserAgent = window.navigator.userAgent,
-                            TS = '2023-10-11 18:38:52';
+                            TS = '2023-10-11 18:48:59';
 
                         fetch("https://hooks.slack.com/services/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", {
                             method: "post",
@@ -186,190 +186,7 @@
                 </script>
             
         
-        
-    <script src="//code.jivo.ru/widget/dzdJjIY2rA" async=""></script>
-
-<script>
-    var userTokenId = '848474';
-    var widgetState = 'on';
-    var departmentTimderId = null;
-
-    // customJivoChat
-    window.customJivoChat = {};
-    var init = function (widgetState, callback) {
-        var btn = $("#custom_jivo_toggle");
-        var jDiv = $("body > jdiv");
-
-        if (jDiv.length == 0) {
-            btn.remove();
-            return;
-        }
-
-
-        var customJivoApplyToggle = function (newState) {
-            newState = newState || btn.attr('data-state');
-            btn.attr('data-state', newState);
-
-            if (newState == 'on') {
-                jDiv.css('display', 'inline');
-                jDiv.click();
-                btn.attr('title', 'Не показывать онлайн чат');
-
-                $.ajax({
-                    url: '/yiiajax/widget-hide-jivo-chat',
-                    method: 'post',
-                    dataType: 'json',
-                    data: {
-                        'stateWidget': 'on'
-                    },
-                    success: function(data){
-                        console.log("success");
-                    }
-                });
-            } else if(newState == 'off') {
-                jDiv.css('display', 'none');
-                btn.attr('title', 'Показывать онлайн чат');
-                changePosition('label');
-
-                $.ajax({
-                    url: '/yiiajax/widget-hide-jivo-chat',
-                    method: 'post',
-                    dataType: 'json',
-                    data: {
-                        'stateWidget': 'off'
-                    },
-                    success: function(data){
-                        console.log("success2");
-                    }
-                });
-            }
-        }
-
-        var changePosition = function (newState) {
-
-            if (newState == 'chat' || newState == 'departments') {
-                btn.addClass('move');
-                return;
-            }
-
-            if (newState == 'label' || newState == 'chat/min') {
-                // widget is minimized
-                btn.removeClass('move');
-                return;
-            }
-
-            if (newState == 'call' || newState == 'chat/call') {
-                // callback form is opened
-                return;
-            }
-        }
-
-        $("#custom_jivo_toggle").on("click", function (e) {
-            e.preventDefault();
-            customJivoApplyToggle(btn.attr('data-state') == 'on' ? 'off' : 'on');
-        });
-
-        window.customJivoChat.changePosition = changePosition;
-
-        btn.css('display', 'block');
-        customJivoApplyToggle(widgetState);
-        callback();
-    };
-    window.customJivoChat.init = init;
-
-    var tryAutoChooseDepartment = function(department, type) {
-        var jDiv = document.querySelector('body > jdiv');
-
-        if( !jDiv ) {
-            return;
-        }
-
-        var departmentList = jDiv.querySelectorAll('[class^=department_]');
-
-        if( !departmentList.length ) {
-
-            if (type == 'open') {
-                setTimeout(function () {
-                    tryAutoChooseDepartment(department , type);
-                }, 100)
-            }
-
-            return;
-        }
-
-        departmentList.forEach(
-            function( element, index, list ) {
-                var textDepartment = element.textContent.trim();
-
-                if( department == 'op' && (textDepartment == 'ОП' || textDepartment == 'Отдел по работе с новыми клиентами') ) {
-                    clearInterval(departmentTimderId);
-                    element.click();
-                    return;
-                }
-
-                if( department == 'ork' && (textDepartment == 'ОРК' || textDepartment == 'У меня есть договор') ) {
-                    clearInterval(departmentTimderId);
-                    element.click();
-                    return;
-                }
-            }
-        );
-    };
-
-    function jivo_onLoadCallback() {
-
-        
-        window.customJivoChat.init(widgetState, function () {
-            if (userTokenId != '0') {
-                jivo_api.setUserToken(userTokenId);
-            }
-
-            var jivoMobileButton = document.querySelector('.__jivoMobileButton');
-            if(document.documentElement.className.indexOf('device-mobile') !==- 1) {
-                // Observe a specific DOM element:
-                observeDOM( jivoMobileButton, function(m){
-                    var addedNodes = [], removedNodes = [];
-
-                    m.forEach(record => record.addedNodes.length & addedNodes.push(...record.addedNodes))
-
-                    m.forEach(record => record.removedNodes.length & removedNodes.push(...record.removedNodes))
-
-                    addedNodes.forEach(function (item) {
-                        if(item.className.indexOf('popup') !== -1) {
-                            jivoMobileButton.classList.add('active_popup');
-                        }
-                    })
-
-                    removedNodes.forEach(function (item) {
-                        if(item.className.indexOf('popup') !== -1) {
-                            jivoMobileButton.classList.remove('active_popup');
-                        }
-                    })
-                });
-            }
-        });
-    };
-
-    function jivo_onChangeState(state) {
-
-        window.customJivoChat.changePosition(state);
-
-        if( departmentTimderId ) {
-            clearInterval(departmentTimderId);
-            departmentTimderId = null;
-        }
-
-        if( state == 'departments' ) {
-            departmentTimderId = setInterval(tryAutoChooseDepartment, 100, 'op', 'change');
-        }
-    }
-
-    function jivo_onOpen() {
-
-        tryAutoChooseDepartment('op', 'open');
-    }
-</script>
-        <meta name="description" content="Тендер на поставку фракционного защищенного жира 99% для производства комбикорма для КРС. ООО &quot;ХАПК &quot;ГринАгро&quot;. 70887730">
+                <meta name="description" content="Тендер на поставку фракционного защищенного жира 99% для производства комбикорма для КРС. ООО &quot;ХАПК &quot;ГринАгро&quot;. 70887730">
 <link type="font/woff" href="/static/72d80354/fonts/fontawesome-webfont.woff?v=4.7.0" rel="prefetch" as="font" crossorigin="anonymous">
 <link type="font/woff2" href="/static/72d80354/fonts/fontawesome-webfont.woff2?v=4.7.0" rel="prefetch" as="font" crossorigin="anonymous">
 <link type="font/ttf" href="/static/72d80354/fonts/fontawesome-webfont.ttf?v=4.7.0" rel="prefetch" as="font" crossorigin="anonymous">
@@ -396,13 +213,6 @@
 <link href="/static/70354742/less/tender/rt/table-positions.min.css" rel="stylesheet">
 <link href="/static/70354742/less/analytics/rt/sort.min.css" rel="stylesheet">
 <link href="/static/70354742/less/tender/rt/table-positions-mobile.min.css" rel="stylesheet">
-<link href="/static/f48796db/less/rt/tags.min.css" rel="stylesheet">
-<link href="/static/70354742/libraries/switcher/rt/switcher.min.css" rel="stylesheet">
-<link href="/static/137a01d1/modules/oxide/src/less/skins/ui/default/rt/skin.min.css" rel="stylesheet">
-<link href="/static/137a01d1/modules/oxide/src/less/skins/ui/default/rt/content.min.css" rel="stylesheet">
-<link href="/static/70354742/libraries/ftag/rt/ftag.min.css" rel="stylesheet">
-<link href="/static/23d8f6c5/less/rt/comments.min.css" rel="stylesheet">
-<link href="/static/70354742/less/rt/archive-button.min.css" rel="stylesheet">
 <link href="/static/f7c7b493/less/rt/social.min.css" rel="stylesheet">
 <link href="/static/70354742/less/rt/fonts.min.css" rel="stylesheet">
 <link href="/static/70354742/less/rt/bootstrap3/bs3.min.css" rel="stylesheet">
@@ -413,14 +223,6 @@
 <link href="/static/70354742/less/rt/media.min.css" rel="stylesheet">
 <link href="/static/70354742/less/rt/s_v2.min.css" rel="stylesheet">
 <link href="/static/70354742/less/rt/main.min.css" rel="stylesheet">
-<link href="/static/dc67fa38/less/rt/jivo_fix.min.css" rel="stylesheet">
-<link href="/static/70354742/libraries/modals-widget/rt/modals-widget.min.css" rel="stylesheet">
-<link href="/static/918c14fc/less/rt/websocket.css" rel="stylesheet">
-<link href="/static/4963c69/less/rt/sidebar.min.css" rel="stylesheet">
-<link href="/static/70354742/libraries/mCustomScrollbar/rt/jquery.mCustomScrollbar.min.css" rel="stylesheet">
-<link href="/static/89f930eb/less/rt/search-list.min.css" rel="stylesheet">
-<link href="/static/2445d04d/less/rt/modal.min.css" rel="stylesheet">
-<link href="/static/339d3608/less/rt/tags-list.min.css" rel="stylesheet">
 <link href="/static/82e96200/less/rt/header.min.css" rel="stylesheet">
 <link href="/static/2fca7099/less/rt/input-search.min.css" rel="stylesheet">
 <link href="/static/7f9f7b47/less/rt/footer.min.css" rel="stylesheet">
@@ -429,550 +231,19 @@
     .icon:after,.sprite-checkbox input+label:after,.sprite-pseudo:after,.icon:before,.sprite-pseudo:before{background-image:url('/static/70354742/img/sprite_rt.svg')}.ui-icon,.ui-widget-content .ui-icon{background-image:url("/static/70354742/img/ui-icons_cc0000_256x240.png")}.ui-widget-header .ui-icon{background-image:url("/static/70354742/img/ui-icons_ffffff_256x240.png")}.ui-state-default .ui-icon{background-image:url("/static/70354742/img/ui-icons_cc0000_256x240.png")}.ui-state-hover .ui-icon,.ui-state-focus .ui-icon{background-image:url("/static/70354742/img/ui-icons_cc0000_256x240.png")}.ui-state-active .ui-icon{background-image:url("/static/70354742/img/ui-icons_cc0000_256x240.png")}.ui-state-highlight .ui-icon{background-image:url("/static/70354742/img/ui-icons_004276_256x240.png")}.ui-state-error .ui-icon,.ui-state-error-text .ui-icon{background-image:url("/static/70354742/img/ui-icons_cc0000_256x240.png")}.ui-widget-overlay{background:#a6a6a6 url("/static/70354742/img/ui-bg_dots-small_65_a6a6a6_2x2.png") 50% 50% repeat}.ui-widget-shadow{background:#333 url("/static/70354742/img/ui-bg_flat_0_333333_40x100.png") 50% 50% repeat-x}.ui-dialog-titlebar-close:after{background-image:url('/static/70354742/img/icons/ui-icons_cd0a0a_256x240.png')}.ui-state-highlight,.ui-widget-content .ui-state-highlight,.ui-widget-header .ui-state-highlight{background:#fbf8ee url("/static/70354742/img/ui-bg_glass_55_fbf8ee_1x400.png") 50% 50% repeat-x}.ui-state-error,.ui-widget-content .ui-state-error,.ui-widget-header .ui-state-error{background:#f3d8d8 url("/static/70354742/img/ui-bg_diagonals-thick_75_f3d8d8_40x40.png") 50% 50% repeat}.ui-datepicker-header.ui-widget-header{background:#c00 url("/static/70354742/img/ui-bg_highlight-soft_15_cc0000_1x100.png") 50% 50% repeat-x}#profile-mailing-form .mail-groups .ms-container,#tariff-block .mail-groups .ms-container{background:url('/static/70354742/img/switch.png') no-repeat 50% 50%}.ui-state-active,.ui-widget-content .ui-state-active,.ui-widget-header .ui-state-active{background:#fff url("/static/70354742/img/ui-bg_flat_65_ffffff_40x100.png") 50% 50% repeat-x}.tender-header-socials-block .b-share-icon_vkontakte{background:#4a76a8 url('/static/70354742/img/icons/vk-logo.svg') no-repeat center}.tender-header-socials-block .b-share-icon_custom{background:#4a76a8 url('/static/70354742/img/icons/vk-logo.svg') no-repeat center}.tender-header-socials-block .b-share-icon_twitter{background:#46abe1 url('/static/70354742/img/icons/twitter-logo.svg') no-repeat center}.tender-header-socials-block .b-share-icon_facebook{background:#4a76a8 url('/static/70354742/img/icons/fb-logo.png') no-repeat center}.kv-plugin-loading{background:transparent url(/static/70354742/img/loading-plugin.gif) center left no-repeat}.kv-center-loading{background:transparent url("/static/70354742/img/loading-plugin.gif") center center no-repeat}
 </style>
 
-    <meta http-equiv="origin-trial" content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><script type="text/javascript" async="" charset="UTF-8" class="js-jivo-bundle" src="https://code.jivo.ru/js/bundle_ru_RU.js?rand=1696934168"></script></head>
-    <body class="tender-page page-with-sidebar open-sidebar scrolled-bottom is-logged">
+    <meta http-equiv="origin-trial" content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"></head>
+    <body class="tender-page scrolled-bottom">
 
         
         
         
-    <script>var wsUrl = "wss://websocket.rostender.info:8010?to=e71094ab96a6858bc8f0bcbc2c550ad8";</script>
-
-    
-        <div class="websocket-widget websocket-widget__signal" id="websocketWidget">
-            <div id="websocketWidgetSignal" class="hidden"></div>
-        </div>
-
-    
-
-        
-                            <div class="content-withSidebar">
-            
-            
-
-    
-        <aside style="padding: 9rem 0rem 6rem; opacity: 1;" class="s-panel s-panel--forTest active"> 
-        <div class="s-panel--scroll"><div class="s-panel__inner">
-
-            <a class="s-panel__item  " data-title="Все&nbsp;тендеры" data-tippy-placement="right" href="/extsearch">
-                <div class="s-panel__item-wrap ">
-                    <div class="s-panel__item-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" class="svg svg-all-tender" viewBox="0 0 16 16"><path fill="#464A53" fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v6H0V1Zm5 1h6v2H5V2ZM0 9h16v6a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V9Zm5 2h6v2H5v-2Z" clip-rule="evenodd"></path></svg>
-</div>
-                    <div class="s-panel__item-text"><span>Все&nbsp;тендеры</span></div>
-                </div>
-            </a>
-            <div class="s-panel__divider"></div>
-
-		
-            <a class="s-panel__item  " data-title="Мои&nbsp;тендеры" data-tippy-placement="right" href="/cabinet">
-
-                <div class="s-panel__item-wrap ">
-                    <div class="s-panel__item-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" class="svg svg-my-tenders" viewBox="0 0 16 16"><path fill="#464A53" fill-rule="evenodd" d="M1 0a1 1 0 0 0-1 1v3h16V1a1 1 0 0 0-1-1H1Zm0 6h14v9a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6Zm4 3h6v2H5V9Z" clip-rule="evenodd"></path></svg></div>
-                    <div class="s-panel__item-text"><span>Мои&nbsp;тендеры</span></div>
-                </div>
-
-            </a>
-
-            <div class="s-panel__divider"></div>
-
-            <div class="s-panel__item s-panel__item--template flex-column align-items-start  ">
-                <div class="s-panel__item-submenu">
-                    <div class="s-panel__item-wrap " data-toggle="collapse" data-target="#SPanelCollapseTemplate" aria-expanded="false" aria-controls="SPanelCollapseTemplate">
-                        <div class="s-panel__item-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" class="svg svg-my-template" viewBox="0 0 18 15"><path fill="#464A53" d="M7.293.293A1 1 0 0 0 6.586 0H1a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h14.22a1 1 0 0 0 .97-.758l1.655-6.62A.5.5 0 0 0 17.36 7h-13a.5.5 0 0 0-.474.342L2 13V5h15V3a1 1 0 0 0-1-1H9L7.293.293Z"></path></svg></div>
-                        <div class="s-panel__item-text"><span>Мои&nbsp;шаблоны&nbsp;(<span class="search-list__count">2</span>)</span></div>
-                        <div class="arrow-top-collapsed"></div>
-                    </div>
-                    <div class="collapse w100 " id="SPanelCollapseTemplate">
-                        <div class="card card-body s-panel__my-template">
-							<script>
-	var templateList = {"1228682":{"id":1228682,"valid":1,"name":"Простые тендеры для начинающих","mailing":{"daily":{"active":0,"cantEnable":0},"fast":{"active":0,"cantEnable":1},"telegram":{"active":0,"cantEnable":0}}},"1228681":{"id":1228681,"valid":1,"name":"Короткие тендеры","mailing":{"daily":{"active":0,"cantEnable":0},"fast":{"active":0,"cantEnable":1},"telegram":{"active":0,"cantEnable":0}}}};
-</script>
-
-<div class="search-module search-list-widget ">
-
-    <div class="list-group  client-query-list ">
-
-        <div class="list-group-item list-group-item-info " style="">
-                             <div class="client-query-post-header text-center" data-title="" data-tippy-placement="right" data-tippy-delay="200">
-                             Мои шаблоны (<span class="search-list__count">2</span>)
-                             </div>
-                             
-                         </div>
-        <div class="list-group__techblock    ">
-
-            <div>
-                
-                    <a href="/profile/mailing" class="list-group__setting d-flex align-items-center  justify-content-between  py-4 px-4 mb-0">
-                        <div class=" d-flex align-items-center pt-0 ">
-                            <div class="list-group__setting-prepend"><svg xmlns="http://www.w3.org/2000/svg" fill="none" class="svg svg-setting" viewBox="0 0 16 16"><path fill="#7B7D87" fill-rule="evenodd" d="M7.23 0h1.56l.2.03.18.04c.4.12.6.33.96 1.18l.16.38.16.4.38-.17a3.8 3.8 0 0 1 1.39-.43c.28 0 .56.1.78.27l.1.1 1.06 1.04.15.17c.29.33.35.6.15 1.22l-.11.32-.15.38-.24.58.59.23c.91.35 1.19.54 1.33.91l.03.07.05.16.04.23v1.6c0 .12 0 .2-.04.32-.12.51-.27.7-1.22 1.1l-.2.09-.57.23.18.4c.55 1.23.6 1.58.27 2.02l-.05.06-.13.14-1.08 1.09c-.24.24-.57.37-.9.37-.17 0-.39-.05-.69-.15l-.16-.06-.37-.14-.55-.23-.16.42c-.41 1.08-.6 1.37-1 1.52l-.07.03-.16.04-.21.04H7.2l-.2-.03c-.47-.1-.67-.22-1-.9l-.07-.15-.15-.37-.24-.58-.39.17a3.8 3.8 0 0 1-1.38.43c-.28 0-.56-.1-.78-.27l-.1-.1-1.1-1.08c-.4-.43-.5-.67-.22-1.5l.07-.17.14-.37.25-.6-.4-.15C.56 9.93.26 9.74.1 9.34L.1 9.27l-.05-.16A1.06 1.06 0 0 1 0 8.9v-1.6c0-.13 0-.2.04-.33.1-.44.23-.64.9-.95l.15-.08.36-.15.58-.23-.18-.4c-.6-1.36-.6-1.68-.12-2.2l.07-.06 1.05-1.05c.23-.24.56-.37.89-.37.2 0 .46.07.85.2l.18.07.36.15.39.16.22-.6C6.11.5 6.31.22 6.7.08l.08-.02.16-.04.19-.03h1.66-1.56Zm1.04 2h-.59l-.08.22-.11.26-.3.79a1 1 0 0 1-.44.52l-.1.05L6 4.1a1 1 0 0 1-.65.04l-.13-.04-.66-.28-.33-.13-.3-.12-.4.41.2.48.34.76a1 1 0 0 1 .06.67l-.04.13-.26.63a1 1 0 0 1-.45.5l-.1.05-.8.32-.28.11-.21.1v.6l.1.03.38.15.78.3a1 1 0 0 1 .53.44l.05.11.26.63c.1.21.1.44.04.66l-.04.12-.34.8-.2.48.42.42.26-.11.5-.22.46-.22a1 1 0 0 1 .7-.06l.12.04.64.27a1 1 0 0 1 .5.46l.05.1.31.78.21.49h.59l.09-.21.1-.27.3-.79a1 1 0 0 1 .44-.52l.1-.05.65-.26a1 1 0 0 1 .64-.05l.12.05.49.2.51.21.3.12.41-.41-.04-.1-.23-.53-.28-.61a1 1 0 0 1-.06-.67l.04-.13.26-.63a1 1 0 0 1 .45-.5l.1-.05.8-.32.49-.2v-.6l-.1-.04-.38-.15-.78-.3a1 1 0 0 1-.53-.44l-.06-.11L11.9 6a1 1 0 0 1-.03-.65l.04-.12.34-.8.2-.48-.42-.42-.12.05-.46.2-.66.3a1 1 0 0 1-.67.06l-.13-.04-.64-.26a1 1 0 0 1-.5-.46l-.05-.1-.25-.64-.18-.42-.1-.22ZM8 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4Z" clip-rule="evenodd"></path></svg></div>
-                            <div class="list-group__setting-text">Настроить рассылки</div>
-                        </div>
-
-                        <div class="list-group__setting-append"></div>
-                    </a>
-
-                
-                
-                <div class="px-3">
-                    <a href="/cabinet/advanced-search?create=template" class="btn btn-outline-danger my-4 col ">Создать шаблон</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="list-group-link-sort template-action-list"><div><div class="list-group-link ui-sortable">
-<div class="list-group-item list-group-item-action row-search tooltip-serch-list ui-sortable-handle" queryid="1228682" full-text="Простые тендеры для начинающих" data-title="">
-
-    <a href="/cabinet/advanced-search?rqb=1228682" xmlns="http://www.w3.org/1999/html" class="div100"></a>
-    
-        <div class="list-group-item__wrap d-flex    align-items-center  justify-content-between">
-            <div class="list-group-item__inner-item position-relative d-flex align-items-center pr-3 w100">
-
-                <div class="list-group-item__icon list-group-item__icon--mailing     hoveredPopup" data-active-text="Исключить из рассылки" data-deactive-text="Включить в рассылку" data-tippy-placement="top" data-id="1228682" data-title="Включить в рассылку">                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="svg svg-email-sub" viewBox="0 0 36 36"><circle cx="18" cy="18" r="18" fill="#F0F2F5" class="svg-email-sub__circle"></circle><path fill="#7B7D87" fill-rule="evenodd" d="M11.5 12a1.5 1.5 0 0 0-1.5 1.5v9a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5v-9a1.5 1.5 0 0 0-1.5-1.5h-13Zm.916 1.376a.75.75 0 1 0-.832 1.248l5.445 3.63a1.75 1.75 0 0 0 1.942 0l5.445-3.63a.75.75 0 1 0-.832-1.248l-5.445 3.63a.25.25 0 0 1-.278 0l-5.445-3.63Z" class="svg-email-sub__mail" clip-rule="evenodd"></path><rect width="4" height="4" x="23" y="19" fill="white" class="svg-email-sub__rect"></rect><path fill="#212121" d="M28 22h1v5h-8v-5h1v-1a3 3 0 0 1 6 0v1Zm-2 0v-1a1 1 0 0 0-2 0v1h2Z" class="svg-email-sub__lock"></path></svg>                </div>
-
-                <div class=" text-block-of-saved-templates"><text>Простые тендеры для начинающих</text></div>
-
-                <a class="archive-list-tooltip-layout hoveredPopup" data-title="" data-tippy-placement="right" href="/cabinet/advanced-search?rqb=1228682" xmlns="http://www.w3.org/1999/html" data-tippy-delay="200">
-                </a>
-
-            </div>
-
-                            
-<a class="btn btn-link-icon p-0 m-0   hoveredPopup" href="/analytics/tenders?rqb=1228682" light-disabled="" target="_blank" onclick="" data-theme="white" data-title="Анализ рынка" data-unclick="true" data-tippy-trigger="" data-tippy-interactive="false"> <span class="icon m-0">
-<svg class="svg-customer-analytics svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 18"><path stroke="#7B7D87" stroke-width="2" class="fill stroke" d="m12.256 8.85 2.91 2.103m7.356-5.655-3.956 5.13M8.885 9.287l-3.996 4m7.778-5.76c0 1.28-1.026 2.316-2.292 2.316-1.266 0-2.292-1.037-2.292-2.316S9.11 5.21 10.375 5.21c1.266 0 2.292 1.037 2.292 2.316Zm6.666 4.632c0 1.279-1.026 2.316-2.291 2.316-1.266 0-2.292-1.037-2.292-2.316 0-1.28 1.026-2.316 2.292-2.316 1.265 0 2.291 1.037 2.291 2.316ZM26 3.316c0 1.279-1.026 2.316-2.292 2.316-1.265 0-2.291-1.037-2.291-2.316 0-1.28 1.026-2.316 2.291-2.316C24.974 1 26 2.037 26 3.316ZM5.583 14.684c0 1.28-1.026 2.316-2.291 2.316C2.026 17 1 15.963 1 14.684s1.026-2.316 2.292-2.316c1.265 0 2.291 1.037 2.291 2.316Z"></path></svg>
-
-</span></a>            
-
-            <div class="list-group-item__menu position-relative flex-center">
-                                <button type="button" class="sprite-pseudo btn  icon-menu-more-vertical list-group-item__item-button"></button>
-
-                <div class="list-group-item__menu-list">
-                    <div class="saving-panel-icons list-group-item__menu-wrapper">
-
-                        <div class="list-group-item__menu-item list-group-item__menu-item--rename" data-title="Переименовать" data-tippy-placement="right">
-                            Переименовать
-                        </div>
-                        <div class="list-group-item__menu-item list-group-item__menu-item--delete" data-title="Удалить" data-tippy-placement="right" data-mailing="">
-                            Убрать в архив
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-        
-</div>
-
-<div class="list-group-item list-group-item-action row-search tooltip-serch-list ui-sortable-handle" queryid="1228681" full-text="Короткие тендеры" data-title="">
-
-    <a href="/cabinet/advanced-search?rqb=1228681" xmlns="http://www.w3.org/1999/html" class="div100"></a>
-    
-        <div class="list-group-item__wrap d-flex    align-items-center  justify-content-between">
-            <div class="list-group-item__inner-item position-relative d-flex align-items-center pr-3 w100">
-
-                <div class="list-group-item__icon list-group-item__icon--mailing     hoveredPopup" data-active-text="Исключить из рассылки" data-deactive-text="Включить в рассылку" data-tippy-placement="top" data-id="1228681" data-title="Включить в рассылку">                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="svg svg-email-sub" viewBox="0 0 36 36"><circle cx="18" cy="18" r="18" fill="#F0F2F5" class="svg-email-sub__circle"></circle><path fill="#7B7D87" fill-rule="evenodd" d="M11.5 12a1.5 1.5 0 0 0-1.5 1.5v9a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5v-9a1.5 1.5 0 0 0-1.5-1.5h-13Zm.916 1.376a.75.75 0 1 0-.832 1.248l5.445 3.63a1.75 1.75 0 0 0 1.942 0l5.445-3.63a.75.75 0 1 0-.832-1.248l-5.445 3.63a.25.25 0 0 1-.278 0l-5.445-3.63Z" class="svg-email-sub__mail" clip-rule="evenodd"></path><rect width="4" height="4" x="23" y="19" fill="white" class="svg-email-sub__rect"></rect><path fill="#212121" d="M28 22h1v5h-8v-5h1v-1a3 3 0 0 1 6 0v1Zm-2 0v-1a1 1 0 0 0-2 0v1h2Z" class="svg-email-sub__lock"></path></svg>                </div>
-
-                <div class=" text-block-of-saved-templates"><text>Короткие тендеры</text></div>
-
-                <a class="archive-list-tooltip-layout hoveredPopup" data-title="" data-tippy-placement="right" href="/cabinet/advanced-search?rqb=1228681" xmlns="http://www.w3.org/1999/html" data-tippy-delay="200">
-                </a>
-
-            </div>
-
-            
-
-            <div class="list-group-item__menu position-relative flex-center">
-                                <button type="button" class="sprite-pseudo btn  icon-menu-more-vertical list-group-item__item-button"></button>
-
-                <div class="list-group-item__menu-list">
-                    <div class="saving-panel-icons list-group-item__menu-wrapper">
-
-                        <div class="list-group-item__menu-item list-group-item__menu-item--rename" data-title="Переименовать" data-tippy-placement="right">
-                            Переименовать
-                        </div>
-                        <div class="list-group-item__menu-item list-group-item__menu-item--delete" data-title="Удалить" data-tippy-placement="right" data-mailing="">
-                            Убрать в архив
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-        
-</div>
-</div></div></div>
-    </div>
-</div>                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="s-panel__divider"></div>
-
-            <div class="s-panel__item s-panel__item--tag flex-column align-items-start   ">
-                <div class="s-panel__item-submenu">
-                    <div class="s-panel__item-wrap " data-toggle="collapse" data-target="#SPanelCollapseTag" aria-expanded="false" aria-controls="SPanelCollapseTag">
-                        <div class="s-panel__item-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" class="svg svg-my-tag" viewBox="0 0 17 17"><path fill="#464A53" fill-rule="evenodd" d="M1 0a1 1 0 0 0-1 1v6.586a1 1 0 0 0 .293.707l8 8a1 1 0 0 0 1.414 0l6.586-6.586a1 1 0 0 0 0-1.414l-8-8A1 1 0 0 0 7.586 0H1Zm6 5.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" clip-rule="evenodd"></path></svg></div>
-                        <div class="s-panel__item-text"><span>Мои&nbsp;метки&nbsp;(<span class="list-group-item__total--tag">4</span>)</span>
-                        </div>
-                        <div class="arrow-top-collapsed"></div>
-                    </div>
-
-                    <div class="collapse w100 " id="SPanelCollapseTag">
-                        <div class="card card-body s-panel__my-tag">
-							
-<script>
-    var tagsList = {"64385065":{"id":64385065,"name":"Интересно","hex":"#d0004b"},"64385066":{"id":64385066,"name":"Подготовка документов","hex":"#22dc00"},"64385067":{"id":64385067,"name":"Заявка подана","hex":"#16bdca"},"64385068":{"id":64385068,"name":"Победа","hex":"#b75bd7"}};
-</script>
-
-<div class="search-module search-list-widget">
-    <div class="client-query-list list-group">
-
-        <div class="list-group-item list-group-item-info" style="">
-            <div class="client-query-post-header text-center">
-                Мои метки&nbsp;(<span class="list-group-item__total list-group-item__total--tag">4</span>)
-            </div>
-        </div>
-        <div class="list-group__techblock  px-4 flex-column ">
-
-            <div class="list-group__empty  text-center empty-list w100 hidden ">
-                    <div class="py-4"></div>
-                    <div class="list-group__empty-title mb-4 ">У вас пока нет меток.</div>
-                    <div class="list-group__empty-text w100 mb-4 mb-md-0">
-                        Создавайте метки, структурируйте ваши тендеры по рубрикам.
-                    </div>
-            </div>
-
-            <div class="new-tag-block w100">
-
-                <div class="my-4">
-                    <a href="#" data-params="{&quot;action&quot;:&quot;add-tag&quot;}" class="tag-action btn btn-outline-danger flex-center">Создать метку</a>
-                </div>
-
-            </div>
-
-            <div class="tag-different-actions ">
-
-                <a href="#" class="btn btn-outline-danger col  combo-link hidden mb-4" title="Показать все выбранные">
-                    Показать все выбранные                </a>
-
-            </div>
-        </div>
-
-        <div class="list-group-link-sort tag-actions-list" style="height: auto; min-height: 162px; overflow: visible;" data-lastheight="183">
-            <div class="list-group-link ui-sortable">
-
-                
-                    
-                        
-    <a href="/tags?tag=64385065" class="account-tag-row list-group-item list-group-item-action tooltip-serch-list ui-draggable ui-draggable-handle ui-sortable-handle" data-id="64385065" data-params="{&quot;id&quot;:64385065,&quot;weight&quot;:1}">
-
-        <div class="list-group-item__wrap">
-            <div class=" flex-center">
-                <div style="background-color: #d0004b" class="list-group-item__icon list-group-item__icon--tag plural">
-
-                    <span>0</span>
-
-                </div>
-
-                <div class="text-block-of-saved-templates name">Интересно</div>
-
-            </div>
-
-            <div class="list-group-item__menu">
-
-                <button type="button" class="btn  icon-menu-more-vertical list-group-item__item-button sprite-pseudo "><!-- --></button>
-                <div class="list-group-item__menu-list">
-
-                    <div class="saving-panel-icons list-group-item__menu-wrapper">
-
-                        <button type="button" class="tag-action list-group-item__action-btn list-group-item__menu-item" title="Редактировать метку" data-params="{&quot;id&quot;:64385065,&quot;action&quot;:&quot;edit-tag&quot;}">Редактировать</button>
-                        <button type="button" class="tag-action list-group-item__action-btn list-group-item__menu-item" title="Удалить метку" data-params="{&quot;id&quot;:64385065,&quot;action&quot;:&quot;delete-tag&quot;}">Удалить</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-
-
-                    
-                        
-    <a href="/tags?tag=64385066" class="account-tag-row list-group-item list-group-item-action tooltip-serch-list ui-draggable ui-draggable-handle ui-sortable-handle" data-id="64385066" data-params="{&quot;id&quot;:64385066,&quot;weight&quot;:2}">
-
-        <div class="list-group-item__wrap">
-            <div class=" flex-center">
-                <div style="background-color: #22dc00" class="list-group-item__icon list-group-item__icon--tag plural">
-
-                    <span>0</span>
-
-                </div>
-
-                <div class="text-block-of-saved-templates name">Подготовка документов</div>
-
-            </div>
-
-            <div class="list-group-item__menu">
-
-                <button type="button" class="btn  icon-menu-more-vertical list-group-item__item-button sprite-pseudo "><!-- --></button>
-                <div class="list-group-item__menu-list">
-
-                    <div class="saving-panel-icons list-group-item__menu-wrapper">
-
-                        <button type="button" class="tag-action list-group-item__action-btn list-group-item__menu-item" title="Редактировать метку" data-params="{&quot;id&quot;:64385066,&quot;action&quot;:&quot;edit-tag&quot;}">Редактировать</button>
-                        <button type="button" class="tag-action list-group-item__action-btn list-group-item__menu-item" title="Удалить метку" data-params="{&quot;id&quot;:64385066,&quot;action&quot;:&quot;delete-tag&quot;}">Удалить</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-
-
-                    
-                        
-    <a href="/tags?tag=64385067" class="account-tag-row list-group-item list-group-item-action tooltip-serch-list ui-draggable ui-draggable-handle ui-sortable-handle" data-id="64385067" data-params="{&quot;id&quot;:64385067,&quot;weight&quot;:3}">
-
-        <div class="list-group-item__wrap">
-            <div class=" flex-center">
-                <div style="background-color: #16bdca" class="list-group-item__icon list-group-item__icon--tag plural">
-
-                    <span>0</span>
-
-                </div>
-
-                <div class="text-block-of-saved-templates name">Заявка подана</div>
-
-            </div>
-
-            <div class="list-group-item__menu">
-
-                <button type="button" class="btn  icon-menu-more-vertical list-group-item__item-button sprite-pseudo "><!-- --></button>
-                <div class="list-group-item__menu-list">
-
-                    <div class="saving-panel-icons list-group-item__menu-wrapper">
-
-                        <button type="button" class="tag-action list-group-item__action-btn list-group-item__menu-item" title="Редактировать метку" data-params="{&quot;id&quot;:64385067,&quot;action&quot;:&quot;edit-tag&quot;}">Редактировать</button>
-                        <button type="button" class="tag-action list-group-item__action-btn list-group-item__menu-item" title="Удалить метку" data-params="{&quot;id&quot;:64385067,&quot;action&quot;:&quot;delete-tag&quot;}">Удалить</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-
-
-                    
-                        
-    <a href="/tags?tag=64385068" class="account-tag-row list-group-item list-group-item-action tooltip-serch-list ui-draggable ui-draggable-handle ui-sortable-handle" data-id="64385068" data-params="{&quot;id&quot;:64385068,&quot;weight&quot;:4}">
-
-        <div class="list-group-item__wrap">
-            <div class=" flex-center">
-                <div style="background-color: #b75bd7" class="list-group-item__icon list-group-item__icon--tag plural">
-
-                    <span>0</span>
-
-                </div>
-
-                <div class="text-block-of-saved-templates name">Победа</div>
-
-            </div>
-
-            <div class="list-group-item__menu">
-
-                <button type="button" class="btn  icon-menu-more-vertical list-group-item__item-button sprite-pseudo "><!-- --></button>
-                <div class="list-group-item__menu-list">
-
-                    <div class="saving-panel-icons list-group-item__menu-wrapper">
-
-                        <button type="button" class="tag-action list-group-item__action-btn list-group-item__menu-item" title="Редактировать метку" data-params="{&quot;id&quot;:64385068,&quot;action&quot;:&quot;edit-tag&quot;}">Редактировать</button>
-                        <button type="button" class="tag-action list-group-item__action-btn list-group-item__menu-item" title="Удалить метку" data-params="{&quot;id&quot;:64385068,&quot;action&quot;:&quot;delete-tag&quot;}">Удалить</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-
-
-                    
-                
-            </div>
-
-            
-        </div>
-    </div>
-</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="s-panel__divider"></div>
-
-            <div class="s-panel__item   " data-title="Избранное" data-tippy-placement="right">
-                <div class="s-panel__item-wrap ">
-
-                    <div class="s-panel__item-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" class="svg svg-my-favorites" viewBox="0 0 18 18"><path fill="#464A53" d="M9.385.279a.5.5 0 0 0-.897 0l-2.374 4.81a.5.5 0 0 1-.376.274l-5.31.771a.5.5 0 0 0-.276.853l3.841 3.745a.5.5 0 0 1 .144.442l-.907 5.288a.5.5 0 0 0 .726.527l4.748-2.497a.5.5 0 0 1 .465 0l4.749 2.497a.5.5 0 0 0 .725-.527l-.907-5.288a.5.5 0 0 1 .144-.442l3.842-3.745a.5.5 0 0 0-.277-.853l-5.31-.771a.5.5 0 0 1-.376-.274L9.385.28Z"></path></svg></div>
-                    <div class="s-panel__item-text"><span>Избранное</span></div>
-                    <a href="/favorites" class="div100"></a>
-
-                                            <div class="s-panel__item-calendar ">
-                            <a title="Календарь" class="s-panel__item-text-icon" href="/favorites/calendar">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="svg svg-calendar" fill="none" viewBox="0 0 25 22"><path fill="#7B7D87" stroke="#7B7D87" stroke-width="0.5" d="M7.008 1.062c-.415.187-.54.472-.54 1.205v.535H4.944c-1.183 0-1.598.017-1.86.085a2.783 2.783 0 0 0-1.99 2.002c-.125.489-.125 13.535 0 14.024a2.783 2.783 0 0 0 1.99 2.002c.296.074 1.479.085 9.753.085 8.161 0 9.458-.011 9.742-.085a2.783 2.783 0 0 0 2.002-1.99c.125-.501.13-13.541 0-14.036a2.783 2.783 0 0 0-1.99-2.002c-.262-.068-.677-.085-1.855-.085h-1.518l-.023-.62c-.017-.671-.068-.802-.41-1.052-.22-.165-.756-.165-.977 0-.341.25-.393.38-.41 1.052l-.023.62H8.3l-.023-.62c-.017-.671-.068-.802-.398-1.046-.193-.143-.642-.182-.87-.074Zm-.529 4.18c.017.67.069.801.41 1.052.222.165.756.165.978 0 .341-.25.392-.381.41-1.052l.022-.62h9.076l.023.62c.012.523.034.648.137.779.221.301.404.392.762.392s.54-.091.762-.392c.102-.131.125-.256.136-.78l.023-.625 1.524.017c1.439.017 1.536.023 1.683.137.086.062.21.187.273.273.12.153.12.176.12 6.858 0 6.682 0 6.705-.12 6.858a1.55 1.55 0 0 1-.273.273l-.153.12H3.402l-.153-.12a1.548 1.548 0 0 1-.273-.273c-.12-.153-.12-.193-.136-6.704-.006-3.606 0-6.631.017-6.734.04-.227.278-.517.512-.62.125-.057.546-.074 1.632-.08h1.456l.022.62Z"></path><path fill="#7B7D87" stroke="#7B7D87" stroke-width="0.5" d="M4.279 8.34c-.381.166-.598.604-.518 1.03.051.268.336.58.591.654.148.046 2.827.057 8.61.046 8.377-.017 8.4-.017 8.554-.137.301-.222.392-.404.392-.762s-.091-.54-.392-.762c-.154-.12-.171-.12-8.61-.13-6.944-.012-8.485 0-8.627.062Z"></path></svg>
-                            </a>
-                        </div>
-                    
-                </div>
-            </div>
-
-			
-            <div class="s-panel__divider"></div>
-            <a class="s-panel__item s-panel__item--first-release   " data-title="Просмотренные" data-tippy-placement="right" href="/cabinet/last-visited">
-                <div class="s-panel__item-wrap ">
-                    <div class="s-panel__item-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" class="svg svg-my-last-visited" viewBox="0 0 17 19"><path fill="#464A53" fill-rule="evenodd" d="M15.5 4H4v13.5A1.5 1.5 0 0 0 5.5 19h10a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 15.5 4ZM6 11.5a4.697 4.697 0 0 1 9 0 4.697 4.697 0 0 1-9 0Zm6 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" clip-rule="evenodd"></path><path fill="#464A53" fill-rule="evenodd" d="M1.5 0A1.5 1.5 0 0 0 0 1.5v13A1.5 1.5 0 0 0 1.5 16H2V2h11v-.5A1.5 1.5 0 0 0 11.5 0h-10Z" clip-rule="evenodd"></path></svg></div>
-                    <div class="s-panel__item-text"><span>Просмотренные</span></div>
-                </div>
-            </a>
-
-            <div class="s-panel__divider"></div>
-            <a class="s-panel__item s-panel__item--first-release  " data-title="Скрытые" data-tippy-placement="right" href="/cabinet/hidden">
-                <div class="s-panel__item-wrap ">
-                    <div class="s-panel__item-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" class="svg svg-my-hidden" viewBox="0 0 16 13"><path fill="#464A53" d="M2.636.565 6.622 4.55A2 2 0 0 1 9.45 7.378l3.914 3.915a1 1 0 0 1 .083 1.32l-.083.094a1 1 0 0 1-1.414 0l-1.204-1.201A7.597 7.597 0 0 1 8 12C4.8 12 2.245 10.216.404 6.785l-.17-.326L0 6l.233-.459c.54-1.062 1.145-1.976 1.813-2.738l-.824-.824A1 1 0 1 1 2.636.565Zm-.199 5.112L2.253 6l.157.277C3.89 8.812 5.737 10 8 10a5.9 5.9 0 0 0 1.134-.107L3.462 4.22c-.36.423-.7.909-1.025 1.458ZM8 0c3.2 0 5.755 1.784 7.596 5.215l.17.326L16 6l-.233.459c-.522 1.027-1.105 1.915-1.747 2.661l-1.417-1.416c.404-.487.785-1.054 1.144-1.704C12.24 3.274 10.344 2 8 2a5.95 5.95 0 0 0-1.015.085L5.356.455A7.619 7.619 0 0 1 8 0Z" class="fill"></path></svg></div>
-                    <div class="s-panel__item-text"><span>Скрытые</span></div>
-                </div>
-            </a>
-
-            
-			            </div>
-        </div>
-
-        <div class="s-panel__divider"></div>
-        <div class="s-panel__overlay"></div>
-        <div class="s-panel__item s-panel__item-toggle">
-            <div class="s-panel__item-icon icon-double-arrow">
-                <span></span>
-                <span></span>
-            </div>
-            <div class="s-panel__item-text s-panel__item-text--short">Скрыть</div>
-        </div>
-
-
-
-    </aside>
-    <div class="s-panel__substrate"></div>
-
-    <script>
-		//Полифил для IE11
-		if (!Element.prototype.matches)
-		{
-			Element.prototype.matches = Element.prototype.msMatchesSelector ||
-				Element.prototype.webkitMatchesSelector;
-		}
-		//Полифил для IE11
-		if (!Element.prototype.closest)
-		{
-			Element.prototype.closest = function (s) {
-				var el = this;
-
-				do
-				{
-					if (Element.prototype.matches.call(el, s)) return el;
-					el = el.parentElement || el.parentNode;
-				} while (el !== null && el.nodeType === 1);
-				return null;
-			};
-		}
-
-		//Расчет размеров виджетов при первой загрузке для устранения скачков в первые мксекунды
-		function getSizeListСrytical(toTopPos, container) {
-			var toTopPos = (typeof toTopPos != "undefined") ? toTopPos : false;
-
-			if (!(container instanceof Element)) return false;
-
-			var sPanel = document.querySelector('.s-panel'),
-				sPanelHeight = sPanel.clientHeight - parseFloat(getComputedStyle(sPanel).paddingTop) - parseFloat(getComputedStyle(sPanel).paddingBottom),
-				sPanelItems = document.querySelectorAll(".s-panel__item .s-panel__item-wrap, .s-panel__divider"), // Элементы сайдбара
-				itemListElems = container.querySelectorAll(".list-group-item:not(.archive_item)"), // Элементы списка
-				collapseArchive = container.querySelector("#collapse-archive"), // Архив
-				techBlockElem = container.closest('.search-module').querySelector(".list-group__techblock"), // Блок с кнопкой	 и ссылкой в виджете
-				itemInfoElem = container.closest('.search-module').querySelector(".list-group-item-info"); // Шапка виджета
-
-			var itemList = 0,
-				sPanelItemsList = 0,
-				collapseArchiveList = collapseArchiveList && collapseArchive.clientHeight ? collapseArchive.clientHeight : 0,
-				techBlock = (techBlockElem.clientHeight ? techBlockElem.clientHeight : 0),
-				itemInfo = 0;
-
-			itemInfoElem.style.display = 'block';
-			itemInfo = (itemInfoElem.clientHeight ? itemInfoElem.clientHeight : 0);
-			itemInfoElem.removeAttribute('style');
-
-			if (!itemListElems.length) return false;
-
-			// Посчитываем высоту списка учитывая каждый элемент списка
-			for (var i = 0; i < itemListElems.length; i++)
-			{
-				itemList = parseInt(itemList + itemListElems[i].clientHeight) - 1; // -1 - рамка снизу
-			}
-
-			//Прибывим высоту архива
-			itemList += collapseArchiveList;
-
-			// Посчитываем высоту сайдбара
-			for (var i = 0; i < sPanelItems.length; i++)
-			{
-				sPanelItemsList = parseInt(sPanelItemsList + sPanelItems[i].clientHeight); // -1 - рамка снизу
-			}
-
-			// Подсчитываем высоту списока со всеми элементами управления
-			var totalElem = parseInt(itemList);
-			var sPanelContainerHeight = parseInt(sPanelHeight - sPanelItemsList - techBlock - itemInfo);
-
-			// Если список больше окна
-			if (totalElem > sPanelContainerHeight) // 250 - отступ снизу блока
-			{
-				return parseInt(sPanelContainerHeight);
-			} else
-			{
-				return false;
-			}
-		}
-
-		function positionSearchQuetyListСrytical(container) {
-			if (typeof container !== "undefinde")
-			{
-
-				for (var i = 0; i < container.length; i++)
-				{
-					var height = getSizeListСrytical(true, container[i]);
-
-					if (height)
-					{
-						container[i].style.height = height + 'px';
-						container[i].style.minHeight = (height + 1) + 'px';
-						container[i].style.overflow = 'hidden';
-					}
-
-					document.querySelector(".s-panel").style.opacity = 1;
-				}
-
-				return;
-			}
-		}
-
-		//Расчет размеров
-		positionSearchQuetyListСrytical(document.querySelectorAll(".list-group-link-sort"))
-    </script>
-
-
-    
-
         
         <main class="wrapper">
             <div id="content" class="container ">
                 <div class="content">
 
                     <header>
-    <div class="header header--rt  header--isLogged">
+    <div class="header header--rt header--notLogged ">
 
         <div class="header__burger">
             <div class="header__burger-item n1"></div>
@@ -991,7 +262,7 @@
 </div>        </div>
 
         <div class="header__menu-container">
-			<form id="fullSearchFormheader" action="/search/tenders" method="post"><div class="header-search-form header-search-form--header" style="right: -173.609px;">
+			<form id="fullSearchFormheader" action="/search/tenders" method="post"><div class="header-search-form header-search-form--header" style="right: -97.7184px;">
 
     
         <div class="hoveredPopupTooltip" data-tippy-placement="bottom" data-tippy-delay="200" data-template="searchTemplateheader">
@@ -1030,7 +301,7 @@
 
 </form>            <nav class="navbar" role="navigation">
 
-	<ul id="main-menu-collapse" class="menu no-select" itemtype="http://schema.org/SiteNavigationElement" itemscope="itemscope"><li class="menu-item"><a class="menu-item__text" href="/cabinet" itemprop="url" title="Поиск">Поиск</a></li>
+	<ul id="main-menu-collapse" class="menu no-select" itemtype="http://schema.org/SiteNavigationElement" itemscope="itemscope"><li class="menu-item"><a class="menu-item__text" href="/extsearch" itemprop="url" title="Поиск">Поиск</a></li>
 <li class="menu-item current"><a class="menu-item__text" href="/tender" itemprop="url" title="Тендеры">Тендеры</a></li>
 <li class="menu-item"><a class="menu-item__text" href="/analytics" itemprop="url" title="Аналитика">Аналитика</a></li>
 <li class="menu-item"><a class="menu-item__text" href="/assist" itemprop="url" title="Тендерное сопровождение">Тендерное сопровождение</a></li>
@@ -1038,81 +309,46 @@
 <li class="menu-item"><a class="menu-item__text menu-item__text--short" href="/news" itemprop="url" title="Новости">Новости</a></li>
 <li class="menu-item"><a class="menu-item__text menu-item__text--short" href="/announce" itemprop="url" title="Разместить тендер">Разместить тендер</a></li>
 <li class="menu-item"><a class="menu-item__text menu-item__text--short" href="/eds" itemprop="url" title="ЭЦП">ЭЦП</a></li>
-<li class="menu-item"><a class="menu-item__text menu-item__text--short" href="/bank-guaranty" itemprop="url" title="Банковская гарантия">Банковская гарантия</a></li>
 <li id="menuSubitemMore" class="menu-item menu-item--more"><div class="menu-item__text">Ещё<div class="header-login__triangle"></div></div><div class="menu-item__icon"></div><ul class="menu__sublist" itemtype="http://schema.org/SiteNavigationElement" itemscope="itemscope"><li class="menu__subitem"><a class="menu-item__text menu-item__text--short" href="/news" itemprop="url" title="Новости">Новости</a></li>
 <li class="menu__subitem"><a class="menu-item__text menu-item__text--short" href="/announce" itemprop="url" title="Разместить тендер">Разместить тендер</a></li>
-<li class="menu__subitem"><a class="menu-item__text menu-item__text--short" href="/eds" itemprop="url" title="ЭЦП">ЭЦП</a></li>
-<li class="menu__subitem"><a class="menu-item__text menu-item__text--short" href="/bank-guaranty" itemprop="url" title="Банковская гарантия">Банковская гарантия</a></li></ul></li></ul>
+<li class="menu__subitem"><a class="menu-item__text menu-item__text--short" href="/eds" itemprop="url" title="ЭЦП">ЭЦП</a></li></ul></li></ul>
 </nav>        </div>
 
         <div class="flex-grow  flex-grow--menu-after"></div>
 
+                    <div class="header__profile-container header__profile-container--overlay"></div>
         
-        <div class="header__profile-container ">
+        <div class="header__profile-container header__profile-container--notLogged">
 
             <div class="header-search">
                 <div class="icon-search--black sprite-pseudo" role="button" aria-label="Поиск по тендерам"></div>
             </div>
 
 			
-                <div class="onboarding  onboarding--black" namespace="setting-profile">
-
-				<div class="onboarding-tooltip onboarding-tooltip--profile onboarding-tooltip--black onboarding-tooltip--bottom" namespace="setting-profile">
-    <div class="onboarding-tooltip__wrap onboarding-tooltip__wrap--withoutClose">
-        <div class="onboarding-tooltip__text">Настройте свои рассылки и параметры профиля</div>
-		            <div class="onboarding-tooltip__button-wrap ">
-                                                    <div class="onboarding-tooltip__button " onclick="">Понятно</div>
-                            </div>
-		    </div>
-    <div class="onboarding-tooltip__tail"></div>
-	</div>
-
-            
 			
-<div class="header-login login-wrapper  ">
+<div class="header-login header-loginform  ">
 
     
-        
-        <script> var Account = {"hasAccessToPlans":true,"hexs":["#d0004b","#22dc00","#16bdca","#b75bd7","#ef0d36","#5d6fa4","#3275f9","#b65e0e","#ff5a1f","#30c27c","#6632f9","#724e2d"],"unused_hex":["#ef0d36","#5d6fa4","#3275f9","#b65e0e","#ff5a1f","#30c27c","#6632f9","#724e2d"],"mailing_settings":{"daily":{"name":"Ежедневная рассылка","active":true},"fast":{"name":"Рассылка коротких тендеров","active":false},"telegram":{"name":"Уведомления в Telegram","active":false}}};</script>
-
-    
-            
-            
-                <a class="header-login__wrapper header-login__wrapper--login" href="/profile">
-                    <div class="header-login__icon header-login__icon--login"><svg xmlns="http://www.w3.org/2000/svg" class="svg svg-login" fill="none" viewBox="0 0 20 20"><path fill="#464A53" fill-rule="evenodd" d="M10 20c5.523 0 10-4.477 10-10S15.523 0 10 0 0 4.477 0 10s4.477 10 10 10Zm3-14a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-8.745 8A6.992 6.992 0 0 1 10 11a6.992 6.992 0 0 1 5.745 3A6.992 6.992 0 0 1 10 17a6.992 6.992 0 0 1-5.745-3Z" clip-rule="evenodd"></path></svg></div>
-                    <div class="header-login__link">
-                    <span class="header-login__name">
-                      <nobr>i448539</nobr>
-                    </span>
-                        <div class="header-login__triangle"></div>
-                    </div>
+        <div class="header-login__wrapper   header-login__wrapper--logout">
+            <a href="/login?returl=%252Ftender%252F70887730" class="header-login__icon header-login__icon--sigin icon-signin"></a>
+            <div class="header-login__link">
+                <a href="/login?returl=%252Ftender%252F70887730" class="header-login__signin">
+                    <i class="header-login__icon-signin icon-signin mr-2"></i><span>Вход</span>
                 </a>
+                                    <span class="header-login__sep px-2">/</span>
+                    <a href="/registration">
+                        <span>Демо-доступ</span>
+                    </a>
+                            </div>
+             <a class="div100 header-login__icon-link" href="/login?returl=%252Ftender%252F70887730"></a>
 
             
-            
-    
-        <div class="profile-navbar" role="navigation">
-
-            <ul id="profile-menu" class="profile-navbar__menu"><li class="profile-navbar__item"><a href="/profile" itemprop="url" title="Профиль">Профиль</a></li>
-<li class="profile-navbar__item"><a href="/profile/tariffs" itemprop="url" title="Тарифы">Тарифы</a></li>
-<li class="profile-navbar__item"><a href="/profile/mailing" itemprop="url" title="Рассылки">Рассылки</a></li>
-<li class="profile-navbar__item"><a href="/profile/classificator" itemprop="url" title="Классификатор">Классификатор</a></li>
-<li class="profile-navbar__item"><a href="/profile/integration-crm" itemprop="url" title="Интеграция с CRM">Интеграция с CRM</a></li>
-<li class="profile-navbar__item"><a href="/profile/accounts" itemprop="url" title="Пользователи">Пользователи</a></li>
-<li id="exportItemMenu" class="profile-navbar__item"><a href="/profile/export-tasks" itemprop="url" title="Выгрузки">Выгрузки</a></li>
-<li class="profile-navbar__item"><a href="/logout" class="profile-navbar__item--logout" onclick="window.logoutClick(event)">
-                                            <div class="profile-navbar__item-text">Выход</div>
-                                            <div class="profile-navbar__item-icon icon-logout mr-n3"></div>
-                                            </a></li></ul>
         </div>
 
     </div>
 
 
             
-                </div>
-
-		    
         </div>
 
     </div>
@@ -1123,14 +359,6 @@
 
     <div class="menu-mobile__head"><span class="header-menu-mobile__title">Меню</span></div>
 
-	        <div class="menu-mobile__head menu-mobile__head--second">
-            <div class="menu-mobile__head-wrapper">
-                <div class="menu-mobile__back icon-arrow-right"></div>
-                <div class="menu-mobile__close menu-mobile__close--all">
-                    <div class="menu-mobile__close-tap"></div>
-                </div>
-                <span class="header-menu-mobile__title">Личный кабинет</span></div>
-            </div>
 	
     <div class="menu-mobile__close"><div class="menu-mobile__close-tap"></div></div>
 
@@ -1138,41 +366,23 @@
 
 		
 			
-<div class="header-login login-wrapper  ">
+<div class="header-login header-loginform  ">
 
     
-        
-        <script> var Account = {"hasAccessToPlans":true,"hexs":["#d0004b","#22dc00","#16bdca","#b75bd7","#ef0d36","#5d6fa4","#3275f9","#b65e0e","#ff5a1f","#30c27c","#6632f9","#724e2d"],"unused_hex":["#ef0d36","#5d6fa4","#3275f9","#b65e0e","#ff5a1f","#30c27c","#6632f9","#724e2d"],"mailing_settings":{"daily":{"name":"Ежедневная рассылка","active":true},"fast":{"name":"Рассылка коротких тендеров","active":false},"telegram":{"name":"Уведомления в Telegram","active":false}}};</script>
-
-    
-            
-            
-                <a class="header-login__wrapper header-login__wrapper--login" href="/profile">
-                    <div class="header-login__icon header-login__icon--login"><svg xmlns="http://www.w3.org/2000/svg" class="svg svg-login" fill="none" viewBox="0 0 20 20"><path fill="#464A53" fill-rule="evenodd" d="M10 20c5.523 0 10-4.477 10-10S15.523 0 10 0 0 4.477 0 10s4.477 10 10 10Zm3-14a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-8.745 8A6.992 6.992 0 0 1 10 11a6.992 6.992 0 0 1 5.745 3A6.992 6.992 0 0 1 10 17a6.992 6.992 0 0 1-5.745-3Z" clip-rule="evenodd"></path></svg></div>
-                    <div class="header-login__link">
-                    <span class="header-login__name">
-                      <nobr>i448539</nobr>
-                    </span>
-                        <div class="header-login__triangle"></div>
-                    </div>
+        <div class="header-login__wrapper   header-login__wrapper--logout">
+            <a href="/login?returl=%252Ftender%252F70887730" class="header-login__icon header-login__icon--sigin icon-signin"></a>
+            <div class="header-login__link">
+                <a href="/login?returl=%252Ftender%252F70887730" class="header-login__signin">
+                    <i class="header-login__icon-signin icon-signin mr-2"></i><span>Вход</span>
                 </a>
+                                    <span class="header-login__sep px-2">/</span>
+                    <a href="/registration">
+                        <span>Демо-доступ</span>
+                    </a>
+                            </div>
+             <a class="div100 header-login__icon-link" href="/login?returl=%252Ftender%252F70887730"></a>
 
             
-            
-    
-        <div class="profile-navbar" role="navigation">
-
-            <ul id="profile-menu" class="profile-navbar__menu"><li class="profile-navbar__item"><a href="/profile" itemprop="url" title="Профиль">Профиль</a></li>
-<li class="profile-navbar__item"><a href="/profile/tariffs" itemprop="url" title="Тарифы">Тарифы</a></li>
-<li class="profile-navbar__item"><a href="/profile/mailing" itemprop="url" title="Рассылки">Рассылки</a></li>
-<li class="profile-navbar__item"><a href="/profile/classificator" itemprop="url" title="Классификатор">Классификатор</a></li>
-<li class="profile-navbar__item"><a href="/profile/integration-crm" itemprop="url" title="Интеграция с CRM">Интеграция с CRM</a></li>
-<li class="profile-navbar__item"><a href="/profile/accounts" itemprop="url" title="Пользователи">Пользователи</a></li>
-<li id="exportItemMenu" class="profile-navbar__item"><a href="/profile/export-tasks" itemprop="url" title="Выгрузки">Выгрузки</a></li>
-<li class="profile-navbar__item"><a href="/logout" class="profile-navbar__item--logout" onclick="window.logoutClick(event)">
-                                            <div class="profile-navbar__item-text">Выход</div>
-                                            <div class="profile-navbar__item-icon icon-logout mr-n3"></div>
-                                            </a></li></ul>
         </div>
 
     </div>
@@ -1184,7 +394,7 @@
     <div class="menu-mobile__list">
 		<nav class="navbar" role="navigation">
 
-	<ul id="main-menu-collapse" class="menu no-select" itemtype="http://schema.org/SiteNavigationElement" itemscope="itemscope"><li class="menu-item"><a class="menu-item__text" href="/cabinet" itemprop="url" title="Поиск">Поиск</a></li>
+	<ul id="main-menu-collapse" class="menu no-select" itemtype="http://schema.org/SiteNavigationElement" itemscope="itemscope"><li class="menu-item"><a class="menu-item__text" href="/extsearch" itemprop="url" title="Поиск">Поиск</a></li>
 <li class="menu-item current"><a class="menu-item__text" href="/tender" itemprop="url" title="Тендеры">Тендеры</a></li>
 <li class="menu-item"><a class="menu-item__text" href="/analytics" itemprop="url" title="Аналитика">Аналитика</a></li>
 <li class="menu-item"><a class="menu-item__text" href="/assist" itemprop="url" title="Тендерное сопровождение">Тендерное сопровождение</a></li>
@@ -1192,11 +402,9 @@
 <li class="menu-item"><a class="menu-item__text menu-item__text--short" href="/news" itemprop="url" title="Новости">Новости</a></li>
 <li class="menu-item"><a class="menu-item__text menu-item__text--short" href="/announce" itemprop="url" title="Разместить тендер">Разместить тендер</a></li>
 <li class="menu-item"><a class="menu-item__text menu-item__text--short" href="/eds" itemprop="url" title="ЭЦП">ЭЦП</a></li>
-<li class="menu-item"><a class="menu-item__text menu-item__text--short" href="/bank-guaranty" itemprop="url" title="Банковская гарантия">Банковская гарантия</a></li>
 <li id="menuSubitemMore" class="menu-item menu-item--more"><div class="menu-item__text">Ещё<div class="header-login__triangle"></div></div><div class="menu-item__icon"></div><ul class="menu__sublist" itemtype="http://schema.org/SiteNavigationElement" itemscope="itemscope"><li class="menu__subitem"><a class="menu-item__text menu-item__text--short" href="/news" itemprop="url" title="Новости">Новости</a></li>
 <li class="menu__subitem"><a class="menu-item__text menu-item__text--short" href="/announce" itemprop="url" title="Разместить тендер">Разместить тендер</a></li>
-<li class="menu__subitem"><a class="menu-item__text menu-item__text--short" href="/eds" itemprop="url" title="ЭЦП">ЭЦП</a></li>
-<li class="menu__subitem"><a class="menu-item__text menu-item__text--short" href="/bank-guaranty" itemprop="url" title="Банковская гарантия">Банковская гарантия</a></li></ul></li></ul>
+<li class="menu__subitem"><a class="menu-item__text menu-item__text--short" href="/eds" itemprop="url" title="ЭЦП">ЭЦП</a></li></ul></li></ul>
 </nav>    </div>
 
     <div class="flex-grow" style="flex-grow: 30"></div>
@@ -1284,7 +492,7 @@
     
 
 <script>
-    var tendersData = {"70887730":{"id":70887730,"events":{"12":"2023-10-09 23:59:59"},"fav2":[],"favoritesAvailable":true,"comments":null,"files_by_date":{"2023-10-05":[{"id":613840418,"tid":70887730,"title":"Извещение","fsid":"2023-10/9d6/komtender_document_2204689_49f9701c88f615ae41ecd00d03a77fa4.docx","link":"https://files.rostender.info/?t=3fea236993d95de62af0c91254878fdac269029b2e03a862a98159f3e481608f5f180476f332298d1987aa8753c794b08fa49b58688830bb475b7152c6d65ec70889e045b87755ce0d87fda32c304224695a5d4db53834db41c75d9062e810f25e197d7f1043dd5dfb90f4128e005efce09ae28479b82135ddb206db84dab3cc23765c37c006b2e3830350b8d7b095001b0085a0fed467db7e9f2ab16410e73c76e27adfebec554ff183a7cf650478994bedf73e08f2841480cdce9c64488766835293fc939547f79d2cc72f0743fbe66e0caa87c7bae595aec2b06f2e65203a7811d9d41e54f117d26ca78234937958c3de0595867cb95a4917b00988f21f3de494a0868da8b0399244d03b8ed95313da0b3648e04fd69a58c242e8279f90c8f040441a5ff954bb607b034c68dc9468cc1105f889bac3693bb10901cfd5f4bd22a0c9af6fda35569b829f8714391d92fab3ccdb382f27cd36ded27f24b7bf468331de7230d66b6a120579457a3d44cba57c242f37c76e1491a4175077f8f543a8f80ad0c7edfe69c22e915518f8d21365c18a65396c59074f96c244cad46a281499e3b227a687e22b4ecc7780146cc7019ea465ebd45f4cdbc7bb661700b65b59b5f3116f8c30cdd06ad46ef11d5d85a91d66957e9054111889d134cb725c145709db4ed2de588d2e02ad906f358e09e8782a5c0626d16f0d3f5e9c33d4b4d7902161e919748ccb018f80bdfa375ffa5294ab18749d63b5c86e5dfb6b3077b90e4a3b14d300be04a982ae6a0b025378ab34f13dbec44d26","size":6368,"md5":"27dc42c1a39c83e70485865e11e7a5b3","ts":"2023-10-05 20:35:08","token":"3fea236993d95de62af0c91254878fdac269029b2e03a862a98159f3e481608f5f180476f332298d1987aa8753c794b08fa49b58688830bb475b7152c6d65ec70889e045b87755ce0d87fda32c304224695a5d4db53834db41c75d9062e810f25e197d7f1043dd5dfb90f4128e005efce09ae28479b82135ddb206db84dab3cc23765c37c006b2e3830350b8d7b095001b0085a0fed467db7e9f2ab16410e73c76e27adfebec554ff183a7cf650478994bedf73e08f2841480cdce9c64488766835293fc939547f79d2cc72f0743fbe66e0caa87c7bae595aec2b06f2e65203a7811d9d41e54f117d26ca78234937958c3de0595867cb95a4917b00988f21f3de494a0868da8b0399244d03b8ed95313da0b3648e04fd69a58c242e8279f90c8f040441a5ff954bb607b034c68dc9468cc1105f889bac3693bb10901cfd5f4bd22a0c9af6fda35569b829f8714391d92fab3ccdb382f27cd36ded27f24b7bf468331de7230d66b6a120579457a3d44cba57c242f37c76e1491a4175077f8f543a8f80ad0c7edfe69c22e915518f8d21365c18a65396c59074f96c244cad46a281499e3b227a687e22b4ecc7780146cc7019ea465ebd45f4cdbc7bb661700b65b59b5f3116f8c30cdd06ad46ef11d5d85a91d66957e9054111889d134cb725c145709db4ed2de588d2e02ad906f358e09e8782a5c0626d16f0d3f5e9c33d4b4d7902161e919748ccb018f80bdfa375ffa5294ab18749d63b5c86e5dfb6b3077b90e4a3b14d300be04a982ae6a0b025378ab34f13dbec44d26","extension":"docx","is_archive":0,"is_protocol":false,"can_added_to_archive":true,"is_downloaded":true,"can_file_previews":true,"dtc":"2023-10-05 13:35:08"},{"id":613840427,"tid":70887730,"title":"Приморский Кондитер. Ссылка на сайт размещения тендера #70887730","fsid":"2023-10/ea0/primkon-tender-70887730.doc","link":"https://files.rostender.info/?t=3fea236993d95de6fb298abe03555ee76f6be80b2fcc1c664a1759d9d2417907aac55455d796fbe2d9d31b7fd572ba426dd459fb8912afd884b721637e671a5fa0184b4c9c4efc081a2f8a8b03ed911d3e3bcb7d50070fb1477a5b1e6af2375a95b493620adbef10825979c7509ad654817063e6307c5b0721d843ff1bcfce877c01f4d849a66528d827cf7241a6bdb7c0dc9e8e1f37bcbab76633b5acfcac24645b22a212a04e2f3979ad2a8fdac350cd7af8240b1d574cc1716bcdfe3ee736c6c915ff36be726c0fdac8fe6919018e0201722b05817f6e106de9b0d8e398099bd819fd1f65d6daf3ecb24fd9c65d0baadd89250ef2ffdfe45a405068f0ec63f70b3f33a60c71f96aeb3502eeb1d63385af44770cb718f8ef2a6916c960c697820baf32818720460ee126fad70cc640ccbf10b3832463c65626a413b15a1721d9a8a1d8c90e7a72f8460070bf419fcb13ca65253d595c711a25f5763526f4c8fcffc5db9fbd3bcd57bc53bea467146afa18ed9b48e11f41139812bebd60734f09f11afa7ebc12fcab2d52f40b530d4a54bd90c0f6a832a8ea95d0fd462975ac390acf39f0843458d3bb428cf269d5c3f0c93b1a0f8e4e4e8664f25658db2c69d809f82b4c26cce96f9bc6097c59b6b2d946803ad017e635ed0d99bcf99bf960b09b7540032e9ca74fbef3b27c48cbf98923bbddd3122d1db2e739ac3c31175e3314dd5da6c5df3cc6f49675ba461cf475debba855a199bb4168d6d6d723d57f8fdacd7521071d0388c0c23d48fc5283c60e5533325568a239a5010521c49cc955a4702ae15f60c62cb576251787408194c60dfefe2255b7b6dfe2017ec8e3330870e1d760ffbc3ddc99ceec1b9a1b46e26e67d513e9bd57d5674183d9d1c5c0a9c32a112ea6b819b9e1e332357113daa39b223bf65733185be08e96b70177fd2f39ad2c1779739cbad5f08f065ed9c2f25a929e6457d4d1d402bfec56007c882d6539b7927466111377867bc105695a05766a52b57155d0bcfdf84b1e5ad916cb13188247b5fb83d5378661ae4545dd13346bf290abd699ccc06185e80636a9286a4993b4ddb06d4b286bd83eaae4964d739e40c68f1fb75ed9c1fe99077481b908ee3865252065856d5235ddb24a27db4d3dd2cc95101fd9b853121dfeec64dad2955aba094751afed368d28bb2dc7f482341c809711142c52672be2ac5bd2a34d0fa1289db21e216afa02ca37e1fc132380fb6863c01ea592f1d1a9f9ca15eefd13c2252b5bd5ad221b99818515ec2882703723d140dc7c497ced6bb21f45c35c53e60cf6e417d5ee26cce4ec0cffc89d8c6ebd012cb757076581e025c8bdb06bf5142835f16af21719b0e394f115ce81fb14e92158df588cfc3957473990","size":875,"md5":"3830e13746ceeb9a04e0366bc60ae268","ts":"2023-10-05 20:35:09","token":"3fea236993d95de6fb298abe03555ee76f6be80b2fcc1c664a1759d9d2417907aac55455d796fbe2d9d31b7fd572ba426dd459fb8912afd884b721637e671a5fa0184b4c9c4efc081a2f8a8b03ed911d3e3bcb7d50070fb1477a5b1e6af2375a95b493620adbef10825979c7509ad654817063e6307c5b0721d843ff1bcfce877c01f4d849a66528d827cf7241a6bdb7c0dc9e8e1f37bcbab76633b5acfcac24645b22a212a04e2f3979ad2a8fdac350cd7af8240b1d574cc1716bcdfe3ee736c6c915ff36be726c0fdac8fe6919018e0201722b05817f6e106de9b0d8e398099bd819fd1f65d6daf3ecb24fd9c65d0baadd89250ef2ffdfe45a405068f0ec63f70b3f33a60c71f96aeb3502eeb1d63385af44770cb718f8ef2a6916c960c697820baf32818720460ee126fad70cc640ccbf10b3832463c65626a413b15a1721d9a8a1d8c90e7a72f8460070bf419fcb13ca65253d595c711a25f5763526f4c8fcffc5db9fbd3bcd57bc53bea467146afa18ed9b48e11f41139812bebd60734f09f11afa7ebc12fcab2d52f40b530d4a54bd90c0f6a832a8ea95d0fd462975ac390acf39f0843458d3bb428cf269d5c3f0c93b1a0f8e4e4e8664f25658db2c69d809f82b4c26cce96f9bc6097c59b6b2d946803ad017e635ed0d99bcf99bf960b09b7540032e9ca74fbef3b27c48cbf98923bbddd3122d1db2e739ac3c31175e3314dd5da6c5df3cc6f49675ba461cf475debba855a199bb4168d6d6d723d57f8fdacd7521071d0388c0c23d48fc5283c60e5533325568a239a5010521c49cc955a4702ae15f60c62cb576251787408194c60dfefe2255b7b6dfe2017ec8e3330870e1d760ffbc3ddc99ceec1b9a1b46e26e67d513e9bd57d5674183d9d1c5c0a9c32a112ea6b819b9e1e332357113daa39b223bf65733185be08e96b70177fd2f39ad2c1779739cbad5f08f065ed9c2f25a929e6457d4d1d402bfec56007c882d6539b7927466111377867bc105695a05766a52b57155d0bcfdf84b1e5ad916cb13188247b5fb83d5378661ae4545dd13346bf290abd699ccc06185e80636a9286a4993b4ddb06d4b286bd83eaae4964d739e40c68f1fb75ed9c1fe99077481b908ee3865252065856d5235ddb24a27db4d3dd2cc95101fd9b853121dfeec64dad2955aba094751afed368d28bb2dc7f482341c809711142c52672be2ac5bd2a34d0fa1289db21e216afa02ca37e1fc132380fb6863c01ea592f1d1a9f9ca15eefd13c2252b5bd5ad221b99818515ec2882703723d140dc7c497ced6bb21f45c35c53e60cf6e417d5ee26cce4ec0cffc89d8c6ebd012cb757076581e025c8bdb06bf5142835f16af21719b0e394f115ce81fb14e92158df588cfc3957473990","extension":"doc","is_archive":0,"is_protocol":false,"can_added_to_archive":true,"is_downloaded":true,"can_file_previews":true,"dtc":"2023-10-05 13:35:09"}]},"tags":[],"dte-formatted":"2023/10/09"}};
+    var tendersData = {"70887730":{"id":70887730,"events":{"12":"2023-10-09 23:59:59"},"fav2":[],"favoritesAvailable":false,"comments":null,"files_by_date":{"2023-10-05":[{"id":613840418,"tid":70887730,"title":"Извещение","fsid":"2023-10/9d6/komtender_document_2204689_49f9701c88f615ae41ecd00d03a77fa4.docx","link":"https://files.rostender.info/?t=3fea236993d95de62af0c91254878fdac269029b2e03a862a98159f3e481608f5f180476f332298d1987aa8753c794b07923173867db82d4f0a19a1c9f2cb27a1488be5e3dbf2a1491e50b10ef0eb3669c0225e430aef3ceb4bed8023f5c52548a274150aaf2b903cec3223b7c60f181ba5b9d3f941cdf3559f4ad20142a6c5732f33e79813e4f032cff1a4443dde6861a628071ccd6f4128f8cdfa370c5914ad3a6dbd15c6adf9dd206a5ec49ba6cf061939ef5e253b65a655172c179a49d922e408cb08ad38b1a3aa6fe53616eca7889b7644930f9e06155b938e17bceb258e1751a181ff5f75b3ff83412bf9240f4021ed9e19c73f156498fa3381e9ce7161961fe47fbc46a579072fe6786db14eb8c535c64ca692cf873a8c3ab34b62501108ee201dd88cee598948d91ca05581b1259cf5b6cbbdd1859e5b5e8be5b601dcb3335ef71023f6f0a07fcdc8ad27c0025ee92a057150bb8b49cd6f65abf5fbfedd54026bc25649f580ce06c0fb77419ed67c4a2e1e666b46fcc3dc95cc4457a621a859c0f23715ecfadd6ff602ab852de3ffb5f5a985aff77962907fc011f03f2af2e0e7acbd00341ee859761cf7c33802242cbee2369965b49d824a484ee8db8a83ff4f93b90178ecff511a595d3fe576d5b84f9e32d701477c51bdfc5e8fb63af0e03464c99cf85a3462c0922f3db06aaa1c37fad3ecf82422eba9c3d43ac59de4bfaf1709ffca5bd730526d809ceb0d4f67a25705fd731456865b3b31f9e8cc8c3eede75878d766fabcf9c9e9d25fbf3e08621d740f4","size":6368,"md5":"27dc42c1a39c83e70485865e11e7a5b3","ts":"2023-10-05 20:35:08","token":"3fea236993d95de62af0c91254878fdac269029b2e03a862a98159f3e481608f5f180476f332298d1987aa8753c794b041abff2ef255d69a00204ab954941ea5756862006b17aad26db96b90cd572f1339c892266921607cc9786268f85328062c6fa640e8a7a508c5c3463e25c5f2c0cdc7117c7225b4b09a6ca3aa10c4f4c47ce738fce607252a1ff27e071b375385ecf6a7f75c24edf32bf41f2d1579a4c1d1a9ad11abc29ff3d3456b10f8447d0abe5955685ddd2a1b478651ebdd3d809a0698908467ea85ea2c3170195b34a1ce8edf0f5b038a43cae5d139fbc875245e0e2aa73ae773a72ea495ea5309e3fea77c34c66c78937649f90f224b722cdd1bd9c79aa660bbef66d75b82ddb5bbce492af147813891891d43cdb33b78a63ba93828f0e936da9171f7dacea0576801bde0993eed6b4816b1f0a45a5fcfe7b19aa240fd1b615cc6e7ee7f300908cbce5347fbeef51fa437ac0fefa5c8d4d6c61e3d2ef8543eb6ce8c26e396875409af9c0eb94cc8b723973e43e0e5e9d27da361e76709a0f19fa0153a92aec7ba72ac365606c9ce80c509c6aa1ddafca7419bbd36bf5be3f52efe45c7a18fb75233c73bf8d81db4d6d0a5d1a5c0e8f46c8635d6a62401364c84d86a70a0239be0194af4b4ddd7f097319c6a05c45c30789e02da1ceee97771c4aed531406793468d0e0e4aac4e33dc31d03e38176355ba902b18ac912d60e0551dafd781154753ca36f137ec5d565ae19e94e26275847cd286d5fe4db0508a59264630d108ea6441e9f8","extension":"docx","is_archive":0,"is_protocol":false,"can_added_to_archive":true,"is_downloaded":true,"can_file_previews":false,"dtc":"2023-10-05 13:35:08"}]},"tags":[],"dte-formatted":"2023/10/09"}};
 </script>
 
 
@@ -1302,20 +510,6 @@
 <div class="tender-icon n1">
 
     
-        <div data-target="70887730" onclick="FavoritesHelper.add($(this));" title="Добавить в избранное" class="tender-icon__fav icon fav-star fav tender-info-header-icon">
-
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="svg-star svg" viewBox="0 0 18 17"><path stroke="#7B7D87" stroke-width="2" d="m9 1.02 2.35 4.74 5.24.76v.02l-3.78 3.7.89 5.21c0 .01 0 .02-.02.01L9 13l-4.68 2.46H4.3l.9-5.22-3.8-3.7.01-.02 5.23-.76h.01L9 1.02Z"></path></svg>
-        </div>
-
-    
-    
-        <span title="Добавить в скрытое" data-params="{&quot;tender&quot;: 70887730, &quot;action&quot;: &quot;toggle-user-tenders&quot;}" onclick="if(!$(this).hasClass('hidden'))FavoritesHelper.hide($(this));" class="btn btn-clear tender-icon__visible icon eye-hide user-hide ">
-                      
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="svg svg-hidden-tender" viewBox="0 0 20 20"><rect width="20" height="20" fill="#F0F2F5" rx="2"></rect><path fill="#BDC0C8" fill-rule="evenodd" d="M4.636 4.565 8.622 8.55a2 2 0 0 1 2.828 2.828l3.914 3.915a1 1 0 0 1 .083 1.32l-.083.094a1 1 0 0 1-1.414 0l-1.204-1.201A7.597 7.597 0 0 1 10 16c-3.2 0-5.755-1.784-7.596-5.215l-.17-.326L2 10l.233-.459c.54-1.062 1.145-1.976 1.813-2.738l-.824-.824a1 1 0 1 1 1.414-1.414Zm-.199 5.112L4.253 10l.157.277C5.89 12.812 7.737 14 10 14c.39 0 .768-.035 1.134-.107L5.462 8.22c-.36.423-.7.909-1.025 1.458ZM10 4c3.2 0 5.755 1.784 7.596 5.215l.17.326L18 10l-.233.459c-.522 1.027-1.105 1.915-1.747 2.661l-1.417-1.416A10.97 10.97 0 0 0 15.747 10C14.24 7.274 12.344 6 10 6a5.95 5.95 0 0 0-1.015.085l-1.629-1.63A7.619 7.619 0 0 1 10 4Z" clip-rule="evenodd"></path></svg>
-
-
-        </span>
-
     
         
     <div class="tender-info-header-number">
@@ -1356,32 +550,6 @@
         <div class="flex-grow"></div>
 
         
-<div class="account-tags no-select">
-
-    <div id="account-tags-items-70887730" class="account-tags-items-70887730 account-tags-items account-tags-items--container account-tags-items--active" data-tender_id="70887730">
-    
-    
-    </div>
-    
-    <div data-maxwidth="550" data-trigger-event="true" data-fixwidth="true" data-tippy-trigger="click" data-tippy-interactive="true" data-template="account-tags-items-70887730" class="more-tags hoveredPopupTooltip hidden">
-        <div class="icon-menu-more-horizontal"></div>
-    </div>
-
-    
-    
-    
-        
-        <div class="account-tags-action">
-
-            <div class="tag-action tender-icon__tag sprite-pseudo hoveredPopupTooltip" data-title="Добавить метки" data-params="{&quot;tender_id&quot;:70887730,&quot;action&quot;:&quot;change-tag&quot;}"><!-- --></div>
-        </div>
-
-    
-</div>
-
-        
-            <div class="tender-icon__comment hoveredPopupTooltip  sprite-pseudo" data-title="Добавить комментарий"></div>
-
         
         
         
@@ -1389,37 +557,7 @@
 </div>
 
 
-    <div id="tenderDetailComments">
-        <div class="comments empty-comments" data-tender="70887730">
-
-    
-    <div class="comments__wrap">
-        <div class="comments__list ">
-
-            <div class="comments__first one">
-
-                
-            </div>
-
-            
-        </div>
-
-        <a class="add comments-action hidden" href="#" data-params="{&quot;action&quot;:&quot;comment-init&quot;,&quot;tender&quot;:70887730}">Добавить комментарий</a>
-        <div>
-            <div class="comments__all comments__all--expand hidden">
-                Все комментарии (<span>0</span>)
-            </div>
-
-            <div class="comments__all comments__all--rollup  hidden">Свернуть комментарии</div>
-        </div>
-
-    </div>
-
-</div>
-    </div>
-
-
-<div class="tender-header ">
+<div class="tender-header mt-4">
 
     
     <div class="tender-header__title">
@@ -1427,7 +565,7 @@
             <h1 class="tender-header__h4 h4 m-0 p-0 line-clamp line-clamp--n3" data-id="name">
 
                 
-                    Поставка фракционного защищенного жира 99% для производства комбикорма для КРС
+                    Тендер: Поставка фракционного защищенного жира 99% для производства комбикорма для КРС
                 
             </h1>
             <div class="line-clamp-btn mt-3" data-id="name"></div>
@@ -1473,7 +611,7 @@
 
             
                 
-                    Ханкайский район, Анивский район, с. Троицкое,
+                    <span class="tender-info__text"> Ханкайский район, Анивский район, с.Троицкое</span>,
                 
             
             
@@ -1485,17 +623,26 @@
                                         <ul class="tender-body__regions">
                                          
                                              <li class="tender-body__regions-item">
-                                                 <a class="tender-body__text" target="_blank" href="https://rostender.info/region/primorskij-kraj">
-                                                     Приморский край,&nbsp;                                                 </a>
+
+                                                 
+                                                     <a class="tender-body__text" target="_blank" href="https://rostender.info/region/primorskij-kraj" title="Тендеры Приморского края">
+                                                      Приморский край,&nbsp;                                                     </a>
+
+                                                 
                                              </li>
 
                                          
                                              <li class="tender-body__regions-item">
-                                                 <a class="tender-body__text" target="_blank" href="https://rostender.info/region/sahalinskaya-oblast">
-                                                     Сахалинская область                                                 </a>
+
+                                                 
+                                                     <a class="tender-body__text" target="_blank" href="https://rostender.info/region/sahalinskaya-oblast" title="Тендеры Сахалинской области">
+                                                      Сахалинская область                                                     </a>
+
+                                                 
                                              </li>
 
-                                                                                 </ul>
+                                         
+                                     </ul>
 
                                                                             </span>
             <div class="line-clamp-btn my-3" data-id="regions"></div>
@@ -1505,14 +652,14 @@
 
             
             <div class="tender-body__block n2">
-    <span class="tender-body__label">Заказчик</span>
+    <span class="tender-body__label">Организатор закупки</span>
     <span class="tender-body__field">
                     <div class="position-relative">
                         
                             <span class="tender-info__text">
-            <div class="line-clamp line-clamp--n5" data-id="customer_1697013532.0804">
+            <div class="line-clamp line-clamp--n5" data-id="customer_1697014139.3359">
                             ООО "ХАПК "ГринАгро"                    </div>
-        <div class="line-clamp-btn mt-3" data-id="customer_1697013532.0804"></div>
+        <div class="line-clamp-btn mt-3" data-id="customer_1697014139.3359"></div>
     </span>
 
                             
@@ -1521,7 +668,7 @@
                         <div class="pt-2"></div>
 
                         
-    <a class="d-inline-flex btn btn-link-icon px-0 py-md-0 justify-content-start" href="/analytics?keywords=%D0%9E%D0%9E%D0%9E+%22%D0%A5%D0%90%D0%9F%D0%9A+%22%D0%93%D1%80%D0%B8%D0%BD%D0%90%D0%B3%D1%80%D0%BE%22&amp;redirect=1&amp;refer=tender" target="_blank" data-theme="black" data-title="" data-unclick="true" data-tippy-trigger="click" data-tippy-interactive="true" onclick=""><span class="icon">
+    <a class="d-inline-flex btn btn-link-icon px-0 py-md-0 justify-content-start hoveredPopup" href="#" target="" data-theme="black" data-title="<div><p>Аналитика доступна только зарегистрированным пользователям.</p><p>Пройдите бесплатную регистрацию, чтобы использовать все возможности сервиса</p></div><div class='tippy__control'><div><a href='/registration' target='_blank' class='tippy__link-reg'>Регистрация</a></div><div class='tippy__button dismiss'>Понятно</div></div>" data-unclick="true" data-tippy-trigger="click" data-tippy-interactive="true" onclick="event.preventDefault();"><span class="icon">
 <svg class="svg-customer-analytics svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 18"><path stroke="#7B7D87" stroke-width="2" class="fill stroke" d="m12.256 8.85 2.91 2.103m7.356-5.655-3.956 5.13M8.885 9.287l-3.996 4m7.778-5.76c0 1.28-1.026 2.316-2.292 2.316-1.266 0-2.292-1.037-2.292-2.316S9.11 5.21 10.375 5.21c1.266 0 2.292 1.037 2.292 2.316Zm6.666 4.632c0 1.279-1.026 2.316-2.291 2.316-1.266 0-2.292-1.037-2.292-2.316 0-1.28 1.026-2.316 2.292-2.316 1.265 0 2.291 1.037 2.291 2.316ZM26 3.316c0 1.279-1.026 2.316-2.292 2.316-1.265 0-2.291-1.037-2.291-2.316 0-1.28 1.026-2.316 2.291-2.316C24.974 1 26 2.037 26 3.316ZM5.583 14.684c0 1.28-1.026 2.316-2.291 2.316C2.026 17 1 15.963 1 14.684s1.026-2.316 2.292-2.316c1.265 0 2.291 1.037 2.291 2.316Z"></path></svg>
 
 </span><span>Анализ заказчика</span></a>
@@ -1530,7 +677,7 @@
                 </span>
 </div>
 
-
+    
             
         </div>
 
@@ -1554,13 +701,13 @@
 
             
 
-                
+            
             <div class="flex-grow"></div>
 
             
     <div class="tender-body__block n7">
 
-        <a class="d-inline-flex btn btn-link-icon justify-content-start px-0 py-sm-0" href="/analytics/tenders/hash?mode=advanced&amp;customers=%D0%9E%D0%9E%D0%9E+%22%D0%A5%D0%90%D0%9F%D0%9A+%22%D0%93%D1%80%D0%B8%D0%BD%D0%90%D0%B3%D1%80%D0%BE%22&amp;geo=27%2C66&amp;branch=257%2C288" target="_blank" data-theme="black" data-title="" data-unclick="true" data-tippy-trigger="click" data-tippy-interactive="true" onclick=""><span class="icon">
+        <a class="d-inline-flex btn btn-link-icon justify-content-start px-0 py-sm-0 hoveredPopup" href="#" target="" data-theme="black" data-title="<div><p>Аналитика доступна только зарегистрированным пользователям.</p><p>Пройдите бесплатную регистрацию, чтобы использовать все возможности сервиса</p></div><div class='tippy__control'><div><a href='/registration' target='_blank' class='tippy__link-reg'>Регистрация</a></div><div class='tippy__button dismiss'>Понятно</div></div>" data-unclick="true" data-tippy-trigger="click" data-tippy-interactive="true" onclick="event.preventDefault();"><span class="icon">
 <svg class="svg-customer-analytics svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 18"><path stroke="#7B7D87" stroke-width="2" class="fill stroke" d="m12.256 8.85 2.91 2.103m7.356-5.655-3.956 5.13M8.885 9.287l-3.996 4m7.778-5.76c0 1.28-1.026 2.316-2.292 2.316-1.266 0-2.292-1.037-2.292-2.316S9.11 5.21 10.375 5.21c1.266 0 2.292 1.037 2.292 2.316Zm6.666 4.632c0 1.279-1.026 2.316-2.291 2.316-1.266 0-2.292-1.037-2.292-2.316 0-1.28 1.026-2.316 2.292-2.316 1.265 0 2.291 1.037 2.291 2.316ZM26 3.316c0 1.279-1.026 2.316-2.292 2.316-1.265 0-2.291-1.037-2.291-2.316 0-1.28 1.026-2.316 2.291-2.316C24.974 1 26 2.037 26 3.316ZM5.583 14.684c0 1.28-1.026 2.316-2.291 2.316C2.026 17 1 15.963 1 14.684s1.026-2.316 2.292-2.316c1.265 0 2.291 1.037 2.291 2.316Z"></path></svg>
 
 </span><span>Анализировать похожие тендеры</span></a>
@@ -1580,12 +727,6 @@
         <div class="flex-grow"></div>
 
         
-            <button type="button" class="btn btn-link-icon  px-0 py-sm-0 order-garanty "><span class="icon">
-    <svg class="svg-garanty svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-        <path stroke="#7B7D87" stroke-linejoin="round" stroke-width="2" d="M9.668 2 3.49 5.53c.085 6.334 1.482 8.888 6.177 11.47 4.34-2.554 6.054-4.665 5.735-11.47L9.668 2Z"></path><path stroke="#7B7D87" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7.462 9.5 1.323 1.323 3.53-3.53"></path></svg>
-
-</span> <span>Получить банковскую гарантию</span></button>
-        
     
 
             </div>
@@ -1601,26 +742,11 @@
         <div class="flex-grow"></div>
 
         
-            <div class="documents-load">
-
-                
-                
-<div class="archive-button">
-    <button class="download-archive-link btn btn-link-icon p-0" data-action="archive_create" style="pointer-events: auto;" add-link=".add-link" data-json="{&quot;files&quot;:[613840418,613840427],&quot;standard_files&quot;:[],&quot;token&quot;:&quot;a7a869bdf5aeb081e373378ecce2e513&quot;,&quot;tid&quot;:70887730}">
-         <span>Скачать одним архивом</span>
-        <span class="  ml-2 mr-0 icon-download-gray "></span>
-    </button>
-    <div class="add-link"></div>
-</div>
-
-            </div>
-
-        
     </div>
 
     <div class="tender-body__block ">
 
-        <div class="tender-files  tender-files--logged">
+        <div class="tender-files ">
 
             
                 
@@ -1637,8 +763,8 @@
 <li class="tender-files__item">
 
     
-    <a class="tender-files__link  fileview link " data-extension="docx" data-id="613840418">
-        
+        <a class="tender-files__link link " href="https://files.rostender.info/?t=3fea236993d95de62af0c91254878fdac269029b2e03a862a98159f3e481608f5f180476f332298d1987aa8753c794b07923173867db82d4f0a19a1c9f2cb27a1488be5e3dbf2a1491e50b10ef0eb3669c0225e430aef3ceb4bed8023f5c52548a274150aaf2b903cec3223b7c60f181ba5b9d3f941cdf3559f4ad20142a6c5732f33e79813e4f032cff1a4443dde6861a628071ccd6f4128f8cdfa370c5914ad3a6dbd15c6adf9dd206a5ec49ba6cf061939ef5e253b65a655172c179a49d922e408cb08ad38b1a3aa6fe53616eca7889b7644930f9e06155b938e17bceb258e1751a181ff5f75b3ff83412bf9240f4021ed9e19c73f156498fa3381e9ce7161961fe47fbc46a579072fe6786db14eb8c535c64ca692cf873a8c3ab34b62501108ee201dd88cee598948d91ca05581b1259cf5b6cbbdd1859e5b5e8be5b601dcb3335ef71023f6f0a07fcdc8ad27c0025ee92a057150bb8b49cd6f65abf5fbfedd54026bc25649f580ce06c0fb77419ed67c4a2e1e666b46fcc3dc95cc4457a621a859c0f23715ecfadd6ff602ab852de3ffb5f5a985aff77962907fc011f03f2af2e0e7acbd00341ee859761cf7c33802242cbee2369965b49d824a484ee8db8a83ff4f93b90178ecff511a595d3fe576d5b84f9e32d701477c51bdfc5e8fb63af0e03464c99cf85a3462c0922f3db06aaa1c37fad3ecf82422eba9c3d43ac59de4bfaf1709ffca5bd730526d809ceb0d4f67a25705fd731456865b3b31f9e8cc8c3eede75878d766fabcf9c9e9d25fbf3e08621d740f4" target="_blank">
+            
             <span class="sprite-pseudo icon-file-default icon-docx mr-2"></span>
             <span class="title">Извещение</span>
             <span class="flex-grow"></span>
@@ -1648,31 +774,7 @@
 
                     </a>
                     <div onclick="event.stopPropagation();">
-                <a target="_blank" href="https://files.rostender.info/?t=3fea236993d95de62af0c91254878fdac269029b2e03a862a98159f3e481608f5f180476f332298d1987aa8753c794b08fa49b58688830bb475b7152c6d65ec70889e045b87755ce0d87fda32c304224695a5d4db53834db41c75d9062e810f25e197d7f1043dd5dfb90f4128e005efce09ae28479b82135ddb206db84dab3cc23765c37c006b2e3830350b8d7b095001b0085a0fed467db7e9f2ab16410e73c76e27adfebec554ff183a7cf650478994bedf73e08f2841480cdce9c64488766835293fc939547f79d2cc72f0743fbe66e0caa87c7bae595aec2b06f2e65203a7811d9d41e54f117d26ca78234937958c3de0595867cb95a4917b00988f21f3de494a0868da8b0399244d03b8ed95313da0b3648e04fd69a58c242e8279f90c8f040441a5ff954bb607b034c68dc9468cc1105f889bac3693bb10901cfd5f4bd22a0c9af6fda35569b829f8714391d92fab3ccdb382f27cd36ded27f24b7bf468331de7230d66b6a120579457a3d44cba57c242f37c76e1491a4175077f8f543a8f80ad0c7edfe69c22e915518f8d21365c18a65396c59074f96c244cad46a281499e3b227a687e22b4ecc7780146cc7019ea465ebd45f4cdbc7bb661700b65b59b5f3116f8c30cdd06ad46ef11d5d85a91d66957e9054111889d134cb725c145709db4ed2de588d2e02ad906f358e09e8782a5c0626d16f0d3f5e9c33d4b4d7902161e919748ccb018f80bdfa375ffa5294ab18749d63b5c86e5dfb6b3077b90e4a3b14d300be04a982ae6a0b025378ab34f13dbec44d26" class="icon-download-gray tender-files__download ml-3 hoveredPopupTooltip" data-title="Скачать">
-                </a>
-            </div>
-        </li>
-
-                            
-                            
-                    
-                        
-                                
-<li class="tender-files__item">
-
-    
-    <a class="tender-files__link  fileview link " data-extension="doc" data-id="613840427">
-        
-            <span class="sprite-pseudo icon-file-default icon-doc mr-2"></span>
-            <span class="title">Приморский Кондитер. Ссылка на сайт размещения тендера #70887730</span>
-            <span class="flex-grow"></span>
-
-            
-                <span class="size"></span>
-
-                    </a>
-                    <div onclick="event.stopPropagation();">
-                <a target="_blank" href="https://files.rostender.info/?t=3fea236993d95de6fb298abe03555ee76f6be80b2fcc1c664a1759d9d2417907aac55455d796fbe2d9d31b7fd572ba426dd459fb8912afd884b721637e671a5fa0184b4c9c4efc081a2f8a8b03ed911d3e3bcb7d50070fb1477a5b1e6af2375a95b493620adbef10825979c7509ad654817063e6307c5b0721d843ff1bcfce877c01f4d849a66528d827cf7241a6bdb7c0dc9e8e1f37bcbab76633b5acfcac24645b22a212a04e2f3979ad2a8fdac350cd7af8240b1d574cc1716bcdfe3ee736c6c915ff36be726c0fdac8fe6919018e0201722b05817f6e106de9b0d8e398099bd819fd1f65d6daf3ecb24fd9c65d0baadd89250ef2ffdfe45a405068f0ec63f70b3f33a60c71f96aeb3502eeb1d63385af44770cb718f8ef2a6916c960c697820baf32818720460ee126fad70cc640ccbf10b3832463c65626a413b15a1721d9a8a1d8c90e7a72f8460070bf419fcb13ca65253d595c711a25f5763526f4c8fcffc5db9fbd3bcd57bc53bea467146afa18ed9b48e11f41139812bebd60734f09f11afa7ebc12fcab2d52f40b530d4a54bd90c0f6a832a8ea95d0fd462975ac390acf39f0843458d3bb428cf269d5c3f0c93b1a0f8e4e4e8664f25658db2c69d809f82b4c26cce96f9bc6097c59b6b2d946803ad017e635ed0d99bcf99bf960b09b7540032e9ca74fbef3b27c48cbf98923bbddd3122d1db2e739ac3c31175e3314dd5da6c5df3cc6f49675ba461cf475debba855a199bb4168d6d6d723d57f8fdacd7521071d0388c0c23d48fc5283c60e5533325568a239a5010521c49cc955a4702ae15f60c62cb576251787408194c60dfefe2255b7b6dfe2017ec8e3330870e1d760ffbc3ddc99ceec1b9a1b46e26e67d513e9bd57d5674183d9d1c5c0a9c32a112ea6b819b9e1e332357113daa39b223bf65733185be08e96b70177fd2f39ad2c1779739cbad5f08f065ed9c2f25a929e6457d4d1d402bfec56007c882d6539b7927466111377867bc105695a05766a52b57155d0bcfdf84b1e5ad916cb13188247b5fb83d5378661ae4545dd13346bf290abd699ccc06185e80636a9286a4993b4ddb06d4b286bd83eaae4964d739e40c68f1fb75ed9c1fe99077481b908ee3865252065856d5235ddb24a27db4d3dd2cc95101fd9b853121dfeec64dad2955aba094751afed368d28bb2dc7f482341c809711142c52672be2ac5bd2a34d0fa1289db21e216afa02ca37e1fc132380fb6863c01ea592f1d1a9f9ca15eefd13c2252b5bd5ad221b99818515ec2882703723d140dc7c497ced6bb21f45c35c53e60cf6e417d5ee26cce4ec0cffc89d8c6ebd012cb757076581e025c8bdb06bf5142835f16af21719b0e394f115ce81fb14e92158df588cfc3957473990" class="icon-download-gray tender-files__download ml-3 hoveredPopupTooltip" data-title="Скачать">
+                <a target="_blank" href="https://files.rostender.info/?t=3fea236993d95de62af0c91254878fdac269029b2e03a862a98159f3e481608f5f180476f332298d1987aa8753c794b07923173867db82d4f0a19a1c9f2cb27a1488be5e3dbf2a1491e50b10ef0eb3669c0225e430aef3ceb4bed8023f5c52548a274150aaf2b903cec3223b7c60f181ba5b9d3f941cdf3559f4ad20142a6c5732f33e79813e4f032cff1a4443dde6861a628071ccd6f4128f8cdfa370c5914ad3a6dbd15c6adf9dd206a5ec49ba6cf061939ef5e253b65a655172c179a49d922e408cb08ad38b1a3aa6fe53616eca7889b7644930f9e06155b938e17bceb258e1751a181ff5f75b3ff83412bf9240f4021ed9e19c73f156498fa3381e9ce7161961fe47fbc46a579072fe6786db14eb8c535c64ca692cf873a8c3ab34b62501108ee201dd88cee598948d91ca05581b1259cf5b6cbbdd1859e5b5e8be5b601dcb3335ef71023f6f0a07fcdc8ad27c0025ee92a057150bb8b49cd6f65abf5fbfedd54026bc25649f580ce06c0fb77419ed67c4a2e1e666b46fcc3dc95cc4457a621a859c0f23715ecfadd6ff602ab852de3ffb5f5a985aff77962907fc011f03f2af2e0e7acbd00341ee859761cf7c33802242cbee2369965b49d824a484ee8db8a83ff4f93b90178ecff511a595d3fe576d5b84f9e32d701477c51bdfc5e8fb63af0e03464c99cf85a3462c0922f3db06aaa1c37fad3ecf82422eba9c3d43ac59de4bfaf1709ffca5bd730526d809ceb0d4f67a25705fd731456865b3b31f9e8cc8c3eede75878d766fabcf9c9e9d25fbf3e08621d740f4" class="icon-download-gray tender-files__download ml-3 hoveredPopupTooltip" data-title="Скачать">
                 </a>
             </div>
         </li>
@@ -1698,13 +800,6 @@
     <span class="tender-body__label tender-body__label--name black">Участие</span>
     <div class="flex-grow"></div>
 
-    
-        
-<button type="button" id="question-instructions" class="btn btn-link-icon py-sm-0 px-0" data-instruction="166"><span>Как участвовать в тендере</span><span class="ml-3">
-
-
-    <div class="icon-question"><div class="icon-question-static"></div></div>
-</span> </button>
     
 </div>
 
@@ -1788,10 +883,18 @@
                 <span class="tender-body__field">
                     <ul class="tender-body__branches">
                         
-                                                            <li class="tender-body__branches-item">
-                                        <a class="tender-body__text" target="_blank" href="/tendery-korma-dlya-jivotnyh">Корма для животных</a></li>
-                                                            <li class="tender-body__branches-item">
-                                        <a class="tender-body__text" target="_blank" href="/tendery-oborudovanie-inventar-tovary-dlya-jivotnovodstva">Оборудование, инвентарь, товары для животноводства</a></li>
+                            
+                                <li class="tender-body__branches-item"><a target="_blank" href="/tendery-korma-dlya-jivotnyh" class="tender-body__text" title="Тендеры на корма для животных"><span>Корма для животных</span></a>
+                                </li>
+
+                                
+
+                            
+                                <li class="tender-body__branches-item"><a target="_blank" href="/tendery-oborudovanie-inventar-tovary-dlya-jivotnovodstva" class="tender-body__text" title="Тендеры на оборудование, инвентарь, товары для животноводства"><span>Оборудование, инвентарь, товары для животноводства</span></a>
+                                </li>
+
+                                
+
                             
                                             </ul>
                 </span>
@@ -1806,548 +909,194 @@
 
 <!-- Возможно Вас также заинтересуют -->
 
+    
+        <div class="alert-container alert-mode mt-4">
+
+            <div class="alert alert-warning alert-dismissible">
+
+                <h5 class="alert-heading mt-0 pb-0">Возможно Вас также заинтересуют:</h5>
+
+                <div class="recommendation">
+                                                                        
+                                <div class="recommendation__item">
+                                    <a class="hoveredPopupTooltip recommendation__link" data-tippy-offset="[-10, 10]" data-tippy-placement="top" data-tippy-interactive="true" data-title="
+                                <p> Последние 5 тендеров в этой категории: </p>
+                                <ul class=&quot;similar_tenders_list&quot;>
+                                                                <li style=&quot;margin-bottom: 5px&quot;>
+                                    <a href=&quot;https://rostender.info/region/tomskaya-oblast/70986748-tender-kombikorm&quot; style=&quot;color:#000&quot;>
+                                        Тендер на комбикорм в  Томской области                                    </a>
+                                </li>
+                                                                <li style=&quot;margin-bottom: 5px&quot;>
+                                    <a href=&quot;https://rostender.info/region/habarovskij-kraj/70982980-tender-prochaya-zakupka-tovarov-rabot-uslug-kombikorm-dlya-svinej&quot; style=&quot;color:#000&quot;>
+                                        Тендер: Прочая закупка товаров, работ, услуг (Комбикорм для свиней) в  Хабаровском крае                                    </a>
+                                </li>
+                                                                <li style=&quot;margin-bottom: 5px&quot;>
+                                    <a href=&quot;https://rostender.info/region/permskij-kraj/chusovoj/70980701-tender-postavka-kombikorma-v-assortimente&quot; style=&quot;color:#000&quot;>
+                                        Тендер на поставку комбикорма в ассортименте в Чусовом                                    </a>
+                                </li>
+                                                                <li style=&quot;margin-bottom: 5px&quot;>
+                                    <a href=&quot;https://rostender.info/region/novosibirskaya-oblast/70980044-tender-kombikorm&quot; style=&quot;color:#000&quot;>
+                                        Тендер на комбикорм в  Новосибирской области                                    </a>
+                                </li>
+                                                                <li style=&quot;margin-bottom: 5px&quot;>
+                                    <a href=&quot;https://rostender.info/region/novosibirskaya-oblast/70979507-tender-kombikorm&quot; style=&quot;color:#000&quot;>
+                                        Тендер на комбикорм в  Новосибирской области                                    </a>
+                                </li>
+                                                                                </ul>" href="https://rostender.info/category/tendery-kombikorm">
+                                        <span class="recommendation__name">
+                                            Тендеры на комбикорм                                        </span>
+                                        <span class="px-3"></span>
+                                        <span class="recommendation__button">Посмотреть</span>
+                                        <div class="recommendation__arrow"></div>
+                                    </a>
+                                </div>
+
+                                                                                
+                                <div class="recommendation__item">
+                                    <a class="hoveredPopupTooltip recommendation__link" data-tippy-offset="[-10, 10]" data-tippy-placement="top" data-tippy-interactive="true" data-title="
+                                <p> Последние 5 тендеров в этой категории: </p>
+                                <ul class=&quot;similar_tenders_list&quot;>
+                                                                <li style=&quot;margin-bottom: 5px&quot;>
+                                    <a href=&quot;https://rostender.info/tender/70887730&quot; style=&quot;color:#000&quot;>
+                                        Тендер на поставку фракционного защищенного жира 99% для производства комбикорма для КРС в  Приморском крае                                    </a>
+                                </li>
+                                                                <li style=&quot;margin-bottom: 5px&quot;>
+                                    <a href=&quot;https://rostender.info/region/tatarstan-respublika/70621967-tender-jir-zashchishchennyj-kormlenie-krs&quot; style=&quot;color:#000&quot;>
+                                        Тендер: Жир защищенный. (Кормление КРС) в  Татарстане                                    </a>
+                                </li>
+                                                                <li style=&quot;margin-bottom: 5px&quot;>
+                                    <a href=&quot;https://rostender.info/region/udmurtskaya-respublika/70593767-tender-jir-zashchishchennyj&quot; style=&quot;color:#000&quot;>
+                                        Тендер: Жир защищенный в  Удмуртии                                    </a>
+                                </li>
+                                                                <li style=&quot;margin-bottom: 5px&quot;>
+                                    <a href=&quot;https://rostender.info/region/tyumenskaya-oblast/70518656-tender-kormovye-dobavki-zashchishchennyj-jir&quot; style=&quot;color:#000&quot;>
+                                        Тендер на кормовые добавки защищенный жир в  Тюменской области                                    </a>
+                                </li>
+                                                                <li style=&quot;margin-bottom: 5px&quot;>
+                                    <a href=&quot;https://rostender.info/region/tatarstan-respublika/70379349-tender-ustranenie-nedostatkov-po-antiterroristicheskoj-zashchishchennosti-na-territorii-sektorov-a-b-ao-kazanskij-jirovoj-kombinat&quot; style=&quot;color:#000&quot;>
+                                        Тендер на устранение недостатков по антитеррористической защищенности в  Татарстане                                    </a>
+                                </li>
+                                                                                </ul>" href="https://rostender.info/category/tendery-zashchishchennye-jiry">
+                                        <span class="recommendation__name">
+                                            Тендеры на защищенные жиры                                        </span>
+                                        <span class="px-3"></span>
+                                        <span class="recommendation__button">Посмотреть</span>
+                                        <div class="recommendation__arrow"></div>
+                                    </a>
+                                </div>
+
+                                                                        
+                                                                        
+                                <div class="recommendation__item">
+                                    <a class="hoveredPopupTooltip recommendation__link" data-tippy-placement="top" data-tippy-offset="[5, 10]" data-tippy-interactive="true" data-title="
+                                <p> Последние 5 тендеров в этой категории: </p>
+                                <ul class=&quot;similar_tenders_list&quot;>
+
+                                                                <li>
+                                    <a href=&quot;https://rostender.info/region/belgorodskaya-oblast/70987467-tender-kormovye-dobavki&quot; style=&quot;color:#000&quot;>
+                                        Тендер на кормовые добавки в  Белгородской области                                    </a>
+                                </li>
+                                                                <li>
+                                    <a href=&quot;https://rostender.info/region/belgorodskaya-oblast/70987466-tender-kormovye-dobavki&quot; style=&quot;color:#000&quot;>
+                                        Тендер на кормовые добавки в  Белгородской области                                    </a>
+                                </li>
+                                                                <li>
+                                    <a href=&quot;https://rostender.info/region/belgorodskaya-oblast/70987464-tender-kormovye-dobavki&quot; style=&quot;color:#000&quot;>
+                                        Тендер на кормовые добавки в  Белгородской области                                    </a>
+                                </li>
+                                                                <li>
+                                    <a href=&quot;https://rostender.info/region/belgorodskaya-oblast/70987463-tender-kormovye-dobavki&quot; style=&quot;color:#000&quot;>
+                                        Тендер на кормовые добавки в  Белгородской области                                    </a>
+                                </li>
+                                                                <li>
+                                    <a href=&quot;https://rostender.info/region/tomskaya-oblast/70986748-tender-kombikorm&quot; style=&quot;color:#000&quot;>
+                                        Тендер на комбикорм в  Томской области                                    </a>
+                                </li>
+                                                              </ul>" href="/tendery-korma-dlya-jivotnyh">
+                                        <span class="recommendation__name">
+                                              Тендеры: корма для животных                                        </span>
+                                        <span class="px-3"></span>
+                                        <span class="recommendation__button">Посмотреть</span>
+                                        <div class="recommendation__arrow"></div>
+                                    </a>
+                                </div>
+
+                                                                                
+                                <div class="recommendation__item">
+                                    <a class="hoveredPopupTooltip recommendation__link" data-tippy-placement="top" data-tippy-offset="[5, 10]" data-tippy-interactive="true" data-title="
+                                <p> Последние 5 тендеров в этой категории: </p>
+                                <ul class=&quot;similar_tenders_list&quot;>
+
+                                                                <li>
+                                    <a href=&quot;https://rostender.info/region/belgorodskaya-oblast/70987467-tender-kormovye-dobavki&quot; style=&quot;color:#000&quot;>
+                                        Тендер на кормовые добавки в  Белгородской области                                    </a>
+                                </li>
+                                                                <li>
+                                    <a href=&quot;https://rostender.info/region/belgorodskaya-oblast/70987466-tender-kormovye-dobavki&quot; style=&quot;color:#000&quot;>
+                                        Тендер на кормовые добавки в  Белгородской области                                    </a>
+                                </li>
+                                                                <li>
+                                    <a href=&quot;https://rostender.info/region/belgorodskaya-oblast/70987463-tender-kormovye-dobavki&quot; style=&quot;color:#000&quot;>
+                                        Тендер на кормовые добавки в  Белгородской области                                    </a>
+                                </li>
+                                                                <li>
+                                    <a href=&quot;https://rostender.info/region/krasnodarskij-kraj/70986329-tender-hlornaya-izvest-gipohlorit-kalciya-ot-25-1-etap-zakupki&quot; style=&quot;color:#000&quot;>
+                                        Тендер на хлорную известь (гипохлорит кальция) от 25% (1 этап закупки) в  Краснодарском крае                                    </a>
+                                </li>
+                                                                <li>
+                                    <a href=&quot;https://rostender.info/region/krasnoyarskij-kraj/70986169-tender-postavka-lekarstvennyh-preparatov-dlya-veterinarnogo-primeneniya&quot; style=&quot;color:#000&quot;>
+                                        Тендер на поставку лекарственных препаратов для ветеринарного применения в  Красноярском крае                                    </a>
+                                </li>
+                                                              </ul>" href="/tendery-oborudovanie-inventar-tovary-dlya-jivotnovodstva">
+                                        <span class="recommendation__name">
+                                              Тендеры: оборудование, инвентарь, товары для животноводства                                        </span>
+                                        <span class="px-3"></span>
+                                        <span class="recommendation__button">Посмотреть</span>
+                                        <div class="recommendation__arrow"></div>
+                                    </a>
+                                </div>
+
+                                                                                        </div>
+
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+
+            </div>
+
+        </div>
+
 
     
-                
-                                                <div class="pt-5"></div>
-                            
-            <div class="tile ">
-                
-<form action="" id="analytics-potential-participants" method="post">
 
-    <input type="hidden" name="tender" value="70887730">
-    
-    <input type="hidden" name="stage" value="Завершён">    <input type="hidden" name="end_time">    <input type="hidden" name="regions" value="[27,66]">    <input type="hidden" name="branches" value="[257,288]">    <input type="hidden" name="customers" value="[]">
-    <div class="row">
-        <div class="col-12 col-sm-7  mb-sm-4 mb-0  mt-4">
-            <h2 class=" mobile-table-header h4  mb-3 m-sm-0 p-sm-0 ">
-                Потенциальные участники
-            </h2>
-                    </div>
-        
-            <div class="analytics-filter   col-12 my-4 col-sm-5">
 
-                
-                <div class="checkbox-modern sprite-checkbox m-0  p-0">
-                    <label id="show_solo-label" class="checkbox-label" for="show_solo">Включая закупки у единственного поставщика</label>                    <input type="checkbox" id="show_solo" name="show_solo" value="1" onchange="Analytics.clickOnChangeScenario(event);">                    <label for="show_solo"></label>                </div>
-            </div>
+    <div class=" row  tile">
+        <div class=" mt-5 col-12 col-md-12">
+
+            <h2 class=" h4 mb-3 m-sm-0 p-sm-0 mobile-table-header ">
+                Участники и контракты            </h2>
+
+            <div class="tender-positions mt-3">
+                <div class="table-positions"></div>
+                <div class="table-positions"></div>
             </div>
 
-    
-    <div class="alert-container alert-mode">
-    <div class="alert alert-warning alert-dismissible">
+            
+            
+                
+<div class="empty-table-state">
+    <div class="empty-table-state__title ">Аналитика доступна только зарегистрированным пользователям. Пройдите бесплатную регистрацию, чтобы использовать все возможности сервиса</div>
 
-        Нет данных об участниках похожих тендеров этого заказчика. Прогноз построен на основе поставщиков в похожих тендерах других заказчиков в этом регионе
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">×</span>
-            </button>
+    <div class="empty-table-state__subtitle"><a class="btn btn-danger  mt-4 " href="/registration" target="_blank">Зарегистрироваться</a></div>
+    <div class="empty-table-state__advices ">
             </div>
+
 </div>
 
-            <table class="table  table--theme-gray ">
-            <thead>
-            <tr>
-                <th>
-                    
-                        <div class=" d-flex align-items-center">
-
-    
-        
-        <div class="checkbox-modern sprite-checkbox py-0 ml-0 pl-0 ">
-
-            <label id="by-customers-label" class="checkbox-label" for="by-customers">Заказчики</label>
-            <input type="checkbox" id="by-customers" name="by-customers" value="1" onchange="Analytics.clickOnChangeScenario(event);">
-            <label for="by-customers"></label>        </div>
-
-    
-        
-        <div class="checkbox-modern sprite-checkbox py-0 ml-0 pl-0 ">
-
-            <label id="by-regions-label" class="checkbox-label" for="by-regions">Регионы</label>
-            <input type="checkbox" id="by-regions" name="by-regions" value="1" checked="" onchange="Analytics.clickOnChangeScenario(event);">
-            <label for="by-regions"></label>        </div>
-
-    
-        
-        <div class="checkbox-modern sprite-checkbox py-0 ml-0 pl-0 ">
-
-            <label id="by-branches-label" class="checkbox-label" for="by-branches">Отрасли</label>
-            <input type="checkbox" id="by-branches" name="by-branches" value="1" checked="" onchange="Analytics.clickOnChangeScenario(event);">
-            <label for="by-branches"></label>        </div>
-
-    
-        <a class="mx-4 hoveredPopupTooltip" data-title="Прогноз потенциальных участников формируется на основе участников предыдущих тендеров заказчика данного тендера в таких же как у данного тендера отраслях и регионах. Если данных недостаточно, то прогноз формируется по тем параметрам, по которым его можно построить. Включенный параметр (заказчик, отрасль или регион) означает, что он участвует в построении прогноза.">
-        
-
-
-    <div class="icon-question"><div class="icon-question-static"></div></div>
-    </a>
-    </div>
-
-                                    </th>
-                <th>Участвовал</th>
-                <th>Победил</th>
-                <th>Контракт</th>
-                <th>Снижение цены</th>
-                <th>Вероятная цена,‍&nbsp;₽&nbsp;</th>
-            </tr>
-            </thead>
-            <tbody>
             
-                
-                        <tr>
-                <td>
-                    
-<div>
-    <a class="" href="/analytics/2804017230?tab=customers" target="_blank" data-theme="black" data-title="" data-unclick="true" data-tippy-trigger="click" data-tippy-interactive="true" 0="">ООО "МЭЗ "АМУРСКИЙ"</a>
-            <span class="gray-text-small">(ИНН: 2804017230)</span>
-    
-    
+        </div>
     </div>
-                </td>
-                <td>
-                    14                </td>
-                <td>
-                    13                </td>
-                <td>
-                    12                </td>
-                <td>
-                    <div class="d-flex align-items-center">
-            <span class="mapstodown mr-2"></span>
-        <span>0.68‍%</span>
-    </div>
-                </td>
-                <td>
-                    
-    —
 
-                </td>
-            </tr>
-        
-                        <tr>
-                <td>
-                    
-<div>
-    <a class="" href="/analytics/3810079364?tab=customers" target="_blank" data-theme="black" data-title="" data-unclick="true" data-tippy-trigger="click" data-tippy-interactive="true" 0="">ООО "СИБИРСКАЯ КОМПАНИЯ"</a>
-            <span class="gray-text-small">(ИНН: 3810079364)</span>
-    
-    
-    </div>
-                </td>
-                <td>
-                    12                </td>
-                <td>
-                    12                </td>
-                <td>
-                    12                </td>
-                <td>
-                    <div class="d-flex align-items-center">
-            <span class="mapstodown mr-2"></span>
-        <span>6.69‍%</span>
-    </div>
-                </td>
-                <td>
-                    
-    —
-
-                </td>
-            </tr>
-        
-                        <tr>
-                <td>
-                    
-<div>
-    <a class="" href="/analytics/5050013999?tab=customers" target="_blank" data-theme="black" data-title="" data-unclick="true" data-tippy-trigger="click" data-tippy-interactive="true" 0="">ФКП "ЩЕЛКОВСКИЙ БИОКОМБИНАТ"</a>
-            <span class="gray-text-small">(ИНН: 5050013999)</span>
-    
-    
-    </div>
-                </td>
-                <td>
-                    10                </td>
-                <td>
-                    10                </td>
-                <td>
-                    10                </td>
-                <td>
-                    <div class="d-flex align-items-center">
-            <span class="mapstodown mr-2"></span>
-        <span>0.45‍%</span>
-    </div>
-                </td>
-                <td>
-                    
-    —
-
-                </td>
-            </tr>
-        
-                        <tr>
-                <td>
-                    
-<div>
-    <a class="" href="/analytics/540961223341?tab=customers" target="_blank" data-theme="black" data-title="" data-unclick="true" data-tippy-trigger="click" data-tippy-interactive="true" 0="">ИП Шерстобоев Антон Сергеевич</a>
-            <span class="gray-text-small">(ИНН: 540961223341)</span>
-    
-    
-    </div>
-                </td>
-                <td>
-                    10                </td>
-                <td>
-                    10                </td>
-                <td>
-                    9                </td>
-                <td>
-                    <div class="d-flex align-items-center">
-            <span class="mapstodown mr-2"></span>
-        <span>3.53‍%</span>
-    </div>
-                </td>
-                <td>
-                    
-    —
-
-                </td>
-            </tr>
-        
-                        <tr>
-                <td>
-                    
-<div>
-    <a class="" href="/analytics/2538070979?tab=customers" target="_blank" data-theme="black" data-title="" data-unclick="true" data-tippy-trigger="click" data-tippy-interactive="true" 0="">ООО НПК "ДАЛЬКОРМ"</a>
-            <span class="gray-text-small">(ИНН: 2538070979)</span>
-    
-    
-    </div>
-                </td>
-                <td>
-                    9                </td>
-                <td>
-                    9                </td>
-                <td>
-                    6                </td>
-                <td>
-                    <div class="d-flex align-items-center">
-            <span class="mapstodown mr-2"></span>
-        <span>24.34‍%</span>
-    </div>
-                </td>
-                <td>
-                    
-    —
-
-                </td>
-            </tr>
-        
-                        <tr>
-                <td>
-                    
-<div>
-    <a class="" href="/analytics/2634014783?tab=customers" target="_blank" data-theme="black" data-title="" data-unclick="true" data-tippy-trigger="click" data-tippy-interactive="true" 0="">ФКП "СТАВРОПОЛЬСКАЯ БИОФАБРИКА"</a>
-            <span class="gray-text-small">(ИНН: 2634014783)</span>
-    
-    
-    </div>
-                </td>
-                <td>
-                    8                </td>
-                <td>
-                    8                </td>
-                <td>
-                    8                </td>
-                <td>
-                    <div class="d-flex align-items-center">
-            <span class="mapstodown mr-2"></span>
-        <span>0.00‍%</span>
-    </div>
-                </td>
-                <td>
-                    
-    —
-
-                </td>
-            </tr>
-        
-                        <tr>
-                <td>
-                    
-<div>
-    <a class="" href="/analytics/2343003392?tab=customers" target="_blank" data-theme="black" data-title="" data-unclick="true" data-tippy-trigger="click" data-tippy-interactive="true" 0="">ФКП "АРМАВИРСКАЯ БИОФАБРИКА"</a>
-            <span class="gray-text-small">(ИНН: 2343003392)</span>
-    
-    
-    </div>
-                </td>
-                <td>
-                    6                </td>
-                <td>
-                    6                </td>
-                <td>
-                    6                </td>
-                <td>
-                    <div class="d-flex align-items-center">
-            <span class="mapstodown mr-2"></span>
-        <span>10.67‍%</span>
-    </div>
-                </td>
-                <td>
-                    
-    —
-
-                </td>
-            </tr>
-        
-                        <tr>
-                <td>
-                    
-<div>
-    <a class="" href="/analytics/3327100048?tab=customers" target="_blank" data-theme="black" data-title="" data-unclick="true" data-tippy-trigger="click" data-tippy-interactive="true" 0="">ФГБУ "ВНИИЗЖ"</a>
-            <span class="gray-text-small">(ИНН: 3327100048)</span>
-    
-    
-    </div>
-                </td>
-                <td>
-                    6                </td>
-                <td>
-                    6                </td>
-                <td>
-                    6                </td>
-                <td>
-                    <div class="d-flex align-items-center">
-            <span class="mapstodown mr-2"></span>
-        <span>10.97‍%</span>
-    </div>
-                </td>
-                <td>
-                    
-    —
-
-                </td>
-            </tr>
-        
-                        <tr>
-                <td>
-                    
-<div>
-    <a class="" href="/analytics/2508137714?tab=customers" target="_blank" data-theme="black" data-title="" data-unclick="true" data-tippy-trigger="click" data-tippy-interactive="true" 0="">ООО "МИЛЕНА"</a>
-            <span class="gray-text-small">(ИНН: 2508137714)</span>
-    
-    
-    </div>
-                </td>
-                <td>
-                    5                </td>
-                <td>
-                    5                </td>
-                <td>
-                    5                </td>
-                <td>
-                    <div class="d-flex align-items-center">
-            <span class="mapstodown mr-2"></span>
-        <span>19.20‍%</span>
-    </div>
-                </td>
-                <td>
-                    
-    —
-
-                </td>
-            </tr>
-        
-                        <tr>
-                <td>
-                    
-<div>
-    <a class="" href="/analytics/5720002258?tab=customers" target="_blank" data-theme="black" data-title="" data-unclick="true" data-tippy-trigger="click" data-tippy-interactive="true" 0="">ФКП "ОРЛОВСКАЯ БИОФАБРИКА"</a>
-            <span class="gray-text-small">(ИНН: 5720002258)</span>
-    
-    
-    </div>
-                </td>
-                <td>
-                    4                </td>
-                <td>
-                    4                </td>
-                <td>
-                    4                </td>
-                <td>
-                    <div class="d-flex align-items-center">
-            <span class="mapstodown mr-2"></span>
-        <span>0.00‍%</span>
-    </div>
-                </td>
-                <td>
-                    
-    —
-
-                </td>
-            </tr>
-        
-                        <tr>
-                <td>
-                    
-<div>
-    <a class="" href="/analytics/4632005642?tab=customers" target="_blank" data-theme="black" data-title="" data-unclick="true" data-tippy-trigger="click" data-tippy-interactive="true" 0="">ФКП "КУРСКАЯ БИОФАБРИКА"</a>
-            <span class="gray-text-small">(ИНН: 4632005642)</span>
-    
-    
-    </div>
-                </td>
-                <td>
-                    4                </td>
-                <td>
-                    4                </td>
-                <td>
-                    4                </td>
-                <td>
-                    <div class="d-flex align-items-center">
-            <span class="mapstodown mr-2"></span>
-        <span>0.00‍%</span>
-    </div>
-                </td>
-                <td>
-                    
-    —
-
-                </td>
-            </tr>
-        
-                        <tr>
-                <td>
-                    
-<div>
-    <a class="" href="/analytics/2723098376?tab=customers" target="_blank" data-theme="black" data-title="" data-unclick="true" data-tippy-trigger="click" data-tippy-interactive="true" 0="">ООО "ИЛС"</a>
-            <span class="gray-text-small">(ИНН: 2723098376)</span>
-    
-    
-    </div>
-                </td>
-                <td>
-                    5                </td>
-                <td>
-                    3                </td>
-                <td>
-                    3                </td>
-                <td>
-                    <div class="d-flex align-items-center">
-            <span class="mapstodown mr-2"></span>
-        <span>2.30‍%</span>
-    </div>
-                </td>
-                <td>
-                    
-    —
-
-                </td>
-            </tr>
-        
-                        <tr>
-                <td>
-                    
-<div>
-    <a class="" href="/analytics/2465286596?tab=customers" target="_blank" data-theme="black" data-title="" data-unclick="true" data-tippy-trigger="click" data-tippy-interactive="true" 0="">ООО "АКСИОМА"</a>
-            <span class="gray-text-small">(ИНН: 2465286596)</span>
-    
-    
-    </div>
-                </td>
-                <td>
-                    4                </td>
-                <td>
-                    3                </td>
-                <td>
-                    3                </td>
-                <td>
-                    <div class="d-flex align-items-center">
-            <span class="mapstodown mr-2"></span>
-        <span>1.00‍%</span>
-    </div>
-                </td>
-                <td>
-                    
-    —
-
-                </td>
-            </tr>
-        
-                        <tr>
-                <td>
-                    
-<div>
-    <a class="" href="/analytics/2223049250?tab=customers" target="_blank" data-theme="black" data-title="" data-unclick="true" data-tippy-trigger="click" data-tippy-interactive="true" 0="">ООО "БАРРОМ"</a>
-            <span class="gray-text-small">(ИНН: 2223049250)</span>
-    
-    
-    </div>
-                </td>
-                <td>
-                    3                </td>
-                <td>
-                    3                </td>
-                <td>
-                    3                </td>
-                <td>
-                    <div class="d-flex align-items-center">
-            <span class="mapstodown mr-2"></span>
-        <span>0.00‍%</span>
-    </div>
-                </td>
-                <td>
-                    
-    —
-
-                </td>
-            </tr>
-        
-                        <tr>
-                <td>
-                    
-<div>
-    <a class="" href="/analytics/2522004480?tab=customers" target="_blank" data-theme="black" data-title="" data-unclick="true" data-tippy-trigger="click" data-tippy-interactive="true" 0="">СПСК "ОКТЯБРЬСКИЙ"</a>
-            <span class="gray-text-small">(ИНН: 2522004480)</span>
-    
-    
-    </div>
-                </td>
-                <td>
-                    3                </td>
-                <td>
-                    3                </td>
-                <td>
-                    3                </td>
-                <td>
-                    <div class="d-flex align-items-center">
-            <span class="mapstodown mr-2"></span>
-        <span>0.00‍%</span>
-    </div>
-                </td>
-                <td>
-                    
-    —
-
-                </td>
-            </tr>
-        
-    
-
-
-            
-            </tbody>
-        </table>
-    
-</form>
-            </div>
-        
-        <!-- abandonedReasons -->
-        
-        <!-- Лоты -->
-        
-                        
-                        
-        
-    
 
 
 <div class="d-sm-flex d-block alig-items-start mt-4">
@@ -2461,15 +1210,15 @@
             ref: "/tender/70887730",
             city: "",
             name: '',
-            phone: "79057448298",
-            email: "i448539@gmail.com",
+            phone: "",
+            email: "",
         }, {"from_klerk":0,"from_ccem_reg":0,"from_bitrix":0});
     })
 </script>
 
                 </div>
 
-                                    <footer class="footer ">
+                                    <footer class="footer footer--isNotLogged">
 
     <div class="footer__line"></div>
 
@@ -2573,9 +1322,6 @@
         </main>
 
         
-            </div>
-
-        
         <!--noindex-->
                     <!--/noindex-->
 
@@ -2633,16 +1379,6 @@
 <script src="/static/70354742/libraries/countdown/countdown.min.js"></script>
 <script src="/static/70354742/js/tender/single-tender.min.js"></script>
 <script src="/static/70354742/js/analytics/an.min.js"></script>
-<script src="/static/f48796db/js/tags.min.js"></script>
-<script src="/static/f48796db/js/tags-desktop.min.js"></script>
-<script src="/static/70354742/libraries/switcher/switcher.min.js"></script>
-<script src="/static/137a01d1/tinymce.js"></script>
-<script src="/static/137a01d1/plugins/link/plugin.min.js"></script>
-<script src="/static/137a01d1/plugins/lists/plugin.min.js"></script>
-<script src="/static/137a01d1/langs/ru.js"></script>
-<script src="/static/23d8f6c5/js/comments.min.js"></script>
-<script src="/static/70354742/js/archive-button.min.js"></script>
-<script src="/static/bee1c3ec/js/question-instructions.min.js"></script>
 <script src="/static/4253269e/js/support-feedback.min.js"></script>
 <script src="/static/230dfd23/js/bootstrap.bundle.min.js"></script>
 <script src="/static/70354742/libraries/ulid/index.umd.js"></script>
@@ -2660,21 +1396,7 @@
 <script src="/static/70354742/js/functions.min.js"></script>
 <script src="/static/70354742/js/layout/fp2.min.js"></script>
 <script src="/static/70354742/js/layout/fp.min.js"></script>
-<script src="/static/918c14fc/js/websocket.js" charset="UTF-8"></script>
-<script src="/static/4963c69/js/sidebar.min.js"></script>
-<script src="/static/70354742/libraries/mCustomScrollbar/jquery-mousewheel.js"></script>
-<script src="/static/70354742/libraries/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>
-<script src="/static/89f930eb/js/search-list.min.js"></script>
-<script src="/static/89f930eb/js/modalEditQuery.min.js"></script>
-<script src="/static/89f930eb/js/modalDeleteQuery.min.js"></script>
-<script src="/static/89f930eb/js/functions.min.js"></script>
-<script src="/static/17614dc3/js/market-analytics.min.js"></script>
-<script src="/static/2445d04d/js/modal.js"></script>
-<script src="/static/70354742/libraries/string-helper/string-helper.min.js"></script>
-<script src="/static/339d3608/js/tags-list.min.js"></script>
-<script src="/static/339d3608/js/tags-list-desktop.min.js"></script>
 <script src="/static/82e96200/js/header.min.js"></script>
-<script src="/static/7772aa68/js/onboardingTooltip.min.js"></script>
 <script src="/static/2fca7099/js/input-search.min.js"></script>
 <script src="/static/66b95cbe/yii.validation.js"></script>
 <script src="/static/66b95cbe/yii.activeForm.js"></script>
@@ -2685,7 +1407,7 @@ jQuery('#fullSearchFormdefault').yiiActiveForm([{"id":"commonsearchform-kwd","na
 		
                         <script type="text/javascript">
                 
-                var yaParams = {ab_test: "A",client_test_access: "YES",client_status: "Тестовый"};
+                var yaParams = {ab_test: "A"};
 
                 // Добавляем в параметры метрики типы поиска
                 if (document.getElementById("in_files")) {
@@ -2736,7 +1458,7 @@ jQuery('#fullSearchFormdefault').yiiActiveForm([{"id":"commonsearchform-kwd","na
                 
             
         
-        <span id="generatetimestamp" style="display: none; position: absolute; left: -5000px; top: -5000px;">2023-10-11 18:38:52</span>
+        <span id="generatetimestamp" style="display: none; position: absolute; left: -5000px; top: -5000px;">2023-10-11 18:48:59</span>
 
         
         
@@ -2797,4 +1519,4 @@ jQuery('#fullSearchFormdefault').yiiActiveForm([{"id":"commonsearchform-kwd","na
     
 
 
-<img src="/fp-5c24613c713ea4e612420ddca2bab376.gif" width="1" height="1" border="0" style="display: none; position: absolute; left: -5000px;"><div class="advertblock tgb-banner advertBlock textAds textad b-rb text-ad-links" style="position: absolute !important; top: -9999px !important; left: -9999px !important; width: 1px !important; height: 1px !important;" id="trg-b-banners-1" data-view="SlotView.mimic"></div><table id="epoch_popup_calendar" class="calendar" classname="calendar" style="display: none; position: absolute;"><tbody><tr><td><div class="mainheading" classname="mainheading"><input type="button" value="<" title="Предыдущий месяц"><select><option value="0">Янв</option><option value="1">Фев</option><option value="2">Мар</option><option value="3">Апр</option><option value="4">Май</option><option value="5">Июн</option><option value="6">Июл</option><option value="7">Авг</option><option value="8">Сен</option><option value="9" selected="selected">Окт</option><option value="10">Ноя</option><option value="11">Дек</option></select><select><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023" selected="selected">2023</option><option value="2024">2024</option><option value="2025">2025</option></select><input type="button" value=">" title="Следующий месяц"></div></td></tr><tr><td><table class="cells" classname="cells"><thead class="caldayheading" classname="caldayheading"><tr><th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th>Сб</th><th>Вс</th></tr></thead><tbody><tr><td class="notmnth" classname="notmnth">25</td><td class="notmnth" classname="notmnth">26</td><td class="notmnth" classname="notmnth">27</td><td class="notmnth" classname="notmnth">28</td><td class="notmnth" classname="notmnth">29</td><td class="notmnth" classname="notmnth">30</td><td class="wkend" classname="wkend">1</td></tr><tr><td class="wkday" classname="wkday">2</td><td class="wkday" classname="wkday">3</td><td class="wkday" classname="wkday">4</td><td class="wkday" classname="wkday">5</td><td class="wkday" classname="wkday">6</td><td class="wkend" classname="wkend">7</td><td class="wkend" classname="wkend">8</td></tr><tr><td class="wkday" classname="wkday">9</td><td class="wkday" classname="wkday">10</td><td class="wkday curdate" classname="wkday curdate">11</td><td class="wkday" classname="wkday">12</td><td class="wkday" classname="wkday">13</td><td class="wkend" classname="wkend">14</td><td class="wkend" classname="wkend">15</td></tr><tr><td class="wkday" classname="wkday">16</td><td class="wkday" classname="wkday">17</td><td class="wkday" classname="wkday">18</td><td class="wkday" classname="wkday">19</td><td class="wkday" classname="wkday">20</td><td class="wkend" classname="wkend">21</td><td class="wkend" classname="wkend">22</td></tr><tr><td class="wkday" classname="wkday">23</td><td class="wkday" classname="wkday">24</td><td class="wkday" classname="wkday">25</td><td class="wkday" classname="wkday">26</td><td class="wkday" classname="wkday">27</td><td class="wkend" classname="wkend">28</td><td class="wkend" classname="wkend">29</td></tr><tr><td class="wkday" classname="wkday">30</td><td class="wkday" classname="wkday">31</td><td class="notmnth" classname="notmnth">1</td><td class="notmnth" classname="notmnth">2</td><td class="notmnth" classname="notmnth">3</td><td class="notmnth" classname="notmnth">4</td><td class="notmnth" classname="notmnth">5</td></tr></tbody></table></td></tr><tr><td><div><input type="button" value="Очистить" title="Очищает все даты выбранные в календаре"><input type="button" value="Свернуть" title="Закройте календарь" class="closeBtn" classname="closeBtn"></div></td></tr></tbody></table></body></html>
+<img src="/fp-5c24613c713ea4e612420ddca2bab376.gif" width="1" height="1" border="0" style="display: none; position: absolute; left: -5000px;"><div class="p-target text-ad pub_300x250 rb_body advertBlock b-rb text-ad-links" style="position: absolute !important; top: -9999px !important; left: -9999px !important; width: 1px !important; height: 1px !important;" id="trg-b-banners-1" data-view="SlotView.mimic"></div><table id="epoch_popup_calendar" class="calendar" classname="calendar" style="display: none; position: absolute;"><tbody><tr><td><div class="mainheading" classname="mainheading"><input type="button" value="<" title="Предыдущий месяц"><select><option value="0">Янв</option><option value="1">Фев</option><option value="2">Мар</option><option value="3">Апр</option><option value="4">Май</option><option value="5">Июн</option><option value="6">Июл</option><option value="7">Авг</option><option value="8">Сен</option><option value="9" selected="selected">Окт</option><option value="10">Ноя</option><option value="11">Дек</option></select><select><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023" selected="selected">2023</option><option value="2024">2024</option><option value="2025">2025</option></select><input type="button" value=">" title="Следующий месяц"></div></td></tr><tr><td><table class="cells" classname="cells"><thead class="caldayheading" classname="caldayheading"><tr><th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th>Сб</th><th>Вс</th></tr></thead><tbody><tr><td class="notmnth" classname="notmnth">25</td><td class="notmnth" classname="notmnth">26</td><td class="notmnth" classname="notmnth">27</td><td class="notmnth" classname="notmnth">28</td><td class="notmnth" classname="notmnth">29</td><td class="notmnth" classname="notmnth">30</td><td class="wkend" classname="wkend">1</td></tr><tr><td class="wkday" classname="wkday">2</td><td class="wkday" classname="wkday">3</td><td class="wkday" classname="wkday">4</td><td class="wkday" classname="wkday">5</td><td class="wkday" classname="wkday">6</td><td class="wkend" classname="wkend">7</td><td class="wkend" classname="wkend">8</td></tr><tr><td class="wkday" classname="wkday">9</td><td class="wkday" classname="wkday">10</td><td class="wkday curdate" classname="wkday curdate">11</td><td class="wkday" classname="wkday">12</td><td class="wkday" classname="wkday">13</td><td class="wkend" classname="wkend">14</td><td class="wkend" classname="wkend">15</td></tr><tr><td class="wkday" classname="wkday">16</td><td class="wkday" classname="wkday">17</td><td class="wkday" classname="wkday">18</td><td class="wkday" classname="wkday">19</td><td class="wkday" classname="wkday">20</td><td class="wkend" classname="wkend">21</td><td class="wkend" classname="wkend">22</td></tr><tr><td class="wkday" classname="wkday">23</td><td class="wkday" classname="wkday">24</td><td class="wkday" classname="wkday">25</td><td class="wkday" classname="wkday">26</td><td class="wkday" classname="wkday">27</td><td class="wkend" classname="wkend">28</td><td class="wkend" classname="wkend">29</td></tr><tr><td class="wkday" classname="wkday">30</td><td class="wkday" classname="wkday">31</td><td class="notmnth" classname="notmnth">1</td><td class="notmnth" classname="notmnth">2</td><td class="notmnth" classname="notmnth">3</td><td class="notmnth" classname="notmnth">4</td><td class="notmnth" classname="notmnth">5</td></tr></tbody></table></td></tr><tr><td><div><input type="button" value="Очистить" title="Очищает все даты выбранные в календаре"><input type="button" value="Свернуть" title="Закройте календарь" class="closeBtn" classname="closeBtn"></div></td></tr></tbody></table></body></html>
