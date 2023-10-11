@@ -79,10 +79,6 @@ for idx, tender in enumerate(tenders):
             | llm
         )
         
-        gptresult = rag_chain.invoke("О чем этот файл в кратце?")
-        print(str(idx)+' '+keyword+' '+gptresult.content)
-
-
         gptresult = rag_chain.invoke("Есть ли упоминание " + keyword + "? Если да, то нужно ли им поставлять это вещество и в каком объеме? Так же если документе есть адрес (куда поставить) выведи его. Если не упоминается, то выведи 'Нет упоминания'")
         print(str(idx)+' '+keyword+' '+gptresult.content)
 
@@ -91,7 +87,7 @@ for idx, tender in enumerate(tenders):
         
         tenders[idx]['gptresult'] = gptresult.content
         tenders[idx]['url'] = 'https://rostender.info/tender/' + tender['tenderId']
-        tenders[idx]['documentationurl'] = 'https://github.com/noxonsu/tendergpt/raw/main/'+tender['documentationfilepath']+'.md'
+        tenders[idx]['documentationurl'] = 'https://github.com/noxonsu/tendergpt/raw/main/'+tender['tenderId']+'.md'
         if "Нет упоминания" not in gptresult.content:
             # Construct the webhook URL with the tender data
             tender_data_json = json.dumps(tender, ensure_ascii=False)
