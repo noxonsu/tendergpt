@@ -28,17 +28,24 @@ def update_tender_json(tenderid, documentation):
 
 def main():
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)  # Change to True if you don't want to see the browser
+        browser = p.chromium.launch(headless=False)  # Change to True if you don't want to see the browser
+
+        
         page = browser.new_page()
         
         # Navigate to the login page and log in once
         page.goto("https://rostender.info/login")
         page.fill("#username", "i448539")
         page.fill("#password", os.environ.get("rostenderPASSWORD"))
+        
+
         page.click("[name='login-button']")
         
-        time.sleep(3)  # Sleep/wait for 10 seconds after login click
+        time.sleep(4)  # Sleep/wait for 10 seconds after login click
+        html_content = page.content()
         
+        with open("after_login.html", "w", encoding="utf-8") as f:
+            f.write(html_content) 
         
 
         tenders_to_process = load_tenders_without_docs()

@@ -2,61 +2,75 @@
     {
         "tenderId": "30576661787",
         "region": "Ханты-Мансийский Автономный округ - Югра автономный округ",
-        "link": "https://rostender.info/tender/30576661787"
+        "link": "https://rostender.info/tender/30576661787",
+        "documentation": "not_found"
     },
     {
         "tenderId": "70940564",
         "region": "Алтайский край",
-        "link": "https://rostender.info/tender/70940564"
+        "link": "https://rostender.info/tender/70940564",
+        "documentation": [
+            "tenders/70940564.doc"
+        ]
     },
     {
         "tenderId": "30576728859",
         "region": "Омская область",
-        "link": "https://rostender.info/tender/30576728859"
+        "link": "https://rostender.info/tender/30576728859",
+        "documentation": "not_found"
     },
     {
         "tenderId": "30576729844",
         "region": "Красноярский край",
-        "link": "https://rostender.info/tender/30576729844"
+        "link": "https://rostender.info/tender/30576729844",
+        "documentation": "not_found"
     },
     {
         "tenderId": "30576656659",
         "region": "Свердловская область",
-        "link": "https://rostender.info/tender/30576656659"
+        "link": "https://rostender.info/tender/30576656659",
+        "documentation": "not_found"
     },
     {
         "tenderId": "30576658077",
         "region": "Красноярский край",
-        "link": "https://rostender.info/tender/30576658077"
+        "link": "https://rostender.info/tender/30576658077",
+        "documentation": "not_found"
     },
     {
         "tenderId": "30576658024",
         "region": "Амурская область",
-        "link": "https://rostender.info/tender/30576658024"
+        "link": "https://rostender.info/tender/30576658024",
+        "documentation": "not_found"
     },
     {
         "tenderId": "30576663884",
         "region": "Бурятия республика",
-        "link": "https://rostender.info/tender/30576663884"
+        "link": "https://rostender.info/tender/30576663884",
+        "documentation": "not_found"
     },
     {
         "tenderId": "30576663836",
         "region": "Бурятия республика",
-        "link": "https://rostender.info/tender/30576663836"
+        "link": "https://rostender.info/tender/30576663836",
+        "documentation": "not_found"
     },
     {
         "tenderId": "70887730",
         "region": "Приморский край",
         "link": "https://rostender.info/tender/70887730"
+        
     },
     {
         "tenderId": "30576662738",
         "region": "Ямало-Ненецкий автономный округ",
-        "link": "https://rostender.info/tender/30576662738"
+        "link": "https://rostender.info/tender/30576662738",
+        "documentation": "not_found"
     },
     {
         "tenderId": "30576661595",
         "region": "Вологодская область",
-        "link": "https://rostender.info/tender/30576661595"
+        "link": "https://rostender.info/tender/30576661595",
+        "documentation": "not_found"
     }
 ]
