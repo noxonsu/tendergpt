@@ -81,7 +81,7 @@ for idx, tender in enumerate(tenders):
         
         tenders[idx]['gptresult'] = gptresult.content
         tenders[idx]['url'] = 'https://rostender.info/tender/' + tender['tenderId']
-        tenders[idx]['gptresult'] = 'https://github.com/noxonsu/tendergpt/raw/main/'+tender['documentationfilepath']
+        tenders[idx]['documentationurl'] = 'https://github.com/noxonsu/tendergpt/raw/main/'+tender['documentationfilepath']
         if "Нет упоминания" not in gptresult.content:
             # Construct the webhook URL with the tender data
             tender_data_json = json.dumps(tender, ensure_ascii=False)
