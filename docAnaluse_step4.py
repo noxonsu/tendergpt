@@ -80,10 +80,10 @@ for idx, tender in enumerate(tenders):
         )
         
         gptresult = rag_chain.invoke("О чем этот файл в кратце?")
-        print(idx+' '+keyword+' '+gptresult)
+        print(idx+' '+keyword+' '+gptresult.content)
 
         gptresult = rag_chain.invoke("Есть ли упоминание " + keyword + "? Если да, то нужно ли им поставлять это вещество и в каком объеме? Так же если документе есть адрес (куда поставить) выведи его. Если не упоминается, то выведи 'Нет упоминания'")
-        print(idx+' '+keyword+' '+gptresult)
+        print(idx+' '+keyword+' '+gptresult.content)
 
         os.remove(tender['documentationfilepath'])
         
