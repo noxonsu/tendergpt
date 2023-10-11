@@ -72,5 +72,10 @@
         "region": "Вологодская область",
         "link": "https://rostender.info/tender/30576661595",
         "documentation": "not_found"
+    },
+    {
+        "tenderId": "30576661892",
+        "region": "Магаданская область",
+        "link": "https://rostender.info/tender/30576661892"
     }
 ]
