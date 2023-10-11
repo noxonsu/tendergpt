@@ -47,8 +47,6 @@ def main():
         time.sleep(2)  # Sleep/wait for 2 seconds after login click
         html_content = page.content()
         page.screenshot(path='screenshotAfterLogin.png')
-        with open("after_login.html", "w", encoding="utf-8") as f:
-            f.write(html_content) 
         
         tenders_to_process = load_tenders_without_docs()
 
