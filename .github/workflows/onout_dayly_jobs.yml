@@ -43,7 +43,7 @@ jobs:
     
     - name: Run docAnaluse_step4.py
       env:
-        ROSTENDERPASSWORD: ${{ secrets.OPENAI_API_KEY }}
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       run: python docAnaluse_step4.py
 
     - name: Commit and push changes
