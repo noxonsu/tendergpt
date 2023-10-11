@@ -58,8 +58,10 @@
     {
         "tenderId": "70887730",
         "region": "Приморский край",
-        "link": "https://rostender.info/tender/70887730"
-        
+        "link": "https://rostender.info/tender/70887730",
+        "documentation": [
+            "tenders/70887730.docx"
+        ]
     },
     {
         "tenderId": "30576662738",
@@ -76,6 +78,7 @@
     {
         "tenderId": "30576661892",
         "region": "Магаданская область",
-        "link": "https://rostender.info/tender/30576661892"
+        "link": "https://rostender.info/tender/30576661892",
+        "documentation": "not_found"
     }
 ]

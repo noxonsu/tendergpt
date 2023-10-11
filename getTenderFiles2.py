@@ -1,3 +1,5 @@
+#bash: rostenderPASSWORD=i449 xvfb-run python getTenderFiles2.py 
+
 from playwright.sync_api import sync_playwright
 import re
 import json
@@ -30,7 +32,10 @@ def main():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)  # Change to True if you don't want to see the browser
 
-        
+        password = os.environ.get("rostenderPASSWORD")
+        if not password:
+            raise ValueError("Environment variable 'rostenderPASSWORD' is not set!")
+
         page = browser.new_page()
         
         # Navigate to the login page and log in once
@@ -38,12 +43,12 @@ def main():
         page.fill("#username", "i448539")
         page.fill("#password", os.environ.get("rostenderPASSWORD"))
         
-
+        
         page.click("[name='login-button']")
         
-        time.sleep(4)  # Sleep/wait for 10 seconds after login click
+        time.sleep(2)  # Sleep/wait for 10 seconds after login click
         html_content = page.content()
-        
+        page.screenshot(path='screenshotAfterLogin.png')
         with open("after_login.html", "w", encoding="utf-8") as f:
             f.write(html_content) 
         
