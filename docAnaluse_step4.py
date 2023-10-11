@@ -64,6 +64,10 @@ for idx, tender in enumerate(tenders):
             continue
 
         loader = loader_cls(tender['documentationfilepath'])
+
+        # remove file tender['documentationfilepath']
+        os.remove(tender['documentationfilepath'])
+
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
         splits = text_splitter.split_documents(loader.load())
 
