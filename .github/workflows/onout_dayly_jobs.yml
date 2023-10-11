@@ -19,7 +19,7 @@ jobs:
         python-version: '3.x'
     - name: Check if ROSTENDERPASSWORD is set
       run: |
-        if [ -z "${ROSTENDERPASSWORD}" ]; then
+        if [ -z "${{ secrets.ROSTENDERPASSWORD }}" ]; then
           echo "ROSTENDERPASSWORD is not set!"
           exit 1
         else
@@ -40,7 +40,7 @@ jobs:
     #  run: python searchtenders.py
 
     - name: Run getTenderFiles2.py
-      run: xvfb-run python getTenderFiles2.py
+      run: xvfb-run python ROSTENDERPASSWORD=${{ secrets.ROSTENDERPASSWORD }} getTenderFiles2.py
 
     - name: Commit and push changes
       run: |
