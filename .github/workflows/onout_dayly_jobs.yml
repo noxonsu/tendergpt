@@ -17,6 +17,14 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
+    - name: Check if ROSTENDERPASSWORD is set
+      run: |
+        if [ -z "${{ secrets.ROSTENDERPASSWORD }}" ]; then
+          echo "ROSTENDERPASSWORD is not set!"
+          exit 1
+        else
+          echo "ROSTENDERPASSWORD is set!"
+        fi
     - name: Install XVFB
       run: |
         sudo apt-get update
