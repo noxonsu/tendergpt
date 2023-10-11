@@ -103,9 +103,13 @@ def main():
 
             # Скачивание файла
             response = requests.get(current_data['documentationurl'])
+            
+            #write documentationurl to tenderid.md
+            with open(f"tenders/{tenderid}.md", "wb") as file:
+                file.write(current_data['documentationurl'])
+                
             with open(new_file_path, "wb") as file:
                 file.write(response.content)
-
             # Check if the file is an archive
             #if file_extension.lower() in ['.7z', '.rar', '.zip']:
                 # Define a directory named "extracted_<tenderid>" to extract to

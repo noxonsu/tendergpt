@@ -67,7 +67,7 @@ for idx, tender in enumerate(tenders):
 
         # remove file tender['documentationfilepath']
         os.remove(tender['documentationfilepath'])
-
+        
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
         splits = text_splitter.split_documents(loader.load())
 
@@ -85,7 +85,7 @@ for idx, tender in enumerate(tenders):
         
         tenders[idx]['gptresult'] = gptresult.content
         tenders[idx]['url'] = 'https://rostender.info/tender/' + tender['tenderId']
-        tenders[idx]['documentationurl'] = 'https://github.com/noxonsu/tendergpt/raw/main/'+tender['documentationfilepath']
+        tenders[idx]['documentationurl'] = 'https://github.com/noxonsu/tendergpt/raw/main/'+tender['documentationfilepath']+'.md'
         if "Нет упоминания" not in gptresult.content:
             # Construct the webhook URL with the tender data
             tender_data_json = json.dumps(tender, ensure_ascii=False)
