@@ -107,17 +107,17 @@ def main():
                 file.write(response.content)
 
             # Check if the file is an archive
-            if file_extension.lower() in ['.7z', '.rar', '.zip']:
+            #if file_extension.lower() in ['.7z', '.rar', '.zip']:
                 # Define a directory named "extracted_<tenderid>" to extract to
-                extract_to = f"tenders/extracted_{tenderid}/"
+            #    extract_to = f"tenders/extracted_{tenderid}/"
                 
                 # Check if directory exists, if not, create it
-                if not os.path.exists(extract_to):
-                    os.makedirs(extract_to)
+            #    if not os.path.exists(extract_to):
+            #        os.makedirs(extract_to)
                 
                 # Unpack the archive to the created directory
-                Archive(new_file_path).extractall(extract_to)
-                print(f"Extracted {new_file_path} to {extract_to}")
+            #    Archive(new_file_path).extractall(extract_to)
+            #    print(f"Extracted {new_file_path} to {extract_to}")
             
             # Добавляем путь к скачанному файлу в данные о тендере
             current_data['documentationfilepath'] = new_file_path
