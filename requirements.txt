@@ -13,3 +13,4 @@ unstructured[xlsx]
 unstructured[doc]
 pysqlite3
 openai
+pysqlite3-binary

@@ -1,13 +1,8 @@
 from langchain.document_loaders import TextLoader
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.text_splitter import CharacterTextSplitter
-from langchain.vectorstores import Chroma
-from langchain.document_loaders import UnstructuredWordDocumentLoader
-__import__('pysqlite3')
-import sys
-import os
-import requests
 
+from langchain.document_loaders import UnstructuredWordDocumentLoader
 from langchain.document_loaders import DirectoryLoader
 from langchain.document_loaders.pdf import PyMuPDFLoader
 from langchain.document_loaders.xml import UnstructuredXMLLoader
@@ -15,8 +10,15 @@ from langchain.document_loaders.csv_loader import CSVLoader
 from langchain.document_loaders.unstructured import UnstructuredFileLoader
 from langchain.document_loaders import Docx2txtLoader
 
+import os
+import requests
+
+
+__import__('pysqlite3')
+import sys
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
-# Load the document, from tender documentationfilepath 
+
+from langchain.vectorstores import Chroma
 
 # Define a dictionary to map file extensions to their respective loaders
 loaders = {
@@ -79,7 +81,7 @@ for idx, tender in enumerate(tenders):
         
         tenders[idx]['gptresult'] = gptresult.content
         tenders[idx]['url'] = 'https://rostender.info/tender/' + tender['tenderId']
-
+        tenders[idx]['gptresult'] = 'https://github.com/noxonsu/tendergpt/raw/main/'+tender['documentationfilepath']
         if "Нет упоминания" not in gptresult:
             # Construct the webhook URL with the tender data
             tender_data_json = json.dumps(tender, ensure_ascii=False)
