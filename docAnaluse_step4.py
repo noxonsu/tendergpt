@@ -2,56 +2,93 @@ from langchain.document_loaders import TextLoader
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores import Chroma
-from langchain.document_loaders import Docx2txtLoader
+from langchain.document_loaders import UnstructuredWordDocumentLoader
 __import__('pysqlite3')
 import sys
+import os
+import requests
 
-#load file tenders.json into tenders
-import json 
-with open('tenders.json', 'r', encoding='utf-8') as f:
-    tenders = json.load(f)
-
-#find tender with tenderId = 70987947
-for tender in tenders:
-    if tender['tenderId'] == '70987947':
-        tender = tender
-        break
-
+from langchain.document_loaders import DirectoryLoader
+from langchain.document_loaders.pdf import PyMuPDFLoader
+from langchain.document_loaders.xml import UnstructuredXMLLoader
+from langchain.document_loaders.csv_loader import CSVLoader
+from langchain.document_loaders.unstructured import UnstructuredFileLoader
+from langchain.document_loaders import Docx2txtLoader
 
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 # Load the document, from tender documentationfilepath 
-loader = Docx2txtLoader(tender['documentationfilepath'])
 
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+# Define a dictionary to map file extensions to their respective loaders
+loaders = {
+    '.pdf': PyMuPDFLoader,
+    '.xml': UnstructuredXMLLoader,
+    '.csv': CSVLoader,
+    '.doc': UnstructuredFileLoader,
+    '.xlsx': UnstructuredFileLoader,
+    '': UnstructuredFileLoader,
+    '.docx': Docx2txtLoader
+}
 
-text_splitter = RecursiveCharacterTextSplitter(chunk_size = 500, chunk_overlap = 0)
-splits = text_splitter.split_documents(loader.load())
+import json 
+import os
 
-# Embed and store splits
+with open('tenders.json', 'r', encoding='utf-8') as f:
+    tenders = json.load(f)
 
-from langchain.vectorstores import Chroma
-from langchain.embeddings import OpenAIEmbeddings
-vectorstore = Chroma.from_documents(documents=splits,embedding=OpenAIEmbeddings())
-retriever = vectorstore.as_retriever()
-
-# Prompt 
-# https://smith.langchain.com/hub/rlm/rag-prompt
-
+# LLM and RAG setup (moved up to avoid re-initializing for every tender)
 from langchain import hub
 rag_prompt = hub.pull("rlm/rag-prompt")
-
-# LLM
-
 from langchain.chat_models import ChatOpenAI
 llm = ChatOpenAI(model_name="gpt-4", temperature=0)
-
-# RAG chain 
-
+from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.schema.runnable import RunnablePassthrough
-rag_chain = (
-    {"context": retriever, "question": RunnablePassthrough()} 
-    | rag_prompt 
-    | llm 
-)
 
-print(rag_chain.invoke("Мы поставляем кокосовое масло. Проанализируй документ и найди что и в каком объеме (из того, что мы поставляем) им нужно и куда его поставить? Перечисли позиции и объем"))
+for idx, tender in enumerate(tenders):
+    if 'gptresult' not in tender:
+        tenders[idx]['gptresult'] = "processing"
+        # Save the updated tenders list back to the tenders.json file
+        with open('tenders.json', 'w', encoding='utf-8') as f:
+            json.dump(tenders, f, ensure_ascii=False, indent=4)
+        keyword = tender.get('keyword', None)
+        if not keyword:
+            print(f"Keyword not found in the tender at index {idx}.")
+            continue
+
+        file_extension = os.path.splitext(tender['documentationfilepath'])[1]
+        loader_cls = loaders.get(file_extension, None)
+        if not loader_cls:
+            print(f"No loader found for file type: {file_extension} for the tender at index {idx}.")
+            continue
+
+        loader = loader_cls(tender['documentationfilepath'])
+        text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
+        splits = text_splitter.split_documents(loader.load())
+
+        vectorstore = Chroma.from_documents(documents=splits, embedding=OpenAIEmbeddings())
+        retriever = vectorstore.as_retriever()
+
+        rag_chain = (
+            {"context": retriever, "question": RunnablePassthrough()}
+            | rag_prompt
+            | llm
+        )
+        
+        gptresult = rag_chain.invoke("Есть ли упоминание " + keyword + "? Если да, то нужно ли им поставлять это вещество и в каком объеме? Так же если документе есть адрес (куда поставить) выведи его. Если не упоминается, то выведи 'Нет упоминания'")
+        print(gptresult)
+        
+        tenders[idx]['gptresult'] = gptresult.content
+        tenders[idx]['url'] = 'https://rostender.info/tender/' + tender['tenderId']
+
+        if "нет упоминания" not in gptresult:
+            # Construct the webhook URL with the tender data
+            tender_data_json = json.dumps(tender, ensure_ascii=False)
+            webhook_url = f"https://noxon.wpmix.net/counter.php?totenders=1&msg={tender_data_json}"
+            
+            # Send a POST request to the webhook URL
+            response = requests.post(webhook_url)
+            if response.status_code != 200:
+                print(f"Failed to send webhook for tender at index {idx}. Status code: {response.status_code}")
+
+# Save the updated tenders list back to the tenders.json file
+with open('tenders.json', 'w', encoding='utf-8') as f:
+    json.dump(tenders, f, ensure_ascii=False, indent=4)

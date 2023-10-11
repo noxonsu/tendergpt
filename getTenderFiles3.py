@@ -5,6 +5,7 @@ import requests
 import os
 from bs4 import BeautifulSoup
 import time
+from pyunpack import Archive
 
 def load_tenders_from_file(file_name="tenders.json"):
     if os.path.exists(file_name):
@@ -25,7 +26,17 @@ def main():
             raise ValueError("Environment variable 'ROSTENDERPASSWORD' is not set!")
 
         page = browser.new_page()
-        page.goto("C:\\Users\\Александр\\Documents\\GitHub\\tendergpt\\tmpCat.html")
+
+        # Navigate to the login page and log in once
+        page.goto("https://rostender.info/login")
+        page.fill("#username", "i448539")
+        page.fill("#password", password)
+        page.click("[name='login-button']")
+
+        time.sleep(2)  # Sleep/wait for 2 seconds after login click
+        page.screenshot(path='screenshotAfterLogin.png')
+
+        page.goto("https://rostender.info/extsearch/advanced?query=e9ac7cfa7191307db492aaf70b1b5cf6")
         page.screenshot(path='screenshotTenders.png')
         result = page.content()
 
@@ -94,6 +105,19 @@ def main():
             response = requests.get(current_data['documentationurl'])
             with open(new_file_path, "wb") as file:
                 file.write(response.content)
+
+            # Check if the file is an archive
+            if file_extension.lower() in ['.7z', '.rar', '.zip']:
+                # Define a directory named "extracted_<tenderid>" to extract to
+                extract_to = f"tenders/extracted_{tenderid}/"
+                
+                # Check if directory exists, if not, create it
+                if not os.path.exists(extract_to):
+                    os.makedirs(extract_to)
+                
+                # Unpack the archive to the created directory
+                Archive(new_file_path).extractall(extract_to)
+                print(f"Extracted {new_file_path} to {extract_to}")
             
             # Добавляем путь к скачанному файлу в данные о тендере
             current_data['documentationfilepath'] = new_file_path
