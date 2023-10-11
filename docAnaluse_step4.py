@@ -61,11 +61,11 @@ for idx, tender in enumerate(tenders):
         loader_cls = loaders.get(file_extension, None)
         if not loader_cls:
             print(f"No loader found for file type: {file_extension} for the tender at index {idx}.")
+            os.remove(tender['documentationfilepath'])
             continue
 
         loader = loader_cls(tender['documentationfilepath'])
 
-        # remove file tender['documentationfilepath']
         
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
         splits = text_splitter.split_documents(loader.load())
@@ -79,8 +79,11 @@ for idx, tender in enumerate(tenders):
             | llm
         )
         
+        gptresult = rag_chain.invoke("О чем этот файл в кратце?")
+        print(idx+' '+keyword+' '+gptresult)
+
         gptresult = rag_chain.invoke("Есть ли упоминание " + keyword + "? Если да, то нужно ли им поставлять это вещество и в каком объеме? Так же если документе есть адрес (куда поставить) выведи его. Если не упоминается, то выведи 'Нет упоминания'")
-        print(gptresult)
+        print(idx+' '+keyword+' '+gptresult)
 
         os.remove(tender['documentationfilepath'])
         
