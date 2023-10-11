@@ -56,21 +56,23 @@
         "tenderId": "71000957",
         "tendername": "Набор моющих и чистящих средств",
         "documentationfilename": "договор МОЮЩ СРЕДСТВА.doc",
-        "documentationurl": "https://files.rostender.info/?t=3fea236993d95de6d3c9bed8d13ba6697ff602960f00962f1b84d8cea64eade85179b32c7021ea35fefd7d2781b64cabd2a721fe9ac7d6470d8c5b4dc1dc450d4e112ab7146d0b3733f34469b1b6b74aac0ca8b9dd408205c6e0bd2264840a69e959006d060697effa927017c05787ab36a00805d8df4ff5e881dc1c4df2a041a64e2894e74c20945465c201a8859ce60ba3011a04f22de5a618d730c77ffad9941aaa1b117c5d6e14381553ce2846b2920a79b68c48dbb3a70df620b2d62acf64780dd58c18b2a8f1fa38fab418f2b5d3dfba4f7d456e1b34fd36e18509271b1751c56ce52479e11a47ad3d098680807892a077e66dd2017af840a7e492c4fc9bf1b6900339a238b1dd4d01a729032f94d22059bb73d1be617c1547e77d9f8cbdd9b39c2c5b3b7ea11721a3a854ce3dfb6038d0014e5eca8698ad07c3ed77a39936ff7e3b06a494473ce1868a0ccf54dfb0aad80b166796505603c72f1f32d7baaff295d5f09452eadd8ba15177898a6348f3d871e090e420d215f5e18aa22bb55eaedcf2a95efd258fed0897f83c741a1871e8b8c196b7daa2048af4e63d1ea26a4514b8eaef1015e3ec2982936e427c167d53b2b70de4f404d6d0e29a3d94b22d9d64345a57df4a20c8169e2edc0a97c2fe0f4927526621b836c98355ddf722558fa8d10547cccbe85458291ca8629cb8d1625606f28bb94312dd00ed39c1f00f4057c4ce5006ed4e566cad7cea5b9b39244938b2581469bc550d5d5c9ee24ec34b9a52f7654964340159e50ee160f4a3164a4dae3a80dd175754ce92f910a2938b887b6b5e3fd73835bbbae89d19bbdb795fd14e0095e1414961cc07da563dc56a86e113347f4663a16bdeb955f4e988a31cf519efeaa34e893493de03d8d800a91cf33904c70cf9430ed7f90a7fe68bcfaaa0ee220a9c16a1f8aed3625912d32d91473399f10080312c32e6c43a0ea250b916a8f7f8bec68b407160caab651c741a87b8b5ec7b694f72df218d0225d203765be2342fbe9fe0cb177799f01f09c23e2549bce181ac1f08fb10331e4d39db67e8dbc09277a0bcb83afa837794ecfddbc82e79217226738b97acc6cb3a275d687fdf0f1b064c5cea000e45134494f7fbe4031f77625950a4d04103cc3fdec218167ee95b2af95dfc320e0b8a3eaec3a0e28d198eea891d73d562b0e8b819b3c0242e54c783230c47f12ad36c5a57e1ea2c138e50493d3ddf314a5fd57fb3fdc20882932ea45c6dfe166d368e0e66cc4afeb31b2f1715fca17212bcd72d8104be9afcd582e9905409b531356c59d87fd54fd566a214ad7617dbffd3af25eaf8e759a8cc2da6e240652479dc30973d30d35845a6b5",
+        "documentationurl": "https://github.com/noxonsu/tendergpt/raw/main/tenders/71000957.doc",
         "keyword": "П-2, диоксид титана",
         "file-snippet": "... , парфюмерная композиция, глицерин, хлорид натрия, анталП-2, диоксид титана. Индивидуальная упаковка. Вид упаковки: бумага. Вес ...",
         "documentationfilepath": "tenders/71000957.doc",
-        "url": "https://rostender.info/tender/71000957"
+        "url": "https://rostender.info/tender/71000957",
+        "gptresult": "Нет упоминания"
     },
     {
         "tenderId": "71000324",
         "tendername": "Медицинское оборудование (инструменты)",
         "documentationfilename": "ТЗ оборудование и инструменты.docx",
-        "documentationurl": "https://files.rostender.info/?t=3fea236993d95de652fd35275243348ce399b48b4f0d9c0cb3860eb5adae002e478ad66b57988f8363eca7b5d602b7451992d2cab991d9c851e8acb9bbc1f01b9df56fa58d27a541564827f84387bf9fb2568972d49d609beb7245cd4a8abc51117ed8deb4a764e953111f885fe2896a4e81958cb6caa9332f648d69e7915669ef733c103e9a0e704889ec03691cc02bba1505eb57ea08d2f1d6b1b5ad9aa90f6fba98ae52d42938caec4ad79f3eda80b8a079ac61717893106ff02b09c31d92fc9cabe068bcc75dcc43d677669eeb7bae58ba9488f29b5d1c04500b570ef20f295a207cd84cd7e5505d3fb40192e292dd344cfaea680ba9dcdf1725d0b75582d9d99230f02f3148db6c65985c4b4826a9b1639d9fc01a4d2a3d81e48b01c7c42ace7b5864cf2f77bd708084b1707d95fa5cc12d967d304724c1bdc71851ce6ce2403a6df45cb56b6d1eeec4ba8bdac2cbed9e03aa4c46f4c67ff02b254ba4b1a3034ffe49bf498fd01bf41651588637c55c98ee41b5278642547485bf1416e6a689b073934f9dee93b87181e5bdcb9f39933267a9ec93549b785d9da80febe2554a5c4ece754cd6f32783d6c5b9798beec4f85d946ee00d92ff6fb1d54fa7189d9c53568d9c0c7e097ea166e74dc65d6e9930c8dcf126d9d091c10887994b384f3950cf7870c2daac6f1fcf3e971016860b5a5604793e2476a8b8ee5524036d53e371546222cbb6d7b9ab7f233d376bf6f2efc84503e2d7d1e77d61722b824eb0f50ddd4bc25e687a2324ace27cadae1a3a7f5e04a060ae90bf486ea8f91dd8acc5d0e3aef78f271eb3f307dcf4c3341318241efcabe33776d5a2c136cbb33ed543e1fa4645f0b0b066d34c09dac5bc78de564b10f41095121f1c15750b957b4b6b5f2987d8667dd5a9177c3ee4f5d0c25a169d7a31eb1342eab74e4cc72eeb766f7396d27fda3db83d8508590855f4f4c54984e7aa9926cb64a1962c98b77ab094b5c9467b08fa2bbc022efde380e1f20f3f4289182873f77171a04cca7c7204597c7860f5baedae2e46b9c6cd6b0747a2beaacc43742dcac9592a09904d4ea49d8633637f3ef13cb980c7e55e4f6df4c13de98b1b63ad4104a1dc0a47ef8fd213054365262a188cd226f867de881fc7c83be771479bddc286fd2e3346ba9dcadee9d47c0da52a8641a59f168ff3141e0d61cc6536c3260b396c0bd8e9773e9bd143f9da6bbee9ab28338c1b03de2aeb56178781172a9dc037a8f56ad1e5a155323f8dbfa82e2e6100a89ea46734cb3f1b7ae5fe9f14f92098855abdd26e7e",
+        "documentationurl": "https://github.com/noxonsu/tendergpt/raw/main/tenders/71000324.docx",
         "keyword": "полиэфирного",
         "file-snippet": "...  (Спинальная доска) Спинальная доска из цельногополиэфирного, рентгенопрозрачноговолокнавысокой плотности - Наличие Устойчивость к ударам ...",
         "documentationfilepath": "tenders/71000324.docx",
-        "url": "https://rostender.info/tender/71000324"
+        "url": "https://rostender.info/tender/71000324",
+        "gptresult": "Нет упоминания"
     },
     {
         "tenderId": "70997890",
@@ -158,11 +160,12 @@
         "tenderId": "71002692",
         "tendername": "Поставка пломб свинцовых для нужд Макрорегиона Северо-Запад",
         "documentationfilename": "ТЗ на пломбы свинцовые.docx",
-        "documentationurl": "https://files.rostender.info/?t=3fea236993d95de6e9e03e9973a35b6e2c85efd2d4b03a17453ce918e56e39a868ae57797bd444c9db9bc08ce76c6b1ebaa80203750844d523488ed71883c70854f60ca77eee3b2a960369daa847f63aed8ffebee0aece72e1530ba8b270293899e233091f75309d6d07336796467b0abb48462d92f28a62c952cd079c3bb95f8899892753013afcf9bbc33caa6cd00d2ea95f26fe28f9b7d5ca45ed1d6b20d5d69b34e9fb13592ee9b3bc5d69ac581465d2fbf35670a20b230d028ef5e58b336884ee848254d4300a11aa161e96dfb2f14268da3310ab0f5b82371f868769127d2f1c411382067846391e6c7f8f8e32bedfaa400a83182551ec053f88a606b2afdfc5424980c5c8fcd22c69253533a4897ff0109f7771368b01b30f57d141825fbd9f63a6dfe141ab2973ba08c0f793ecd6843f4765e9927d42f780fc5cfbb473aad60c6d092009ce4e8fe1d18c8e1243c133f5d791207e9624d734170c94dd071d05a9b82e64654f7f1d88708d2601401b21632f39a04bde7c56e71fb98fbab206f4c89a3a28214d624305986482221cb02968618274cd29bbd00c5236a3a33e8495e51abad585d08c585f6555cfd29cd7fa03451fb6a47d5ebf916963e3b63ab924b3fda2061f725f4facc006590fd92f5fd3f642952f2e1fcf82f1da50cf77ba72fe31c1f96fda62bed81a20c847d3f6b9d436b3bbf8f2493250e28762708bd1f3a6c3ade4ac1f99f3af6c9c983d7f1636747506f96c2003814d506c7154f6572df735262fe587043f911390d23486d3bdc3fb00a8859f2a15cdab10d106210858dcf2072b81f659dc57cce312fdbe76d3c6d02be163cea2ca9198b9045b9d4f0d996625ed6f8b0994cf61b1634afab1dc0fa7a2f80a012c2fc3ad02dee637c19744d50608b41c254f891a0992cbb6c08d2c3d1a182ae3c7a9f3b4a9b4159ef42c8febc6b077c113441623588d2d65bb34a481c228572dfc26ffd652399b077276a71a3c60d5a37609543ba90ad7a463ea0a87ae297e7abda0e01fc47cc47314678b12368ce76ab7da4a8bfe47abf70d035c01cb33ac261ed0488c593c2f220877f9fcbc18ed83e6575b45211cc48891eb6a196deed79ff52682b078c201bec9f57237097f83cf7bccc76c4455d3b849d20ddce129e3",
+        "documentationurl": "https://github.com/noxonsu/tendergpt/raw/main/tenders/71002692.docx",
         "keyword": "полиэфирного волокна",
         "file-snippet": "... допускать свободное протягивание шпагата / кордшнура изполиэфирного волокнамаксимальным диаметром 1,5 мм. 2.3. Поверхность ...  должны допускать движение шпагата/ кордшнура изполиэфирного волокна. 3. Требования безопасности 3.1. Требования безопасности – в  ...",
         "documentationfilepath": "tenders/71002692.docx",
-        "url": "https://rostender.info/tender/71002692"
+        "url": "https://rostender.info/tender/71002692",
+        "gptresult": "Нет упоминания"
     },
     {
         "tenderId": "71000221",
@@ -193,6 +196,16 @@
         "keyword": "Пальмовое масло",
         "file-snippet": "... кг 932,089.792Пальмовое масломягкая фракция отбеленное  ... .000Масло пальмовоеотбеленное дезодорированное 1 кг 7,803,616.900Масло пальмовоераф ...Масло пальмовоерафинированное дезодорированное отбеленное (повтор). кг 3,771,326.000Масло пальмовое...",
         "documentationfilepath": "tenders/71002190.xls",
+        "gptresult": "processing"
+    },
+    {
+        "tenderId": "71003114",
+        "tendername": "Экспертиза промышленной безопасности рабочей документации: ЭЛОУ-АВТ-12. Техперевооружение. Монтаж дополнительного теплообменного аппарата охлаждения смесевой д",
+        "documentationfilename": "Анкета_поставщика_для_прохождения_проверки_минимальных_требований.7z",
+        "documentationurl": "https://files.rostender.info/?t=3fea236993d95de6e50267d016d448f475f956333ddd2e06b75212c3aeb19d2fd8d4b05dbf2919110ae84dd812557f0e04b9380e45d1d5de35bb2e24270b58e8773ae2bcc167407bd59cf87b25c7d2eb58560ac225b6ec2843751ae3a68fd4b678e5a900cde096fa544828159ea68cdbaae8273686caecc05aeaf1ead9f9b78aaa1f76671b4405dad64b099cf879fcbb63a07686bf007c7b292d9e0664c2ec2e270e6d50dd7847b338d0d704a075dde3b751061490ded34ae8236a2a15a51cbd9e63409f857b91c3a76db682fda23a51fc8467c6af446e017a188cf8867a1676394e41059a1ba8f0da7f648cd4664dbe9ee976867b6880bf7c670ef497f258af75868a1cf3c1a3a768828a70cbbe60c81fe33d488fb20bf54dcb52eb7b0753aba6ba5f1ecbaab2d78a3e7fb43a7d340a8f1c6fae19a747be68a20f518d2f9a673f08ea969910c78c7a1bccfbd952d0633bb3fe69fa8696966a5847fb667515935dd4109023621572338499fdbc1183116a18e7424d6734402789a9eeedeab9980373ae0907da92d66f295e82e1c5312adec3f9f08991508923dcf69aaee167f81da5b12a449a1b3f31916c4ee04edd4760b14fc8114092d2989e221c06b3b67a68b89a893267aafbfe05efb326c0e2079b95078c727df75b93032b721fd73ddac132cef6d10e4cf5f0808cf0301b4e514069a996c4f9ec1cf2ecce3c05b9aaf1a7624bc75e556112b4ab52a01901eeeb7b8242e7eb175dda50fe034e412aa6546d1ea3d7d4aae9a534c8933d2c1b2d4ab859b4ea49a7181b05f4df6709187724e9e944cbeaafb0cd500951b8a7b9b113b1387b69d809f9e31577d4705144436b7c659adf87af121723011fc3876dcb486b7f68a9fe9dd2309bb56826972413210b29b5fe2a5db7e16f3d59b04417fd4e066910d7e9ba7f45be89f2a09188e3d981737bcdcc81dbb558e1a84a1eeeed7d30f6f30aa6062b1b16f43bc642f471750edcd1df64420af6120a3b4cefa47049a88520fdfee676acffc70478b7422660dbc97370108547e56765489b3e0e791f448b49646d587af5e0ae3832a713f561b315358852fb91475d63705f297f5ca35c640de09add4fe67165774fdb7689da59ebbdd43086b8095f8f68c911f6c0d96711690b7cfe60c0441e8067a3268ac698783254c0b6d84620b2d38a61e8018505f481acc9c0fff6e58bcf5ece092d5a2a52e16df7fdad7a39779e122b8fb27a8f1ed6432a594ad618a9cb89f87eed6a3fd081c36e47c40ab55a26c357c8f2cbc0b0bd006095a06daba554dcc81cfdac29269c9563c16a7769a0e8c7c744aaeaabc93bb018e8fdc9605dcb4794912c1d1b6e171ed6831bea4c12d718a679281368cd2951b4938f206e71f090fc7e6a38ef8438758aa496902a75d9323b031435347e37fdd5f2a99613518ec3dcd34d9e23d2405a8c4500aadbfc46a725bde18bdd944565b54571d30ef3025d970286f560af55b1ac159a7e50909fc9bece73dbb3783f15ce81fa75e942f055e691dbabb612d764360b65876820aa3d9d4f64c1b7d40d1f35b968838ed7602c3a0d3e8bfc5c651ee448bdb1ca390d9c925bbbc31990c79b798d590072e2862d80250466c9749f8a400616eef44833800de6d3b0634de57b1dc5292b608c5e38786b8b6871c15613c44f3be844ba8b6796d741c88e518496c19127d33b404acd466f50c5f960a0091a823f6d07b51bc998878a2b192041960735a66609b517e2d44e1a3b",
+        "keyword": "Масло пальмовое",
+        "file-snippet": "... 27.000Масло пальмовоеи его фракции, нерафинированныеМасло кокосовоеи его фракции, нерафинированные10.41.28Масло кокосовоеи  ...  полушерстяные сполиэфирным волокном13.20.12.127 Ткани плательные тонкосуконные полушерстяные сполиэфирным волокном13.20.12 ...",
+        "documentationfilepath": "tenders/71003114.7z",
         "gptresult": "processing"
     }
 ]
