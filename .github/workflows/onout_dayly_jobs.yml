@@ -1,4 +1,4 @@
-name: Run Python Scripts and Commit Changes
+name: Search tenders on rostender.info with GPT
 
 on:
   schedule:
