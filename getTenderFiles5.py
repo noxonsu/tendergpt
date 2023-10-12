@@ -107,6 +107,10 @@ def main():
             # Проверка наличия URL для скачивания файла
             if 'documentationurl' not in current_data or not current_data['documentationurl']:
                 continue
+            
+            # if gpttitle is not empty conntinue
+            if 'gpttitle' in current_data and current_data['gpttitle']:
+                continue
 
             # Если файл уже существует, не скачиваем его снова
             if os.path.exists(new_file_path):
@@ -138,6 +142,8 @@ def main():
             
             # Добавляем путь к скачанному файлу в данные о тендере
             current_data['documentationfilepath'] = new_file_path
+
+            
 
             tendername = current_data['tendername']
             keyword=current_data['keyword']
