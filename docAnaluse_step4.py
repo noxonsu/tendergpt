@@ -77,8 +77,14 @@ for idx, tender in enumerate(tenders):
             os.remove(tender['documentationfilepath'])
             continue
 
+        #if vectorstore is defined reset it
+        if 'vectorstore' in globals():
+            vectorstore.reset()
+        
         vectorstore = Chroma.from_documents(documents=splits, embedding=OpenAIEmbeddings())
+        
         retriever = vectorstore.as_retriever()
+        
 
         rag_chain = (
             {"context": retriever, "question": RunnablePassthrough()}
