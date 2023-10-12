@@ -69,7 +69,13 @@ for idx, tender in enumerate(tenders):
 
         
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
-        splits = text_splitter.split_documents(loader.load())
+        
+        #try splits catch and continue if error
+        try:
+            splits = text_splitter.split_documents(loader.load())
+        except:
+            os.remove(tender['documentationfilepath'])
+            continue
 
         vectorstore = Chroma.from_documents(documents=splits, embedding=OpenAIEmbeddings())
         retriever = vectorstore.as_retriever()
