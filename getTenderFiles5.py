@@ -162,9 +162,9 @@ def main():
                             print(f"Failed to send webhook for tender at index {idx}. Status code: {response.status_code}")
 
             current_data['gpttitle'] = gpttitle.content
-            current_data["tenderId"] = tenderid
-            current_data['url'] = 'https://rostender.info/tender/' + current_data['tenderId']
-            current_data['documentationurl'] = 'https://github.com/noxonsu/tendergpt/raw/main/'+tender['tenderId']+'.md'
+            
+            current_data['url'] = 'https://rostender.info/tender/' + tenderid
+            current_data['documentationurl'] = 'https://github.com/noxonsu/tendergpt/raw/main/'+tenderid+'.md'
         
             if tenderid and current_data:
                 existing_tenders.append(current_data)
