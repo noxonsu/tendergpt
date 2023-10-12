@@ -26,8 +26,9 @@ loaders = {
     '.xml': UnstructuredXMLLoader,
     '.csv': CSVLoader,
     '.doc': UnstructuredFileLoader,
+    '.DOC': UnstructuredFileLoader,
     '.xlsx': UnstructuredFileLoader,
-    '': UnstructuredFileLoader,
+    '.xls': UnstructuredFileLoader,
     '.docx': Docx2txtLoader
 }
 
