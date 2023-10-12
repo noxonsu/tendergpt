@@ -159,7 +159,18 @@ def main():
             gpttitle = chat(messages)
             if "Не подходит" not in gpttitle.content:
                         # Construct the webhook URL with the tender data
-                        tender_data_json = json.dumps(tender, ensure_ascii=False)
+                        tender_data = {
+                            "tenderId": current_data.get("tenderId", ""),
+                            "tendername": current_data.get("tendername", ""),
+                            "documentationfilename": current_data.get("documentationfilename", ""),
+                            "documentationurl": current_data.get("documentationurl", ""),
+                            "keyword": current_data.get("keyword", ""),
+                            "file-snippet": current_data.get("file-snippet", ""),
+                            "gpttitle": current_data.get("gpttitle", ""),
+                            "url": current_data.get("url", ""),
+                        }
+
+                        tender_data_json = json.dumps(tender_data, ensure_ascii=False)
                         webhook_url = f"https://noxon.wpmix.net/counter.php?totenders=1&msg={tender_data_json}"
                         
                         # Send a POST request to the webhook URL
