@@ -118,6 +118,10 @@ def main():
             if 'gpttitle' in current_data and current_data['gpttitle']:
                 print(f"Skip tender ID: {tenderid} because gpttitle not empty")
                 continue
+            
+            if keyword_tag is None:
+                print(f"Skip tender ID: {tenderid} because keyword not found")
+                continue
 
             # Если файл уже существует, не скачиваем его снова
             #if os.path.exists(new_file_path):
@@ -165,7 +169,11 @@ def main():
                 )
             ]
             gpttitle = chat(messages)
-            if "Не подходит" not in gpttitle.content:
+            if gpttitle.content is not None:
+                print(f"Generated title: {gpttitle.content}")
+
+            # if gpttitle.content lenght is more than 20 characters: and "Не подходит" not in gpttitle.content:
+            if gpttitle.content is not None and len(gpttitle.content) > 20 and "Не подходит" not in gpttitle.content:
                         # Construct the webhook URL with the tender data
                         tender_data = {
                             "tenderId": current_data.get("tenderId", ""),
