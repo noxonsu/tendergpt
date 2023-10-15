@@ -72,6 +72,8 @@ def main():
                 else:
                     continue  # If tender ID is not found, skip the current iteration
 
+            # print current tender ID
+            print(f"Current tender ID: {tenderid}")
 
             # Extract tender name
             tender_name_tag = tender.find(class_='description tender-info__description tender-info__link')
@@ -98,23 +100,29 @@ def main():
             if snippet_tag:
                 current_data["file-snippet"] = snippet_tag.get_text(strip=True)
 
-            if 'documentationfilename' not in current_data:
-                continue
+            #if 'documentationfilename' not in current_data:
+                #print why skip
+            #    print(f"Skip tender ID: {tenderid} because documentationfilename not found")
+            #    continue
 
-            file_extension = os.path.splitext(current_data['documentationfilename'])[-1]
-            new_file_path = f"tenders/{tenderid}{file_extension}"
+            #file_extension = os.path.splitext(current_data['documentationfilename'])[-1]
+            #new_file_path = f"tenders/{tenderid}{file_extension}"
 
             # Проверка наличия URL для скачивания файла
-            if 'documentationurl' not in current_data or not current_data['documentationurl']:
-                continue
+            #if 'documentationurl' not in current_data or not current_data['documentationurl']:
+            #    #print why skip
+            #    print(f"Skip tender ID: {tenderid} because documentationurl not found")
+            #    continue
             
             # if gpttitle is not empty conntinue
             if 'gpttitle' in current_data and current_data['gpttitle']:
+                print(f"Skip tender ID: {tenderid} because gpttitle not empty")
                 continue
 
             # Если файл уже существует, не скачиваем его снова
-            if os.path.exists(new_file_path):
-                continue
+            #if os.path.exists(new_file_path):
+            #    print(f"Skip tender ID: {tenderid} because file already exists")
+            #    continue
 
             # Скачивание файла
             #response = requests.get(current_data['documentationurl'])
@@ -123,8 +131,8 @@ def main():
 
             #write documentationurl to tenderid.md
             #TypeError: a bytes-like object is required, not 'str'
-            with open('tenders/'+tenderid+'.md', "wb") as file:
-                file.write(current_data['documentationurl'].encode('utf-8'))
+            #with open('tenders/'+tenderid+'.md', "wb") as file:
+            #    file.write(current_data['documentationurl'].encode('utf-8'))
 
 
             # Check if the file is an archive
@@ -141,7 +149,7 @@ def main():
             #    print(f"Extracted {new_file_path} to {extract_to}")
             
             # Добавляем путь к скачанному файлу в данные о тендере
-            current_data['documentationfilepath'] = new_file_path
+            #current_data['documentationfilepath'] = new_file_path
 
             
 
