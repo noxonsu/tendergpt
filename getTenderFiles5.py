@@ -182,7 +182,7 @@ def main():
                             "documentationurl": current_data.get("documentationurl", ""),
                             "keyword": current_data.get("keyword", ""),
                             "file-snippet": current_data.get("file-snippet", ""),
-                            "gpttitle": current_data.get("gpttitle", ""),
+                            "gpttitle": gpttitle.content,
                             "url": current_data.get("url", ""),
                         }
 
