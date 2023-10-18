@@ -17,35 +17,28 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
-    - name: Check if ROSTENDERPASSWORD is set
+    - name: Check if MYSELDON_PASS is set
       run: |
-        if [ -z "${{ secrets.ROSTENDERPASSWORD }}" ]; then
-          echo "ROSTENDERPASSWORD is not set!"
+        if [ -z "${{ secrets.MYSELDON_PASS }}" ]; then
+          echo "MYSELDON_PASS is not set!"
           exit 1
         else
-          echo "ROSTENDERPASSWORD is set!"
+          echo "MYSELDON_PASS is set!"
         fi
-    - name: Install XVFB and other libs
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y libreoffice xvfb unrar p7zip-full
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
-
-    - name: Install Playwright Browsers
-      run: playwright install chromium   
-
-    - name: Run getTenderFiles5.py
+    - name: Run 7.py
       env:
-        ROSTENDERPASSWORD: ${{ secrets.ROSTENDERPASSWORD }}
+        MYSELDON_PASS: ${{ secrets.MYSELDON_PASS }}
+        MYSELDON_LOGIN: ${{ secrets.MYSELDON_LOGIN }}
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      run: xvfb-run python getTenderFiles5.py
+      run: python 6mysqldon.py
 
     - name: Commit and push changes
       run: |
         git config --global user.name "GitHub Action"
         git config --global user.email "action@github.com"
         git add -A
-        git diff --cached --exit-code || git commit -m "Automated update from GitHub Actions"
+        git diff --cached --exit-code || git commit -m "Automated update ($GITHUB_WORKFLOW)"
         git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git || echo "No changes to commit"
