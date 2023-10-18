@@ -17,7 +17,7 @@ chat = ChatOpenAI(temperature=0,model_name="gpt-4")
 
 BASE_URL = "https://apitorgi.myseldon.com"
 LOGIN_ENDPOINT = "/User/Login"
-CREATE_PURCHASE_REQUEST_ENDPOINT = "/Purchases/Update"  
+CREATE_PURCHASE_REQUEST_ENDPOINT = "/Purchases/New"  
 FETCH_PURCHASES_RESULTS_ENDPOINT = "/Purchases/Result"
 
 def login_to_service():
