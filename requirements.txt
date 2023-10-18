@@ -1,16 +1,8 @@
 langchain
-beautifulsoup4
 requests
-playwright
 docx2txt
-chromadb
 tiktoken
-langchainhub
-unstructured
 pyunpack
 patool
-unstructured[xlsx]
-unstructured[doc]
 pysqlite3
 openai
-pysqlite3-binary
