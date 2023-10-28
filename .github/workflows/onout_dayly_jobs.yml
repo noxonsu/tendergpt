@@ -16,7 +16,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.x'
+        python-version: '3.11.6'
     - name: Check if MYSELDON_PASS is set
       run: |
         if [ -z "${{ secrets.MYSELDON_PASS }}" ]; then
