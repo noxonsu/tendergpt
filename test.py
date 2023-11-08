@@ -1,53 +1,47 @@
-from openai import OpenAI
+import openai
 import time
-client = OpenAI()
 
+# Создаем экземпляр клиента один раз
+client = openai.OpenAI()
 
-# Upload a file with an "assistants" purpose
-file = client.files.create(
-  file=open("70916611_Извещение.doc", "rb"),
-  purpose="assistants"
+# Загрузка файла с целью "assistants"
+with open("70916611_Извещение.doc", "rb") as file:
+    file_response = client.files.create(file=file, purpose="assistants")
+
+# Создание пустой нити (thread)
+empty_thread_response = client.beta.threads.create()
+print(empty_thread_response)
+
+# Создание и запуск нити с сообщением и файлом
+run_response = client.beta.threads.create_and_run(
+    assistant_id="asst_mjrrw6UamzL17K4ow9uz9dT7",
+    thread={
+        "messages": [
+            {
+                "role": "user",
+                "content": "фракционный жир",
+                "file_ids": [file_response.id]
+            }
+        ]
+    }
 )
 
+# Функция для ожидания завершения выполнения задачи
+def wait_for_completion(run):
+    while run.status in ["queued", "in_progress"]:
+        run = client.beta.threads.runs.retrieve(
+            thread_id=run.thread_id,
+            run_id=run.id
+        )
+        time.sleep(1)
+    return run
 
-empty_thread = client.beta.threads.create(
+# Ожидание завершения выполнения задачи
+completed_run = wait_for_completion(run_response)
 
-)
-print(empty_thread)
+# Получение и вывод результатов
+thread_messages_response = client.beta.threads.messages.list(completed_run.thread_id)
 
-tid = empty_thread.id #"thread_MYpjAVCkzx3EKSSD7uAHNeR8"
-
-from openai import OpenAI
-client = OpenAI()
-
-run = client.beta.threads.create_and_run(
-  assistant_id="asst_mjrrw6UamzL17K4ow9uz9dT7",
-  thread={
-    "messages": [
-      {"role": "user", 
-      "content": "фракционный жир",
-      "file_ids": [file.id]
-      }
-    ]
-  }
-)
-
-
-while (run.status == "queued" or run.status == "in_progress"):
-  run = client.beta.threads.runs.retrieve(
-    thread_id=run.thread_id,
-    run_id=run.id
-  )
-  time.sleep(1)
-
-#print result
-thread_messages = client.beta.threads.messages.list(run.thread_id)
-
-
-# Assuming thread_messages.data is a list of ThreadMessage objects
-for message in thread_messages.data:
-    # Access the 'content' attribute of the ThreadMessage object
-    for content in message.content:  # Use dot notation here
-        if content.type == 'text':
-            print(content.text.value)
-
+for message in thread_messages_response.data:
+    if message.role == "system" and message.content.type == "text":
+        print(message.content.text.value)
