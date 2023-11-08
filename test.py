@@ -1,69 +1,53 @@
-from langchain.document_loaders import TextLoader
-from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.text_splitter import CharacterTextSplitter
-
-from langchain.document_loaders import UnstructuredWordDocumentLoader
-from langchain.document_loaders import DirectoryLoader
-from langchain.document_loaders.pdf import PyMuPDFLoader
-from langchain.document_loaders.xml import UnstructuredXMLLoader
-from langchain.document_loaders.csv_loader import CSVLoader
-from langchain.document_loaders.unstructured import UnstructuredFileLoader
-from langchain.document_loaders import Docx2txtLoader
-
-import os
-import requests
+from openai import OpenAI
+import time
+client = OpenAI()
 
 
-__import__('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+# Upload a file with an "assistants" purpose
+file = client.files.create(
+  file=open("70916611_Извещение.doc", "rb"),
+  purpose="assistants"
+)
 
 
-import chromadb
-chroma_client = chromadb.Client()
-# Define a dictionary to map file extensions to their respective loaders
-loaders = {
-    '.pdf': PyMuPDFLoader,
-    '.xml': UnstructuredXMLLoader,
-    '.csv': CSVLoader,
-    '.doc': UnstructuredFileLoader,
-    '.DOC': UnstructuredFileLoader,
-    '.xlsx': UnstructuredFileLoader,
-    '.xls': UnstructuredFileLoader,
-    '.docx': Docx2txtLoader
-}
+empty_thread = client.beta.threads.create(
 
-# LLM and RAG setup (moved up to avoid re-initializing for every tender)
-from langchain import hub
-rag_prompt = hub.pull("rlm/rag-prompt")
-from langchain.chat_models import ChatOpenAI
-llm = ChatOpenAI(model_name="gpt-4", temperature=0)
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.schema.runnable import RunnablePassthrough
-tender=[]
-documentationfilepath = "71044343_Извещение.doc"
+)
+print(empty_thread)
 
-file_extension = os.path.splitext(documentationfilepath)[1]
-loader_cls = loaders.get(file_extension, None)
+tid = empty_thread.id #"thread_MYpjAVCkzx3EKSSD7uAHNeR8"
 
-if not loader_cls:
-    print(f"No loader found for file type: {file_extension} for the tender at index {idx}.")
-            #os.remove(tender['documentationfilepath'])
-            #continue
+from openai import OpenAI
+client = OpenAI()
 
-loader = loader_cls(documentationfilepath)
-
-        
-text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
-        
-        #try splits catch and continue if error
-try:
-    splits = text_splitter.split_documents(loader.load())
-except:
-    print("split error")
+run = client.beta.threads.create_and_run(
+  assistant_id="asst_mjrrw6UamzL17K4ow9uz9dT7",
+  thread={
+    "messages": [
+      {"role": "user", 
+      "content": "фракционный жир",
+      "file_ids": [file.id]
+      }
+    ]
+  }
+)
 
 
-        
-import chromadb
-chroma_client = chromadb.Client()
-collection = chroma_client.create_collection(name="my_collection")
+while (run.status == "queued" or run.status == "in_progress"):
+  run = client.beta.threads.runs.retrieve(
+    thread_id=run.thread_id,
+    run_id=run.id
+  )
+  time.sleep(1)
+
+#print result
+thread_messages = client.beta.threads.messages.list(run.thread_id)
+
+
+# Assuming thread_messages.data is a list of ThreadMessage objects
+for message in thread_messages.data:
+    # Access the 'content' attribute of the ThreadMessage object
+    for content in message.content:  # Use dot notation here
+        if content.type == 'text':
+            print(content.text.value)
+

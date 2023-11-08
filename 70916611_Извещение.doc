@@ -1,0 +1,1167 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+   xmlns:w="urn:schemas-microsoft-com:office:word"
+   xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="MsDocGenerator 0.4">
+<meta name="Originator" content="MsDocGenerator 0.4">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<style>
+<!--
+/* Style Definitions */
+@page Section1
+   {size: 595.35pt 841.995pt;
+   mso-page-orientation: portrait;
+   margin: 3cm 2.5cm 3cm 2.5cm;
+   mso-header-margin: 36pt;
+   mso-footer-margin: 36pt;
+   mso-paper-source: 0;}
+div.Section1
+  {page: Section1;}
+
+p.normalText, li.normalText, div.normalText{
+   mso-style-parent: "";
+   margin: 0cm;
+   margin-bottom: 6pt;
+   mso-pagination: widow-orphan;
+   font-size: 12pt;
+   font-family: "Arial";
+   mso-fareast-font-family: "Arial";
+}
+
+table.normalTable{
+   mso-style-name: "Tabela com grade";
+   mso-tstyle-rowband-size: 0;
+   mso-tstyle-colband-size: 0;
+   border-collapse: collapse;
+   mso-border-alt: solid windowtext 0.5pt;
+   mso-yfti-tbllook: 480;
+   mso-padding-alt: 0cm 5.4pt 0cm 5.4pt;
+   mso-border-insideh: 0.5pt solid windowtext;
+   mso-border-insidev: 0.5pt solid windowtext;
+   mso-para-margin: 0cm;
+   mso-para-margin-bottom: .0001pt;
+   mso-pagination: widow-orphan;
+   font-size: 12pt;
+   font-family: "Arial";
+}
+table.normalTable td{
+   border: solid windowtext 1.0pt;
+   border-left: none;
+   mso-border-left-alt: solid windowtext .5pt;
+   mso-border-alt: solid windowtext .5pt;
+   padding: 0cm 5.4pt 0cm 5.4pt;
+}
+
+table.tableWithoutGrid{
+   mso-style-name: "Tabela sem grade";
+   mso-tstyle-rowband-size: 0;
+   mso-tstyle-colband-size: 0;
+   border-collapse: collapse;
+   border: none;
+   mso-border-alt: none;
+   mso-yfti-tbllook: 480;
+   mso-padding-alt: 0cm 5.4pt 0cm 5.4pt;
+   mso-border-insideh: 0.5pt solid windowtext;
+   mso-border-insidev: 0.5pt solid windowtext;
+   mso-para-margin: 0cm;
+   mso-para-margin-bottom: .0001pt;
+   mso-pagination: widow-orphan;
+   font-size: 12pt;
+   font-family: "Arial";
+}
+
+
+-->
+</style>
+</head>
+<body lang="PT-BR" style="tab-interval: 35.4pt">
+<div class="Section1">
+<p class="normalText"><!-- ROSTENDER_CONTENT --> <!-- ROSTENDER_PART_LIST -->
+
+                <div class="card-item__row">
+
+                    <div class="card-item__cell">
+                        <div class="plate">
+                            <span class="plate__item">
+                                Закупки малого объема
+                            </span>
+                            <span class="plate__item">
+                                    <span class="status-important">
+                                        Закупка
+                                    </span>
+                            </span>
+                                <span class="plate__item">
+                                    <noindex>
+                                            <a target="_blank" href="https://market-lk.rts-tender.ru/supplier/lk/Handlers/EntityUrlHandler.ashx?Id=6692079&amp;OperatorId=4&amp;MethodId=3&amp;TenantId=56&amp;EntityType=Trade&amp;OrganizationRole=IsSupplier&amp;BussinessFlow=Zmo&amp;ShowOn=1" class="link" onclick='userActivityLogger.logEtpLinkClick({"PurchaseId":"l10045552-3-9-1","FederalLaw":2,"RtsPurchaseType":2,"EtpNameEncoded":"%d0%a0%d0%a2%d0%a1-%d0%a2%d0%95%d0%9d%d0%94%d0%95%d0%a0","Number":"6692079"})' onauxclick='userActivityLogger.logEtpLinkClick({"PurchaseId":"l10045552-3-9-1","FederalLaw":2,"RtsPurchaseType":2,"EtpNameEncoded":"%d0%a0%d0%a2%d0%a1-%d0%a2%d0%95%d0%9d%d0%94%d0%95%d0%a0","Number":"6692079"})'>РТС-ТЕНДЕР</a>
+                                    </noindex>
+                                </span>
+
+                                <span class="plate__item">
+                                    ЗАПРОС ЦЕН
+                                </span>
+                        </div>
+                    </div>
+
+                    <div class="card-item__cell card-item__buttons">
+
+                        <a href="/poisk/id/l10045552-3-9-1/" target="_blank" class="button-red" onclick='userActivityLogger.logPurchaseDetailsLinkClick({"PurchaseId":"l10045552-3-9-1","FederalLaw":2,"RtsPurchaseType":2,"EtpNameEncoded":"%d0%a0%d0%a2%d0%a1-%d0%a2%d0%95%d0%9d%d0%94%d0%95%d0%a0","Number":"6692079"})' onauxclick='userActivityLogger.logPurchaseDetailsLinkClick({"PurchaseId":"l10045552-3-9-1","FederalLaw":2,"RtsPurchaseType":2,"EtpNameEncoded":"%d0%a0%d0%a2%d0%a1-%d0%a2%d0%95%d0%9d%d0%94%d0%95%d0%a0","Number":"6692079"})'>ПОДРОБНЕЕ</a>
+
+                    </div>
+                </div>
+
+                <div class="card-item__about">
+                    <noindex>
+                        
+
+                <a target="_blank" href="https://market-lk.rts-tender.ru/supplier/lk/Handlers/EntityUrlHandler.ashx?Id=6692079&amp;OperatorId=4&amp;MethodId=3&amp;TenantId=56&amp;EntityType=Trade&amp;OrganizationRole=IsSupplier&amp;BussinessFlow=Zmo&amp;ShowOn=1" class="link" onclick='userActivityLogger.logEtpLinkClick({"PurchaseId":"l10045552-3-9-1","FederalLaw":2,"RtsPurchaseType":2,"EtpNameEncoded":"%d0%a0%d0%a2%d0%a1-%d0%a2%d0%95%d0%9d%d0%94%d0%95%d0%a0","Number":"6692079"})' onauxclick='userActivityLogger.logEtpLinkClick({"PurchaseId":"l10045552-3-9-1","FederalLaw":2,"RtsPurchaseType":2,"EtpNameEncoded":"%d0%a0%d0%a2%d0%a1-%d0%a2%d0%95%d0%9d%d0%94%d0%95%d0%a0","Number":"6692079"})'>Закупка №6692079</a>
+
+                    </noindex>
+                </div>
+
+                <div class="card-item__title">
+                    Поставка отделочных материалов для ремонта помещений
+                </div>
+
+                <div class="card-item__properties">
+                    <div class="card-item__properties-cell">
+
+                            <div class="card-item__properties-name">НАЧАЛЬНАЯ ЦЕНА</div>
+                        <div class="card-item__properties-desc" itemprop="price" content="0.00">0,00 <span itemprop="priceCurrency" content="RUB">₽</span>
+</div>
+                        <div class="joint-contract-signing-state"></div>
+
+                    </div>
+
+                        <div class="card-item__properties-cell">
+                                <div class="card-item__properties-name">ОБЕСПЕЧЕНИЕ</div>
+                            <div class="card-item__properties-desc">-</div>
+                        </div>
+
+
+                    <div class="card-item__properties-cell">
+                    </div>
+
+                    <div class="card-item__properties-cell">
+                        <div class="card-item__properties-name">СТАТУС</div>
+                                    <div class="card-item__properties-desc">Прием заявок</div>
+
+                    </div>
+
+                </div>
+
+                
+
+                
+                    <div class="card-item__status">
+                        <div class="card-item__status-progress" style="width:0%"></div>
+                    </div>
+
+                <div class="card-item__info">
+                    
+
+        <div class="card-item__info-main">
+            Опубликовано: <time itemprop="availabilityStarts" datetime="06.10.2023 15:05:02 +03:00"> <b>6 окт. 2023</b> 15:05 мск</time>
+        </div>
+        <div class="card-item__info-end-date">
+            Подать заявку до: <time itemprop="availabilityEnds" datetime="09.10.2023 16:00:00 +03:00"> <b>9 окт. 2023</b> 16:00 мск</time>
+| 
+                <b>Осталось 3 дня 1 час </b>
+        </div>
+
+
+
+                </div>
+
+
+
+<div class="card-content__row parent">
+
+    <div class="table-wrapper">
+
+        <table class="card-table">
+            <tbody>
+<tr>
+                <th>Позиция</th>
+                <th>Кол-во</th>
+                <th>Ед. изм.</th>
+            </tr>
+                <tr class="" style="">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">1.</td>
+        <td>
+Стеклообои Oscar Елочка средняя 1х25 м Os160; 13.1	Основа: 	стекловолокно	
+13.2	Влагостойкость	супермоющиеся	
+13.3	Огнестойкость	устойчивы к возгоранию	
+13.4	Светостойкость	высокая	
+13.5	рисунок	Елка средняя	
+13.6	Количество покрасок: выдерживают		Не менее 20 раз
+13.7	плотность, г/м2	160	
+13.8	Длина, м		Не менее 25
+13.9	Ширина , м		Не менее 1        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 40</td>
+                    <td> рул</td>
+                </tr>
+                <tr class="" style="">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">2.</td>
+        <td>
+Угол наружный WIMAR 2 шт 831 Дуб аргенто; 22.1	Предназначение 	Фурнитура, используемая при установке плинтуса, упрощает установку, делает ее завершенной, в точности повторяет профиль плинтуса в поперечном сечении, что дает плотное прилегание элементов, не оставляя зазоров между плинтусом и элементом.  В конструкцию уголка входят держатели-выемки, необходимые для надежного соединения. Изделие выполнено из пластика, имитирующего фактуру и цвет дерева, в тон напольного плинтуса. 	
+22.2	материал	ПВХ	
+22.3	Размер, мм		
+22.4	высота, мм		Не менее 58 не более 60
+22.5	цвет 	дуб аргенто	
+22.6	упаковка, шт		не менее 2 не более 4        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 60</td>
+                    <td> упак</td>
+                </tr>
+                <tr class="" style="">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">3.</td>
+        <td>
+Торцевик левый, правый WIMAR 831 Дуб аргенто; 23.1	Предназначение 	Удобная и практичная торцевая заглушка для напольного плинтуса позволяет привести в порядок места разъединения плинтуса и сделать незаметными внутри коммуникации. подходит для оформления плинтуса аналогичного цвета.	
+23.2	цвет 	дуб аргенто	
+23.3	упаковка, шт		не менее 2 не более 4        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 20</td>
+                    <td> упак</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">4.</td>
+        <td>
+Дюбель-гвоздь Tech-Krep 6х40 гриб. (нейлон) (500 шт) - ведро ; 37.1	Предназначение 	предназначен для крепления строительных материалов и изделий к основаниям из бетона, полнотелого кирпича, строительного камня. Применяется для сквозного монтажа кронштейнов, дверных коробок, оконных рам, кабельных каналов, обрешетки, гипсокартонных листов (ГКЛ), гипсоволокнистых листов (ГКЛ) и т.д.	
+37.2	материал дюбеля	полипропилен	
+37.3	Диаметр отверстия под дюбель,мм	6	
+37.4	длина,мм 	40	
+37.5	тип	дюбель-гвоздь	
+37.6	фасовка, шт		не менее 500 не более 550        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 3</td>
+                    <td> упак</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">5.</td>
+        <td>
+Угол внутренний WIMAR 2 шт 831 Дуб аргенто; 21.1	Описание	Фурнитура, используемая при установке плинтуса, упрощает установку, делает ее завершенной, в точности повторяет профиль плинтуса в поперечном сечении, что дает плотное прилегание элементов, не оставляя зазоров между плинтусом и элементом.  В конструкцию уголка входят держатели-выемки, необходимые для надежного соединения. Изделие выполнено из пластика, имитирующего фактуру и цвет дерева, в тон напольного плинтуса. 	
+21.2	материал	ПВХ	
+21.3	высота, мм		Не менее 58 не более 60
+21.4	цвет 	дуб аргенто	
+21.5	количество штук в упаковке, шт	2	не менее 2 не более 4        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 60</td>
+                    <td> упак</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">6.</td>
+        <td>
+Кисть флейцевая COLOR EXPERT 70мм, толщ. 6мм, пласт.лак.ручка; 30.1	Предназначение 	предназначена для работы с дисперсионными, латексными красками	
+30.2	ширина,мм	70	
+30.3	толщина,мм	6	
+30.4	щетина	смешаная светлая	
+30.5	Ручка	пластик	
+30.6	тип	плоская        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 2</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">7.</td>
+        <td>
+Кисть флейцевая COLOR EXPERT 50мм, толщ. 6мм, пласт.лак.ручка ; 31.1	Предназначение 	предназначена для работы с дисперсионными, латексными красками	
+31.2	ширина,мм	50	
+31.3	толщина,мм	6	
+31.4	щетина	смешаная светлая	
+31.5	Ручка	пластик	
+31.6	тип	плоская        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 4</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">8.</td>
+        <td>
+Кисть угловая COLOR EXPERT 25мм, толщ 1,5, дерев.ручка ; 32.1	Предназначение 	предназначена для работ в труднодоступных местах	
+32.2	ширина,мм	25	
+32.3	толщина,мм	1,5	
+32.4	общая длина,мм	435	
+32.5	материал рукоятки	дерево	
+32.6	щетина	смешаная 	
+32.7	вид	Для радиаторов (угловая)        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 4</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">9.</td>
+        <td>
+Торцевик левый, правый WIMAR 831 Дуб аргенто; 24.1	Предназначение	при окрашивании поверхностей.	
+24.2	материал рукоятки	пластик	
+24.3	длина,мм	180	
+24.4	диаметр,мм		не менее 47 не более 48
+24.5	типоразмер 	средние/миди-валики (180-300 мм)	
+24.6	матириал шубки	микрофибра	
+24.7	высота ворса,мм	9	
+24.8	Цвет:	зеленые полосы        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 2</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">10.</td>
+        <td>
+Валик COLOR EXPERT 180мм, микрофибра ; 25.1	применение	при окрашивании поверхностей.	
+25.2	длина,мм	180	
+25.3	диаметр,мм		не менее 47 не более 48
+25.4	матириал шубки	микрофибра	
+25.5	высота ворса,мм	9	
+25.6	Цвет:	зеленые полосы        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 2</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">11.</td>
+        <td>
+Кисть макловица FIT 50*150мм, натуральная щетина, пластиковая ручка, серия Мини; 26.1	применение	предназначена для использования со всеми типами лакокрасочных материалов	
+26.2	тип щетины	натуральная	
+26.3	ширина кисти,мм	150	
+26.4	материал ручки	пластик	
+26.5	вид кисти	макловица	
+26.6	серия 	мини        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 2</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">12.</td>
+        <td>
+Ролик COLOR EXPERT 100мм, ядро 16мм, полиамид 12мм ; 27.1	Предназначение	при окрашивании поверхностей.	
+27.2	материал рукоятки	пластик	
+27.3	длина,мм	100	
+27.4	диаметр,мм	16	
+27.5	матириал шубки	полиамид	
+27.6	высота ворса,мм	12        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 4</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">13.</td>
+        <td>
+Уголок ПВХ 40х40х3000 мм белый/25; 18.1	Предназначение 	" для защиты откосов оконных, 
+дверных и прочих проёмов"	
+18.2	Материал	ПВХ	
+18.3	Размер полок, мм	40х40	
+18.4	Длина, м		Не менее 2,7 не более 3
+18.5	Цвет	белый        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 100</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">14.</td>
+        <td>
+Плинтус напольный WIMAR 2500*58*25мм 831 Дуб аргенто; 20.1	Описание	Для маскировки стыка декоративных покрытий между полом и стеной. Предусмотрен кабель канал – замкнутый короб внутри плинтуса.Мягкий край плинтуса обеспечивает при установке полное сглаживание неровностей всех поверхностей, за счет плотного стыка с полом и стеной не пропускает никакие виды загрязнений. 	
+20.2	материал	ПВХ	
+20.3	длина, мм		Не менее 2500 не более 3000
+20.4	высота, мм		Не менее 58 не более 60
+20.5	цвет 	дуб аргенто        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 100</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">15.</td>
+        <td>
+Стеклохолст GlassBand 25г/м2 50м; 14.	применение	Стеклохолст  предназначен для финишной отделки стен.	
+14.2	Основа: 	стеклоткань	
+14.3	Влагостойкость	супермоющиеся	
+14.4	Огнестойкость	устойчивы к возгоранию	
+14.5	Светостойкость	высокая	
+14.6	рисунок	Елка средняя	
+14.7	Количество покрасок: выдерживают		Не менее 20 раз
+14.8	плотность, г/м2	25	
+14.9	Длина, м		Не менее 50
+14.10	Ширина , м		Не менее 1        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 2</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">16.</td>
+        <td>
+Штукатурка гипсовая Knauf Ротбанд 30кг ; 16.1	Предназначение	предназначена для высококачественного оштукатуривания потолков и стен из бетона, кирпича, цементной штукатурки, поверхностей из пенополистирола, ЦСП.	
+16.2	Состав:	гипс и полимерные добавки	
+16.3	Цвет:	розовый	
+16.4	Масса, кг		не менее 30 не более 31        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 5</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">17.</td>
+        <td>
+Краска ВД Фасадная универсальная белая ТЕКС 13 кг/44; 4.1	применение	Предназначена для окраски фасадов зданий и сооружений по минеральным поверхностям (бетонные основы, цементные штукатурки, не глянцевая строительная керамика), прочно держащимся покрытиям, ранее окрашенным водно-дисперсионными красками, за исключением окрашенных известковыми, силикатными красками и органическими эластичными покрытиями. Краска пригодна для отделочных работ внутри помещения, в том числе с повышенной влажностью.	
+4.2	Состав: 	сополимерная акриловая дисперсия,диоксид титана, наполнители, загустители, технологические добавки, вода	
+4.3	Характеристика 	Обладает высокой паропроницаемостью и водостойкостью, атмосферостойкостью, износостойкостью, Моющаяся с применением моющих средств, Без запаха, Стойкая к легким химикатам	
+4.5	Время высыхания, час		не более 1
+4.6	поверхность	матовая	
+4.7	Цвет:	Белый	
+4.8	Оттенок	Без оттенка	
+4.9	Масса, кг		не менее 12 не более 14        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 60</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">18.</td>
+        <td>
+Эмаль акриловая для радиаторов белая глянц 2,4кг Л-С; 5.1	Предназначение 	Предназначена для защитно-декоративного окрашивания радиаторов, труб водяного отопления и водоснабжения, а также других поверхностей: деревянных, металлических, бетонных, каменных, цементных, кирпичных, ДСП, ДВП, фанеры.	
+5.2	свойства	суспензия пигментов и наполнителей в водной дисперсии акрилового сополимера, специальные технологические добавки, консервант, вода, эмульгаторы и стабилизаторы.	
+5.3	описание 	Высококачественная термостойкая водоразбавляемая эмаль на основе акриловой дисперсии. Для внутренних и наружных работ. Устойчива к высоким температурам (до 100°С), к пожелтению, к действию воды, атмосферных осадков и моющих средств. Быстро высыхает. Образует глянцевую поверхность высокой степени белизны. Обладает отличной укрывистостью и адгезией. Отличается высокими декоративными и защитными свойствами, стойкая к мытью.	
+5.4	поверхность	глянцевая	
+5.5	Цвет:	Белый	
+5.6	масса,кг		не менее 2,4 не более 3        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 25</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">19.</td>
+        <td>
+Пена монтажная проф. всесезон. (от-18 до +30) Penosil GoldGun 65 875мл ; 1.1	Предназначение	применяется при монтаже окон и дверей для тепло- и звукоизоляции, для заполнения и герметизации отверстий, щелей, стыков	
+1.2	тип применения 	пистолет	
+1.3	выход пены 		не менее 65 л
+1.4	объем, мл		не менее 875 не более 900
+1.5	тип продукта 	пена полиуритановая        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 20</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">20.</td>
+        <td>
+Колер Текс персиковый 0,5л универсальный; 2.1	применение	Предназначена для ручной колеровки эмалей, масляных и воднодисперсионных красок	
+2.2	Состав: 	пигмент, наполнители, гликоль, поверхностно-активные вещества.	
+2.3	Цвет:	персиковый	
+2.4	Масса, л		не менее 0,5 не более 0,6        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 6</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">21.</td>
+        <td>
+Колер PARADE № 237 кофе с молоком 0,75л; 3.1	применение	Предназначен для тонирования всех видов красок, шпатлевок и декоративных штукатурок на водной основе.	
+3.2	Состав: 	Водная дисперсия акрилового сополимера.	
+3.3	Характеристика 	Высокая стойкость к истиранию	
+3.4	Цвет:	кофе с молоком	
+3.5	Масса, л		не менее 0,7 не более 0,8        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 10</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">22.</td>
+        <td>
+Колер PARADE № 245 синий 0,75л; 7.1	применение	Предназначен для тонирования всех видов красок, шпатлевок и декоративных штукатурок на водной основе.	
+7.2	Состав: 	Водная дисперсия акрилового сополимера.	
+7.3	Характеристика 	Высокая стойкость к истиранию	
+7.4	Цвет:	синий	
+7.5	Масса, л		не менее 0,7 не более 0,8        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 5</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">23.</td>
+        <td>
+Колер Текс синий 0,1л универсальный; 8.1	применение	Предназначена для ручной колеровки эмалей, масляных и воднодисперсионных красок	
+8.2	Состав: 	пигмент, наполнители, гликоль, поверхностно-активные вещества.	
+8.3	Цвет:	синий	
+8.4	Масса, л		не менее 0,1 не более 0,2        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 20</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">24.</td>
+        <td>
+Колер PARADE № 244 морская волна 0,75л; 9.1	применение	Предназначен для тонирования всех видов красок, шпатлевок и декоративных штукатурок на водной основе.	
+9.2	Состав: 	Водная дисперсия акрилового сополимера.	
+9.3	Характеристика 	Высокая стойкость к истиранию	
+9.4	Цвет:	морская волна	
+9.5	Масса, л		не менее 0,7 не более 0,8        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 5</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">25.</td>
+        <td>
+Колер Текс бирюзовый 0,1л универсальный; 10.1	применение	Предназначена для ручной колеровки эмалей, масляных и воднодисперсионных красок	
+10.2	Состав: 	пигмент, наполнители, гликоль, поверхностно-активные вещества.	
+10.3	Цвет:	бирюзовый	
+10.4	Масса, л		не менее 0,1 не более 0,2        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 20</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">26.</td>
+        <td>
+Колер PARADE № 246 зеленое яблоко 0,75л; 11.1	применение	Предназначен для тонирования всех видов красок, шпатлевок и декоративных штукатурок на водной основе.	
+11.2	Состав: 	Водная дисперсия акрилового сополимера.	
+11.3	Характеристика 	Высокая стойкость к истиранию	
+11.4	Цвет:	зеленое яблоко	
+11.5	Масса, л		не менее 0,7 не более 0,8        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 5</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">27.</td>
+        <td>
+Колер Текс зеленый 0,1л универсальный; 12.1	применение	Предназначена для ручной колеровки эмалей, масляных и воднодисперсионных красок	
+12.2	Состав: 	пигмент, наполнители, гликоль, поверхностно-активные вещества.	
+12.3	Цвет:	зеленый	
+12.4	Масса, л		не менее 0,1 не более 0,2        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 15</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">28.</td>
+        <td>
+Клей Homakoll 164 для ПВХ покрытий,линолеума 5кг, Prof; 19.1	Предназначение	Клей универсальный для линолеума и ковролина Homakoll, 14 кг используется при работе с рулонными напольными материалами для их надежной и качественной фиксации на основаниях из бетона, дерева, ДВП, ДСП или иных материалов, способных впитывать влагу. Клей может быть использован в помещениях любого целевого предназначения, включая детские комнаты или кабинеты с высокой интенсивностью людского потока.	
+19.2	цвет	бежевый	
+19.3	объем, кг		не менее 5 не более 6
+19.4	тип продукта	контактный клей	
+19.5	основа	Водная полимерная дисперсия        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 2</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">29.</td>
+        <td>
+Клей обойный для стеклообоев 500 гр KLEO ULTRA; 15.1	Предназначение	Для наклеивания стеклообоев, виниловых, бумажных с тиснением, структурных, флизелиновых, тканевых и плотных бумажных обоев	
+15.2	основа 	органическая	
+15.3	Масса, г		не менее 450 не более 500        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 25</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">30.</td>
+        <td>
+Клей монтажный TYTAN Classiс Fix каучуковый прзрачный 310мл ; 6.1	Предназначение	для склеивания Алюминий, Камень, МДФ, Дерево, Металл	
+6.2	Состав: 	каучук	
+6.3	Цвет:	прозрачный	
+6.4	Масса, мл		не менее 300 не более 310        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 24</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">31.</td>
+        <td>
+Профиль уголок 40*40*1,8 Уп 15.2000.500; 17.1	Предназначение	Используется для защиты ровных прямоугольных стыков различных поверхностей от истирания и возможных сколов. Надежно фиксирует угол и прилегающие стенки на достаточную глубину. Свойства материала обеспечивают быстрый и несложный монтаж профиля в любых условиях.	
+17.2	форма 	Уголок с равными сторонами	
+17.3	основной материал	Алюминий	
+17.4	длина, мм	1800	
+17.5	Размер полок, мм	40х40	
+17.6	цвет 	серебро        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 100</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">32.</td>
+        <td>
+Шпатель фасадный COLOR EXPERT 350мм, пластиковая ручка; 28.1	Предназначение 	для шпатлевки, для штукатурки,	
+28.2	материал	нержавеющая сталь	
+28.3	длина,мм	350	
+28.4	рабочая ширина,мм	230	
+28.5	материал рукоятки	пластик        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 2</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">33.</td>
+        <td>
+Шпатель COLOR EXPERT 80мм нерж.сталь, ручка пластик; 29.1	Предназначение 	для затирки швов и небольших щелей, отверстий.	
+29.2	материал	нержавеющая сталь	
+29.3	длина,мм		
+29.4	 ширина лезвия,мм	80	
+29.5	материал рукоятки	пластик        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 2</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">34.</td>
+        <td>
+Сверло SDS PLUS 6х160мм 1шт ЗУБР ; 35.1	Предназначение 	Предназначены для ударного сверления отверстий в бетоне, граните, кирпичной кладке, камне и твердых известняках. Используются на легких и средних перфораторах с зажимом SDS-plus.	
+35.2	Материал корпуса бура	сталь	
+35.3	Материал наконечника	ВК8	
+35.4	общая длина, мм	160	
+35.5	рабочая длина, мм	110	
+35.6	количество граней	2	
+35.7	диаметр,мм	6	
+35.8	Тип спирали	Спираль 4С с усиленным сердечником	
+35.9	тип хвостика	SDS-plus        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 3</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">35.</td>
+        <td>
+Сверло SDS PLUS 6х110мм ЗУБР ; 36.1	Предназначение 	Предназначены для ударного сверления отверстий в бетоне, граните, кирпичной кладке, камне и твердых известняках. Используются на легких и средних перфораторах с зажимом SDS-plus.	
+36.2	Материал корпуса бура	сталь	
+36.3	Материал наконечника	ВК8	
+36.4	общая длина, мм	110	
+36.5	рабочая длина, мм	60	
+36.6	количество граней	2	
+36.7	диаметр,мм	6	
+36.8	Тип спирали	Спираль 4С с усиленным сердечником	
+36.9	тип хвостика	SDS-plus        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 3</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">36.</td>
+        <td>
+Нож COLOR EXPERT 18мм; 34.1	Предназначение 	Служат для хозяйственного и профессионального использования при резке бумаги, картона, обоев, линолеума и прочих материалов	
+34.2	ширина лезвия ,мм	18	
+34.3	материал лезвия	сталь	
+34.4	материал рукоятки	пластик	
+34.5	конструкция 	выдвижной        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 2</td>
+                    <td> шт</td>
+                </tr>
+                <tr class="hidden" style="display: none">
+                    <td>
+
+
+<table class="tru-position-table">
+    <tbody>
+<tr class="">
+        <td class="position-counter">37.</td>
+        <td>
+Лезвие сегментное COLOR EXPERT 18мм, 0,4мм, 10 шт. в футляре ; 33.1	Предназначение 	применяются в качестве запасных частей для ножа Color Expert. Служат для хозяйственного и профессионального использования при резке бумаги, картона, обоев, линолеума и прочих материалов	
+33.2	ширина,мм	18	
+33.3	форма	сегментированное	
+33.4	материал	сталь	
+33.5	толщина,мм	0,4	
+33.6	упаковка,шт	10	
+33.7        </td>
+    </tr>
+
+</tbody>
+</table>
+</td>
+                    <td> 4</td>
+                    <td> шт</td>
+                </tr>
+
+
+        </tbody>
+</table>
+    </div>
+
+    
+
+
+    <div class="card-item__helpers">
+        <span class="more-position show-more" style="">Еще 34 позиций</span>
+        <span class="less-position show-less" style="display: none">Скрыть 34 позиций</span>
+    </div>
+
+
+</div>
+                    <div class="card-item__files">
+
+
+                    </div>
+
+
+                    <div class="card-item__organization">
+                        <div class="card-item__organization-title">ОРГАНИЗАТОР</div>
+                        <div class="card-item__organization-main">
+
+                            <p>
+                                    <a class="text--bold" target="_blank" href="/poisk/organizator/8603112823-860301001/">
+                                        БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ХАНТЫ-МАНСИЙСКОГО АВТОНОМНОГО ОКРУГА - ЮГРЫ "НИЖНЕВАРТОВСКИЙ ОКРУЖНОЙ КЛИНИЧЕСКИЙ ПЕРИНАТАЛЬНЫЙ ЦЕНТР"
+                                        <span class="show_statistic_organizer">(все закупки)</span>
+                                    </a>
+
+                            </p>
+                            <p><b>ИНН </b>8603112823,  <b>КПП </b>860301001.</p>
+                            <p>
+                                    <span class="text--bold">Контактные данные: </span>
+</p>
+<div class="card-hidden-field">
+    <div class="card-hidden__info">
+        
+        <strong class="txt-note mx--4">Информация скрыта.</strong>
+        <a class="tooltip__anchor" href="javascript:void(0);">Подробнее</a>
+        <span class="tooltip__hidden">
+            <strong class="txt-title">Доступно в личном кабинете</strong>
+            <span class="txt-description">
+                Информация об организаторе и заказчике доступна в личном кабинете. Зарегистрируйтесь или войдите.
+            </span>
+            <a target="_blank" href="https://market-lk.rts-tender.ru/supplier/lk/Handlers/EntityUrlHandler.ashx?Id=6692079&amp;OperatorId=4&amp;MethodId=3&amp;TenantId=56&amp;EntityType=Trade&amp;OrganizationRole=IsSupplier&amp;BussinessFlow=Zmo&amp;ShowOn=1" class="button-red">Войти</a>
+        </span>
+    </div>
+</div>
+                            <p></p>
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+
+                <div class="card-content__row parent">
+                        <div class="card-item__organization">
+                            <div class="card-item__organization-title">ЗАКАЗЧИК</div>
+                            <div itemprop="description">
+                                <div class="card-item__organization-main">
+                                    <p>
+                                        <span class="text--bold">БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ХАНТЫ-МАНСИЙСКОГО АВТОНОМНОГО ОКРУГА - ЮГРЫ "НИЖНЕВАРТОВСКИЙ ОКРУЖНОЙ КЛИНИЧЕСКИЙ ПЕРИНАТАЛЬНЫЙ ЦЕНТР"</span>
+                                    </p>
+                                    <p>
+                                        <b>ИНН </b>8603112823,  <b>КПП </b>860301001.
+                                            <span class="text--bold">Регион: </span>
+                                            <a target="_blank" href="/poisk/region/hanty-mansiyskiy-avtonomnyy-okrug-yugra/">Ханты-Мансийский автономный округ Югра</a>
+                                    </p>
+                                    <p>
+                                            <span class="text--bold">Контактные данные: </span>
+</p>
+<div class="card-hidden-field">
+    <div class="card-hidden__info">
+        
+        <strong class="txt-note mx--4">Информация скрыта.</strong>
+        <a class="tooltip__anchor" href="javascript:void(0);">Подробнее</a>
+        <span class="tooltip__hidden">
+            <strong class="txt-title">Доступно в личном кабинете</strong>
+            <span class="txt-description">
+                Информация об организаторе и заказчике доступна в личном кабинете. Зарегистрируйтесь или войдите.
+            </span>
+            <a target="_blank" href="https://market-lk.rts-tender.ru/supplier/lk/Handlers/EntityUrlHandler.ashx?Id=6692079&amp;OperatorId=4&amp;MethodId=3&amp;TenantId=56&amp;EntityType=Trade&amp;OrganizationRole=IsSupplier&amp;BussinessFlow=Zmo&amp;ShowOn=1" class="button-red">Войти</a>
+        </span>
+    </div>
+</div>
+                                    <p></p>
+                                </div>
+                            </div>
+
+                                <div class="content-address">
+                                    <span class="content-address__title">
+                                        <span class="icon-map"></span>
+                                    </span>
+                                    <span class="text--strong">Адрес поставки:</span>
+                                    <span itemprop="areaServed">628606, Ханты-Мансийский автономный округ – Югра, город Нижневартовск, улица Ленина, дом 18, строение 11 (склад), телефон (3466) 41-28-11;</span>
+                                </div>
+                                <div class="card-item__organization-main hidden" style="display:none;">
+                                    <div class="card-item__organization-hidden-contacts">
+                                        <p>
+                                            <a class="text--bold" href="javascript:void(0)">БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ХАНТЫ-МАНСИЙСКОГО АВТОНОМНОГО ОКРУГА - ЮГРЫ "НИЖНЕВАРТОВСКИЙ ОКРУЖНОЙ КЛИНИЧЕСКИЙ ПЕРИНАТАЛЬНЫЙ ЦЕНТР"</a>
+                                        </p>
+                                        <p>
+                                            <b>ИНН </b>8603112823,  <b>КПП </b>860301001.
+                                        </p>
+
+                                        <p>
+                                                <span class="text--bold">Адрес поставки:</span>
+628606, Ханты-Мансийский автономный округ – Югра, город Нижневартовск, улица Ленина, дом 18, строение 11 (склад), телефон (3466) 41-28-11;                                        </p>
+                                        <p>
+                                                <span class="text--bold">Контактные данные: </span>
+8-3466-41-38-48                                        </p>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+
+
+                <div class="card-item__mobile-buttons">
+
+                    <a href="/poisk/id/l10045552-3-9-1/" target="_blank" class="button-red" onclick='userActivityLogger.logPurchaseDetailsLinkClick({"PurchaseId":"l10045552-3-9-1","FederalLaw":2,"RtsPurchaseType":2,"EtpNameEncoded":"%d0%a0%d0%a2%d0%a1-%d0%a2%d0%95%d0%9d%d0%94%d0%95%d0%a0","Number":"6692079"})' onauxclick='userActivityLogger.logPurchaseDetailsLinkClick({"PurchaseId":"l10045552-3-9-1","FederalLaw":2,"RtsPurchaseType":2,"EtpNameEncoded":"%d0%a0%d0%a2%d0%a1-%d0%a2%d0%95%d0%9d%d0%94%d0%95%d0%a0","Number":"6692079"})'>ПОДРОБНЕЕ</a>
+
+                </div>
+
+            <!-- /ROSTENDER_PART_LIST --> <!-- ROSTENDER_PART_MAIN --><h3>Общие сведения о закупке</h3><table><tr><td>Номер извещения</td><td>6692079</td></tr><tr></tr><tr></table><h3>Сроки подачи заявок</h3><table><tr><td>Дата и время окончания срока подачи заявок</td><td>09.10.2023 16:00 (MSK+00:00)</td></tr><tr></table><h3>Информация об объекте закупки</h3><table><tr><td>Наименование объекта закупки (предмет контракта)</td><td>Поставка отделочных материалов для ремонта помещений</td></tr><tr><td>Начальная (максимальная) цена контракта/Максимальное значение цены контракта, руб.</td><td></td></tr><tr></table><h3>Условия поставки</h3><table><tr><td>Место доставки товара, оказания услуг или выполнения работ</td><td>628606, Ханты-Мансийский автономный округ – Югра, город Нижневартовск, улица Ленина, дом 18, строение 11 (склад), телефон (3466) 41-28-11;</td></tr><tr></table><h3>Заказчик</h3><table><tr><td>Полное наименование</td><td>БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ХАНТЫ-МАНСИЙСКОГО АВТОНОМНОГО ОКРУГА - ЮГРЫ "НИЖНЕВАРТОВСКИЙ ОКРУЖНОЙ КЛИНИЧЕСКИЙ ПЕРИНАТАЛЬНЫЙ ЦЕНТР"</td></tr><tr></table><h3>Описание</h3><p>Поставка отделочных материалов для ремонта помещений</p><h3>Лоты</h3><table><ul><li>Пена монтажная проф. всесезон. (от-18 до +30) Penosil GoldGun 65 875мл ; 1.1 Предназначение применяется при монтаже окон и дверей для тепло- и звукоизоляции, для заполнения и герметизации отверстий, щелей, стыков 1.2 тип применения пистолет 1.3 выход пены не менее 65 л 1.4 объем, мл не менее 875 не более 900 1.5 тип продукта пена полиуритановая</li></ul><ul><li>Колер Текс персиковый 0,5л универсальный; 2.1 применение Предназначена для ручной колеровки эмалей, масляных и воднодисперсионных красок 2.2 Состав: пигмент, наполнители, гликоль, поверхностно-активные вещества. 2.3 Цвет: персиковый 2.4 Масса, л не менее 0,5 не более 0,6</li></ul><ul><li>Колер PARADE № 237 кофе с молоком 0,75л; 3.1 применение Предназначен для тонирования всех видов красок, шпатлевок и декоративных штукатурок на водной основе. 3.2 Состав: Водная дисперсия акрилового сополимера. 3.3 Характеристика Высокая стойкость к истиранию 3.4 Цвет: кофе с молоком 3.5 Масса, л не менее 0,7 не более 0,8</li></ul><ul><li>Краска ВД Фасадная универсальная белая ТЕКС 13 кг/44; 4.1 применение Предназначена для окраски фасадов зданий и сооружений по минеральным поверхностям (бетонные основы, цементные штукатурки, не глянцевая строительная керамика), прочно держащимся покрытиям, ранее окрашенным водно-дисперсионными красками, за исключением окрашенных известковыми, силикатными красками и органическими эластичными покрытиями. Краска пригодна для отделочных работ внутри помещения, в том числе с повышенной влажностью. 4.2 Состав: сополимерная акриловая дисперсия,диоксид титана, наполнители, загустители, технологические добавки, вода 4.3 Характеристика Обладает высокой паропроницаемостью и водостойкостью, атмосферостойкостью, износостойкостью, Моющаяся с применением моющих средств, Без запаха, Стойкая к легким химикатам 4.5 Время высыхания, час не более 1 4.6 поверхность матовая 4.7 Цвет: Белый 4.8 Оттенок Без оттенка 4.9 Масса, кг не менее 12 не более 14</li></ul><ul><li>Эмаль акриловая для радиаторов белая глянц 2,4кг Л-С; 5.1 Предназначение Предназначена для защитно-декоративного окрашивания радиаторов, труб водяного отопления и водоснабжения, а также других поверхностей: деревянных, металлических, бетонных, каменных, цементных, кирпичных, ДСП, ДВП, фанеры. 5.2 свойства суспензия пигментов и наполнителей в водной дисперсии акрилового сополимера, специальные технологические добавки, консервант, вода, эмульгаторы и стабилизаторы. 5.3 описание Высококачественная термостойкая водоразбавляемая эмаль на основе акриловой дисперсии. Для внутренних и наружных работ. Устойчива к высоким температурам (до 100°С), к пожелтению, к действию воды, атмосферных осадков и моющих средств. Быстро высыхает. Образует глянцевую поверхность высокой степени белизны. Обладает отличной укрывистостью и адгезией. Отличается высокими декоративными и защитными свойствами, стойкая к мытью. 5.4 поверхность глянцевая 5.5 Цвет: Белый 5.6 масса,кг не менее 2,4 не более 3</li></ul><ul><li>Клей монтажный TYTAN Classiс Fix каучуковый прзрачный 310мл ; 6.1 Предназначение для склеивания Алюминий, Камень, МДФ, Дерево, Металл 6.2 Состав: каучук 6.3 Цвет: прозрачный 6.4 Масса, мл не менее 300 не более 310</li></ul><ul><li>Колер PARADE № 245 синий 0,75л; 7.1 применение Предназначен для тонирования всех видов красок, шпатлевок и декоративных штукатурок на водной основе. 7.2 Состав: Водная дисперсия акрилового сополимера. 7.3 Характеристика Высокая стойкость к истиранию 7.4 Цвет: синий 7.5 Масса, л не менее 0,7 не более 0,8</li></ul><ul><li>Колер Текс синий 0,1л универсальный; 8.1 применение Предназначена для ручной колеровки эмалей, масляных и воднодисперсионных красок 8.2 Состав: пигмент, наполнители, гликоль, поверхностно-активные вещества. 8.3 Цвет: синий 8.4 Масса, л не менее 0,1 не более 0,2</li></ul><ul><li>Колер PARADE № 244 морская волна 0,75л; 9.1 применение Предназначен для тонирования всех видов красок, шпатлевок и декоративных штукатурок на водной основе. 9.2 Состав: Водная дисперсия акрилового сополимера. 9.3 Характеристика Высокая стойкость к истиранию 9.4 Цвет: морская волна 9.5 Масса, л не менее 0,7 не более 0,8</li></ul><ul><li>Колер Текс бирюзовый 0,1л универсальный; 10.1 применение Предназначена для ручной колеровки эмалей, масляных и воднодисперсионных красок 10.2 Состав: пигмент, наполнители, гликоль, поверхностно-активные вещества. 10.3 Цвет: бирюзовый 10.4 Масса, л не менее 0,1 не более 0,2</li></ul><ul><li>Колер PARADE № 246 зеленое яблоко 0,75л; 11.1 применение Предназначен для тонирования всех видов красок, шпатлевок и декоративных штукатурок на водной основе. 11.2 Состав: Водная дисперсия акрилового сополимера. 11.3 Характеристика Высокая стойкость к истиранию 11.4 Цвет: зеленое яблоко 11.5 Масса, л не менее 0,7 не более 0,8</li></ul><ul><li>Колер Текс зеленый 0,1л универсальный; 12.1 применение Предназначена для ручной колеровки эмалей, масляных и воднодисперсионных красок 12.2 Состав: пигмент, наполнители, гликоль, поверхностно-активные вещества. 12.3 Цвет: зеленый 12.4 Масса, л не менее 0,1 не более 0,2</li></ul><ul><li>Стеклообои Oscar Елочка средняя 1х25 м Os160; 13.1 Основа: стекловолокно 13.2 Влагостойкость супермоющиеся 13.3 Огнестойкость устойчивы к возгоранию 13.4 Светостойкость высокая 13.5 рисунок Елка средняя 13.6 Количество покрасок: выдерживают Не менее 20 раз 13.7 плотность, г/м2 160 13.8 Длина, м Не менее 25 13.9 Ширина , м Не менее 1</li></ul><ul><li>Стеклохолст GlassBand 25г/м2 50м; 14. применение Стеклохолст  предназначен для финишной отделки стен. 14.2 Основа: стеклоткань 14.3 Влагостойкость супермоющиеся 14.4 Огнестойкость устойчивы к возгоранию 14.5 Светостойкость высокая 14.6 рисунок Елка средняя 14.7 Количество покрасок: выдерживают Не менее 20 раз 14.8 плотность, г/м2 25 14.9 Длина, м Не менее 50 14.10 Ширина , м Не менее 1</li></ul><ul><li>Клей обойный для стеклообоев 500 гр KLEO ULTRA; 15.1 Предназначение Для наклеивания стеклообоев, виниловых, бумажных с тиснением, структурных, флизелиновых, тканевых и плотных бумажных обоев 15.2 основа органическая 15.3 Масса, г не менее 450 не более 500</li></ul><ul><li>Штукатурка гипсовая Knauf Ротбанд 30кг ; 16.1 Предназначение предназначена для высококачественного оштукатуривания потолков и стен из бетона, кирпича, цементной штукатурки, поверхностей из пенополистирола, ЦСП. 16.2 Состав: гипс и полимерные добавки 16.3 Цвет: розовый 16.4 Масса, кг не менее 30 не более 31</li></ul><ul><li>Профиль уголок 40*40*1,8 Уп 15.2000.500; 17.1 Предназначение Используется для защиты ровных прямоугольных стыков различных поверхностей от истирания и возможных сколов. Надежно фиксирует угол и прилегающие стенки на достаточную глубину. Свойства материала обеспечивают быстрый и несложный монтаж профиля в любых условиях. 17.2 форма Уголок с равными сторонами 17.3 основной материал Алюминий 17.4 длина, мм 1800 17.5 Размер полок, мм 40х40 17.6 цвет серебро</li></ul><ul><li>Уголок ПВХ 40х40х3000 мм белый/25; 18.1 Предназначение " для защиты откосов оконных, дверных и прочих проёмов" 18.2 Материал ПВХ 18.3 Размер полок, мм 40х40 18.4 Длина, м Не менее 2,7 не более 3 18.5 Цвет белый</li></ul><ul><li>Клей Homakoll 164 для ПВХ покрытий,линолеума 5кг, Prof; 19.1 Предназначение Клей универсальный для линолеума и ковролина Homakoll, 14 кг используется при работе с рулонными напольными материалами для их надежной и качественной фиксации на основаниях из бетона, дерева, ДВП, ДСП или иных материалов, способных впитывать влагу. Клей может быть использован в помещениях любого целевого предназначения, включая детские комнаты или кабинеты с высокой интенсивностью людского потока. 19.2 цвет бежевый 19.3 объем, кг не менее 5 не более 6 19.4 тип продукта контактный клей 19.5 основа Водная полимерная дисперсия</li></ul><ul><li>Плинтус напольный WIMAR 2500*58*25мм 831 Дуб аргенто; 20.1 Описание Для маскировки стыка декоративных покрытий между полом и стеной. Предусмотрен кабель канал – замкнутый короб внутри плинтуса.Мягкий край плинтуса обеспечивает при установке полное сглаживание неровностей всех поверхностей, за счет плотного стыка с полом и стеной не пропускает никакие виды загрязнений. 20.2 материал ПВХ 20.3 длина, мм Не менее 2500 не более 3000 20.4 высота, мм Не менее 58 не более 60 20.5 цвет дуб аргенто</li></ul><ul><li>Угол внутренний WIMAR 2 шт 831 Дуб аргенто; 21.1 Описание Фурнитура, используемая при установке плинтуса, упрощает установку, делает ее завершенной, в точности повторяет профиль плинтуса в поперечном сечении, что дает плотное прилегание элементов, не оставляя зазоров между плинтусом и элементом.  В конструкцию уголка входят держатели-выемки, необходимые для надежного соединения. Изделие выполнено из пластика, имитирующего фактуру и цвет дерева, в тон напольного плинтуса.  21.2 материал ПВХ 21.3 высота, мм Не менее 58 не более 60 21.4 цвет дуб аргенто 21.5 количество штук в упаковке, шт 2 не менее 2 не более 4</li></ul><ul><li>Угол наружный WIMAR 2 шт 831 Дуб аргенто; 22.1 Предназначение Фурнитура, используемая при установке плинтуса, упрощает установку, делает ее завершенной, в точности повторяет профиль плинтуса в поперечном сечении, что дает плотное прилегание элементов, не оставляя зазоров между плинтусом и элементом.  В конструкцию уголка входят держатели-выемки, необходимые для надежного соединения. Изделие выполнено из пластика, имитирующего фактуру и цвет дерева, в тон напольного плинтуса.  22.2 материал ПВХ 22.3 Размер, мм 22.4 высота, мм Не менее 58 не более 60 22.5 цвет дуб аргенто 22.6 упаковка, шт не менее 2 не более 4</li></ul><ul><li>Торцевик левый, правый WIMAR 831 Дуб аргенто; 23.1 Предназначение Удобная и практичная торцевая заглушка для напольного плинтуса позволяет привести в порядок места разъединения плинтуса и сделать незаметными внутри коммуникации. подходит для оформления плинтуса аналогичного цвета. 23.2 цвет дуб аргенто 23.3 упаковка, шт не менее 2 не более 4</li></ul><ul><li>Торцевик левый, правый WIMAR 831 Дуб аргенто; 24.1 Предназначение при окрашивании поверхностей. 24.2 материал рукоятки пластик 24.3 длина,мм 180 24.4 диаметр,мм не менее 47 не более 48 24.5 типоразмер средние/миди-валики (180-300 мм) 24.6 матириал шубки микрофибра 24.7 высота ворса,мм 9 24.8 Цвет: зеленые полосы</li></ul><ul><li>Валик COLOR EXPERT 180мм, микрофибра ; 25.1 применение при окрашивании поверхностей. 25.2 длина,мм 180 25.3 диаметр,мм не менее 47 не более 48 25.4 матириал шубки микрофибра 25.5 высота ворса,мм 9 25.6 Цвет: зеленые полосы</li></ul><ul><li>Кисть макловица FIT 50*150мм, натуральная щетина, пластиковая ручка, серия Мини; 26.1 применение предназначена для использования со всеми типами лакокрасочных материалов 26.2 тип щетины натуральная 26.3 ширина кисти,мм 150 26.4 материал ручки пластик 26.5 вид кисти макловица 26.6 серия мини</li></ul><ul><li>Ролик COLOR EXPERT 100мм, ядро 16мм, полиамид 12мм ; 27.1 Предназначение при окрашивании поверхностей. 27.2 материал рукоятки пластик 27.3 длина,мм 100 27.4 диаметр,мм 16 27.5 матириал шубки полиамид 27.6 высота ворса,мм 12</li></ul><ul><li>Шпатель фасадный COLOR EXPERT 350мм, пластиковая ручка; 28.1 Предназначение для шпатлевки, для штукатурки, 28.2 материал нержавеющая сталь 28.3 длина,мм 350 28.4 рабочая ширина,мм 230 28.5 материал рукоятки пластик</li></ul><ul><li>Шпатель COLOR EXPERT 80мм нерж.сталь, ручка пластик; 29.1 Предназначение для затирки швов и небольших щелей, отверстий. 29.2 материал нержавеющая сталь 29.3 длина,мм 29.4 ширина лезвия,мм 80 29.5 материал рукоятки пластик</li></ul><ul><li>Кисть флейцевая COLOR EXPERT 70мм, толщ. 6мм, пласт.лак.ручка; 30.1 Предназначение предназначена для работы с дисперсионными, латексными красками 30.2 ширина,мм 70 30.3 толщина,мм 6 30.4 щетина смешаная светлая 30.5 Ручка пластик 30.6 тип плоская</li></ul><ul><li>Кисть флейцевая COLOR EXPERT 50мм, толщ. 6мм, пласт.лак.ручка ; 31.1 Предназначение предназначена для работы с дисперсионными, латексными красками 31.2 ширина,мм 50 31.3 толщина,мм 6 31.4 щетина смешаная светлая 31.5 Ручка пластик 31.6 тип плоская</li></ul><ul><li>Кисть угловая COLOR EXPERT 25мм, толщ 1,5, дерев.ручка ; 32.1 Предназначение предназначена для работ в труднодоступных местах 32.2 ширина,мм 25 32.3 толщина,мм 1,5 32.4 общая длина,мм 435 32.5 материал рукоятки дерево 32.6 щетина смешаная 32.7 вид Для радиаторов (угловая)</li></ul><ul><li>Лезвие сегментное COLOR EXPERT 18мм, 0,4мм, 10 шт. в футляре ; 33.1 Предназначение применяются в качестве запасных частей для ножа Color Expert. Служат для хозяйственного и профессионального использования при резке бумаги, картона, обоев, линолеума и прочих материалов 33.2 ширина,мм 18 33.3 форма сегментированное 33.4 материал сталь 33.5 толщина,мм 0,4 33.6 упаковка,шт 10 33.7</li></ul><ul><li>Нож COLOR EXPERT 18мм; 34.1 Предназначение Служат для хозяйственного и профессионального использования при резке бумаги, картона, обоев, линолеума и прочих материалов 34.2 ширина лезвия ,мм 18 34.3 материал лезвия сталь 34.4 материал рукоятки пластик 34.5 конструкция выдвижной</li></ul><ul><li>Сверло SDS PLUS 6х160мм 1шт ЗУБР ; 35.1 Предназначение Предназначены для ударного сверления отверстий в бетоне, граните, кирпичной кладке, камне и твердых известняках. Используются на легких и средних перфораторах с зажимом SDS-plus. 35.2 Материал корпуса бура сталь 35.3 Материал наконечника ВК8 35.4 общая длина, мм 160 35.5 рабочая длина, мм 110 35.6 количество граней 2 35.7 диаметр,мм 6 35.8 Тип спирали Спираль 4С с усиленным сердечником 35.9 тип хвостика SDS-plus</li></ul><ul><li>Сверло SDS PLUS 6х110мм ЗУБР ; 36.1 Предназначение Предназначены для ударного сверления отверстий в бетоне, граните, кирпичной кладке, камне и твердых известняках. Используются на легких и средних перфораторах с зажимом SDS-plus. 36.2 Материал корпуса бура сталь 36.3 Материал наконечника ВК8 36.4 общая длина, мм 110 36.5 рабочая длина, мм 60 36.6 количество граней 2 36.7 диаметр,мм 6 36.8 Тип спирали Спираль 4С с усиленным сердечником 36.9 тип хвостика SDS-plus</li></ul><ul><li>Дюбель-гвоздь Tech-Krep 6х40 гриб. (нейлон) (500 шт) - ведро ; 37.1 Предназначение предназначен для крепления строительных материалов и изделий к основаниям из бетона, полнотелого кирпича, строительного камня. Применяется для сквозного монтажа кронштейнов, дверных коробок, оконных рам, кабельных каналов, обрешетки, гипсокартонных листов (ГКЛ), гипсоволокнистых листов (ГКЛ) и т.д. 37.2 материал дюбеля полипропилен 37.3 Диаметр отверстия под дюбель,мм 6 37.4 длина,мм 40 37.5 тип дюбель-гвоздь 37.6 фасовка, шт не менее 500 не более 550</li></ul></table><!-- /ROSTENDER_PART_MAIN --><!-- /ROSTENDER_CONTENT --></p>
+</div>
+
+</body>
+</html>
