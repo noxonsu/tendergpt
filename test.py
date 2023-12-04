@@ -2,29 +2,17 @@ import openai
 import time
 
 # Создаем экземпляр клиента один раз
+openai.organization = "ildario1"
+
 client = openai.OpenAI()
 
 # Загрузка файла с целью "assistants"
-with open("70916611_Извещение.doc", "rb") as file:
-    file_response = client.files.create(file=file, purpose="assistants")
+#with open("70916611_Извещение.doc", "rb") as file:
+#    file_response = client.files.create(file=file, purpose="assistants")
 
 # Создание пустой нити (thread)
 empty_thread_response = client.beta.threads.create()
 print(empty_thread_response)
-
-# Создание и запуск нити с сообщением и файлом
-run_response = client.beta.threads.create_and_run(
-    assistant_id="asst_mjrrw6UamzL17K4ow9uz9dT7",
-    thread={
-        "messages": [
-            {
-                "role": "user",
-                "content": "фракционный жир",
-                "file_ids": [file_response.id]
-            }
-        ]
-    }
-)
 
 # Функция для ожидания завершения выполнения задачи
 def wait_for_completion(run):
@@ -36,6 +24,22 @@ def wait_for_completion(run):
         time.sleep(1)
     return run
 
+# Создание и запуск нити с сообщением и файлом
+run_response = client.beta.threads.create_and_run(
+    assistant_id="asst_mjrrw6UamzL17K4ow9uz9dT7",
+    thread={
+        "messages": [
+            {
+                "role": "user",
+                "content": "перечисли критичные условия поставки из этого документа. add annotations",
+                "file_ids": ["file-7azqQGuiFwvAyhHTsVX9s2Pb"]
+            }
+        ]
+    }
+)
+
+
+
 # Ожидание завершения выполнения задачи
 completed_run = wait_for_completion(run_response)
 
@@ -43,5 +47,5 @@ completed_run = wait_for_completion(run_response)
 thread_messages_response = client.beta.threads.messages.list(completed_run.thread_id)
 
 for message in thread_messages_response.data:
-    if message.role == "system" and message.content.type == "text":
-        print(message.content.text.value)
+    #if message.role == "assistant" and message.content[0].type == "text":
+    print(message.content[0].text.value)
