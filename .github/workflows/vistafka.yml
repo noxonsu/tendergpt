@@ -1,0 +1,46 @@
+# GSheet Action Documentation: https://github.com/marketplace/actions/gsheet-action
+name: gsheet.action test
+
+# Trigger the workflow only on 'workflow_dispatch' events
+on: 
+  workflow_dispatch:
+    inputs:
+      spreadsheetId:
+        description: 'Spreadsheet ID'
+        required: true
+        default: ''
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Read JSON file
+        id: json_read
+        uses: actions/github-script@v5
+        with:
+          script: |
+            const fs = require('fs');
+            const path = './test.json';
+            const data = fs.readFileSync(path, 'utf8');
+            return data;
+
+      - id: 'update_worksheet'
+        uses: jroehl/gsheet.action@v2.0.0
+        with:
+          spreadsheetId: ${{ github.event.inputs.spreadsheetId }}
+          commands: |
+            [
+              { "command": "addWorksheet", "args": { "worksheetTitle": "<worksheetTitle>" }},
+              { "command": "updateData", "args": { "data": ${{ steps.json_read.outputs.result }} }},
+              { "command": "getData", "args": { "range": "'<worksheetTitle>'!A2:B3" } }
+            ]
+        env:
+          GSHEET_CLIENT_EMAIL: ${{ secrets.GSHEET_CLIENT_EMAIL }}
+          GSHEET_PRIVATE_KEY: ${{ secrets.GSHEET_PRIVATE_KEY }}
+      - name: dump results
+        env:
+          RESULTS: ${{ steps.update_worksheet.outputs.results }}
+        run: echo "$RESULTS" | jq 
