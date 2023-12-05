@@ -9,6 +9,14 @@ on:
         description: 'Spreadsheet ID'
         required: true
         default: ''
+      linkToAttendies:
+        description: 'linkToAttendies'
+        required: true
+        default: 'где берем список участников выставки'
+      instructionOnSiteCrawl:
+        description: 'Инструкция на что смотрим на сайте (напр это производитель)'
+        required: false
+        default: 'если это крупный производитель пиши Подходит. Если нет - Не подходит'
 
 jobs:
   fetch:
@@ -16,7 +24,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-
+      - name: Get list of attendies
+        run: |
+          echo ""
+          
       - name: Read JSON file
         id: json_read
         uses: actions/github-script@v5
