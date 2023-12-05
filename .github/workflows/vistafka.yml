@@ -38,7 +38,7 @@ jobs:
               { "command": "getData", "args": { "range": "'<worksheetTitle>'!A2:B3" } }
             ]
         env:
-          GSHEET_CLIENT_EMAIL: ${{ secrets.GSHEET_CLIENT_EMAIL }}
+          GSHEET_CLIENT_EMAIL: "swap155-212716@appspot.gserviceaccount.com"
           GSHEET_PRIVATE_KEY: ${{ secrets.GSHEET_PRIVATE_KEY }}
       - name: dump results
         env:
